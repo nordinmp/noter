@@ -1,0 +1,38 @@
+{
+  "name": "quartz",
+  "description": "Extensible framework for transpiling various Markdown flavours to HTML",
+  "version": "4.0.0",
+  "author": "jackyzha0 <j.zhao2k19@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://quartz.jzhao.xyz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackyzha0/quartz.git"
+  },
+  "keywords": [
+    "digital-garden",
+    "networked-thought",
+    "markdown",
+    "blog"
+  ],
+  "bin": {
+    "quartz": "./build/cli.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "esbuild index.ts --banner:js=\"#!/usr/bin/env node\" --platform=node --bundle --outfile=./build/cli.js",
+    "link": "npm run build && npm link"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.2",
+    "@types/yargs": "^17.0.24",
+    "esbuild": "0.17.18"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^1.0.3",
+    "chalk": "^5.2.0",
+    "yargs": "^17.7.2"
+  }
+}
