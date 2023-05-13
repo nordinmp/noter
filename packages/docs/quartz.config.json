@@ -1,0 +1,7 @@
+{
+    "version": "4.0.0",
+    "baseUrl": "https://quartz.jzhao.xyz/",
+    "name": "Jacky",
+    "ignorePatterns": [],
+    "enabledPlugins": ["frontmatter"]
+}

@@ -7,7 +7,17 @@
     "target": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "composite": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/package.json"
+  ]
 }

@@ -1,11 +1,15 @@
-import { getConfigFilePath } from '../fs'
 import fs from 'fs'
 import { confirm, input } from '@inquirer/prompts'
-import { QuartzConfig } from '../config'
+import { QuartzConfig, getConfigFilePath } from '../config'
 import chalk from 'chalk'
+import { ArgumentsCamelCase } from 'yargs'
+import { InferredOptionTypes } from 'yargs'
+import { commonFlags } from './flags'
+import { version } from '../package.json'
 
-export async function setupQuartz(directory: string) {
-  const configFilePath = getConfigFilePath(directory)
+export const SetupArgv = { ...commonFlags }
+export async function setupQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<typeof SetupArgv>>) {
+  const configFilePath = getConfigFilePath(argv.directory)
   if (fs.existsSync(configFilePath)) {
     const answer = await confirm({ message: "A Quartz config file `quartz.config.json` already exists in this directory. Overwrite it?" })
     if (answer === false) {
@@ -24,14 +28,16 @@ export async function setupQuartz(directory: string) {
       if (!url.endsWith("/")) {
         return `Include a trailing slash (${url}/)`
       }
-      return true 
+      return true
     }
   })
 
   const defaultConfig: QuartzConfig = {
+    version,
     baseUrl,
     name,
-    ignorePatterns: []
+    ignorePatterns: [],
+    enabledPlugins: ["frontmatter"]
   }
 
   await fs.promises.writeFile(configFilePath, JSON.stringify(defaultConfig, null, 4))
