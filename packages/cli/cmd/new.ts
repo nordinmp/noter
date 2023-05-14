@@ -24,7 +24,7 @@ export async function setupQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
     validate: isValidBaseUrl
   })
 
-  await templateQuartzFolder(quartzPath, {
+  await templateQuartzFolder(argv.directory, {
     quartzVersion: version,
     baseUrl,
     name

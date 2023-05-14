@@ -92,11 +92,19 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   return cfg
 }
 
-export async function templateQuartzFolder(quartzDirectory: string, cfg: UserProvidedConfig) {
+export async function templateQuartzFolder(directory: string, cfg: UserProvidedConfig) {
   const parentFolder = path.join(__dirname, "template")
-  // copy over files 
+  const quartzDirectory = getQuartzPath(directory)
   await fs.promises.cp(parentFolder, quartzDirectory, { recursive: true })
 
-  // insert template 
+  // template the quartz.config.js
+  const configFilePath = getConfigFilePath(directory)
+  const buf = await fs.promises.readFile(configFilePath)
+  let s = buf.toString()
+
+  for (const [k, v] of Object.entries(cfg)) {
+    s = s.replace(`{{${k}}}`, v)
+  }
+  await fs.promises.writeFile(configFilePath, s)
 }
 
