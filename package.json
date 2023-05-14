@@ -6,14 +6,20 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "npm run build:plugins && npm run build:cli",
     "build:cli": "npm run build --workspace ./packages/cli",
     "link:cli": "npm run link --workspace ./packages/cli",
+    "build:plugins": "npm run build --workspace ./packages/plugins",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/node": "^20.1.2",
+    "@types/require-from-string": "^1.2.1",
     "@types/yargs": "^17.0.24",
     "esbuild": "0.17.18",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "require-from-string": "^2.0.2"
   }
 }

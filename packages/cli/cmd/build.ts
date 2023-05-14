@@ -3,7 +3,7 @@ import { ArgumentsCamelCase, InferredOptionTypes } from "yargs"
 import { commonFlags } from "./flags"
 import { readConfigFile } from "../config"
 import { index } from "../indexer"
-import { markdownProcessor, htmlProcessor } from "../processors"
+import { markdownProcessor } from "../processors"
 import path from "path"
 
 export const TEXT_FILE_EXTS = [".md"]
@@ -21,14 +21,15 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
   const cfg = await readConfigFile(directory)
 
   if (argv.verbose) {
-    console.log(`Building with the following plugins: ${cfg.enabledPlugins.join(", ")}`)
+    const pluginNames = cfg.plugins.map(plugin => plugin.constructor.name)
+    console.log(`Building with the following plugins: ${pluginNames.join(", ")}`)
   }
 
-  const mdTransform = await markdownProcessor(cfg.enabledPlugins)
+  const mdTransform = await markdownProcessor(cfg.plugins)
 
   for await (const result of globbyStream("**", {
     cwd: directory,
-    ignore: cfg.ignorePatterns,
+    ignore: cfg.configuration.ignorePatterns,
     onlyFiles: false,
     markDirectories: true,
   })) {

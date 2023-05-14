@@ -1,22 +1,14 @@
-import chalk from 'chalk'
 import remarkParse from 'remark-parse'
 import { unified, Processor } from 'unified'
 import remarkRehype from 'remark-rehype/lib'
 import rehypeStringify from 'rehype-stringify/lib'
 import rehypeDocument, { Options as RehypeDocumentOptions } from 'rehype-document'
-import { PLUGINS, QUARTZ_PLUGIN_NAMES, ValidPluginName } from './plugins'
+import { QuartzPlugin } from '@jackyzha0/quartz-plugins'
 
-export async function markdownProcessor(plugins: ValidPluginName[]) {
+export async function markdownProcessor(plugins: QuartzPlugin[]) {
   let processor: Processor = unified().use(remarkParse)
-
   for (const plugin of plugins) {
-    if (QUARTZ_PLUGIN_NAMES.includes(plugin)) {
-      processor = processor.use(PLUGINS[plugin])
-    } else {
-      console.log(`${chalk.red("Couldn't resolve plugin")} ${plugin}`)
-      console.log("hint: check to see if you made a typo or if you need to update Quartz")
-      process.exit(1)
-    }
+    processor = processor.use(plugin.instantiatePlugin())
   }
 
   return processor

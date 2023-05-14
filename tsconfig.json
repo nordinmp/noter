@@ -14,10 +14,16 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "composite": true
+    "composite": true,
+    "rootDir": ".",
+    "declaration": true,
+    "emitDeclarationOnly": true
   },
   "include": [
     "**/*.ts",
     "**/package.json"
+  ],
+  "exclude": [
+    "**/*.d.ts"
   ]
 }

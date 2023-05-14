@@ -11,26 +11,27 @@
   },
   "keywords": [
     "digital-garden",
-    "networked-thought",
     "markdown",
-    "blog"
+    "blog",
+    "quartz"
   ],
   "bin": {
     "quartz": "./build/cli.js"
   },
   "files": [
-    "build"
+    "build",
+    "template"
   ],
   "scripts": {
-    "build": "esbuild index.ts --banner:js=\"#!/usr/bin/env node\" --platform=node --bundle --outfile=./build/cli.js",
+    "build": "esbuild index.ts --banner:js=\"#!/usr/bin/env node\" --platform=node --bundle --outfile=./build/cli.js && npm run copyTemplate",
+    "copyTemplate": "cp -r ./template ./build/",
     "link": "npm run build && npm link"
   },
   "dependencies": {
     "@inquirer/prompts": "^1.0.3",
     "chalk": "^5.2.0",
-    "env-paths": "^3.0.0",
     "globby": "^13.1.4",
-    "gray-matter": "^4.0.3",
+    "myzod": "^1.10.0",
     "rehype-document": "^6.1.0",
     "rehype-stringify": "^9.0.3",
     "remark": "^14.0.2",

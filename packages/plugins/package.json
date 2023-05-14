@@ -1,0 +1,32 @@
+{
+  "name": "@jackyzha0/quartz-plugins",
+  "description": "Plugins for indexing content and modifying source content",
+  "version": "1.0.0",
+  "author": "jackyzha0 <j.zhao2k19@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://quartz.jzhao.xyz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackyzha0/quartz.git"
+  },
+  "keywords": [
+    "digital-garden",
+    "markdown",
+    "blog",
+    "plugins",
+    "quartz"
+  ],
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && esbuild index.ts --platform=node --bundle --outfile=./build/index.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "unified": "^10.1.2",
+    "vfile": "^5.3.7"
+  }
+}
