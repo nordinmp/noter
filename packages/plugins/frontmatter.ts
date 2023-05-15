@@ -1,6 +1,6 @@
 import { Plugin } from "unified";
 import matter from "gray-matter"
-import { OutputType, QuartzPlugin } from "./index";
+import { OutputType, QuartzPlugin } from "./types";
 import { VFile } from "vfile";
 
 export interface Options {

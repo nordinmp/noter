@@ -5,6 +5,7 @@ import { readConfigFile } from "../config"
 import { index } from "../indexer"
 import { markdownProcessor } from "../processors"
 import path from "path"
+import chalk from "chalk"
 
 export const TEXT_FILE_EXTS = [".md"]
 
@@ -21,8 +22,8 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
   const cfg = await readConfigFile(directory)
 
   if (argv.verbose) {
-    const pluginNames = cfg.plugins.map(plugin => plugin.constructor.name)
-    console.log(`Building with the following plugins: ${pluginNames.join(", ")}`)
+    const pluginNames = cfg.plugins.map(plugin => plugin.constructor.name.toLocaleLowerCase())
+    console.log(`${chalk.blue(`Loaded ${pluginNames.length} plugins`)}: ${pluginNames.join(", ")}`)
   }
 
   const mdTransform = await markdownProcessor(cfg.plugins)

@@ -67,20 +67,20 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   const fp = path.resolve(path.join(directory, QUARTZ, QUARTZ_CONFIG_NAME))
   const out = await esbuild.build({
     entryPoints: [fp],
+    write: false,
     bundle: true,
-    format: "cjs",
-    sourcemap: "inline",
+    platform: "node",
   }).catch(err => {
-    console.log(`${chalk.red("Couldn't read Quartz configuration:")} ${fp}`)
+    console.error(`${chalk.red("Couldn't read Quartz configuration:")} ${fp}`)
     console.log(`Reason: ${chalk.grey(err)}`)
     console.log("hint: you can initialize a new Quartz with `quartz new`")
     process.exit(1)
   })
 
   const mod = out.outputFiles![0].text
-  const cfg: QuartzConfig = requireFromString(mod)
+  const cfg: QuartzConfig = requireFromString(mod, fp).default
   if (!isValidConfig(cfg)) {
-    console.log(chalk.red("Invalid Quartz configuration"))
+    console.error(chalk.red("Invalid Quartz configuration"))
     process.exit(1)
   }
 

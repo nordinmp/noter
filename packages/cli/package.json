@@ -23,7 +23,7 @@
     "template"
   ],
   "scripts": {
-    "build": "esbuild index.ts --banner:js=\"#!/usr/bin/env node\" --platform=node --bundle --outfile=./build/cli.js && npm run copyTemplate",
+    "build": "esbuild index.ts --bundle --banner:js=\"#!/usr/bin/env node\" --external:esbuild --platform=node --outfile=./build/cli.js && npm run copyTemplate",
     "copyTemplate": "cp -r ./template ./build/",
     "link": "npm run build && npm link"
   },
