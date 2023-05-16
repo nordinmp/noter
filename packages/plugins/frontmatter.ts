@@ -1,5 +1,6 @@
 import { Plugin } from "unified"
 import matter from "gray-matter"
+import remarkFrontmatter from 'remark-frontmatter'
 import { OutputType, QuartzPlugin } from "./types"
 import { VFile } from "vfile"
 
@@ -22,22 +23,23 @@ export class FrontMatter extends QuartzPlugin {
     this.opts = opts
   }
 
-  instantiatePlugin(): Plugin {
-    return () => {
-      return (_tree, file) => {
-        const { content, data } = matter(file.value, { ...defaultOptions, ...this.opts })
+  instantiatePlugin(): Plugin<any[], any>[] {
+    return [
+      remarkFrontmatter,
+      () => {
+        return (_, file) => {
+          const { data } = matter(file.value, { ...defaultOptions, ...this.opts })
 
-        // update to exclude frontmatter from file content 
-        file.value = content
-
-        // fill in frontmatter
-        file.data.frontmatter = {
-          title: file.stem ?? "Untitled",
-          tags: [],
-          ...data
+          // fill in frontmatter
+          file.data.frontmatter = {
+            title: file.stem ?? "Untitled",
+            tags: [],
+            ...data
+          }
         }
       }
-    }
+
+    ]
   }
 
   getData(_documents: VFile[]): undefined {

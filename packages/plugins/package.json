@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "unified": "^10.1.2",
     "vfile": "^5.3.7"
