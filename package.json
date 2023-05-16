@@ -6,10 +6,11 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build:plugins && npm run build:cli",
+    "build": "npm run build:lib && npm run build:plugins && npm run build:cli",
     "build:cli": "npm run build --workspace ./packages/cli",
     "link:cli": "npm run link --workspace ./packages/cli",
     "build:plugins": "npm run build --workspace ./packages/plugins",
+    "build:lib": "npm run build --workspace ./packages/lib",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

@@ -1,11 +1,5 @@
-export default function({ content, data }) {
+export default function({ data, children }) {
   return <article>
-    {content}
+    {children}
   </article>
-}
-
-export async function getStaticProps({ content, data }) {
-  return {
-    props: {}
-  }
 }

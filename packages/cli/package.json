@@ -30,16 +30,23 @@
   "dependencies": {
     "@inquirer/prompts": "^1.0.3",
     "chalk": "^5.2.0",
+    "cli-spinners": "^2.9.0",
     "globby": "^13.1.4",
     "myzod": "^1.10.0",
-    "rehype-document": "^6.1.0",
-    "rehype-stringify": "^9.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rehype-react": "^7.2.0",
     "remark": "^14.0.2",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
+    "rimraf": "^5.0.0",
     "to-vfile": "^7.2.4",
     "unified": "^10.1.2",
     "vfile": "^5.3.7",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.2.4",
+    "hast": "^1.0.0"
   }
 }

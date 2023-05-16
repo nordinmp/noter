@@ -1,23 +1,30 @@
 import remarkParse from 'remark-parse'
-import { unified, Processor } from 'unified'
-import remarkRehype from 'remark-rehype/lib'
-import rehypeStringify from 'rehype-stringify/lib'
-import rehypeDocument, { Options as RehypeDocumentOptions } from 'rehype-document'
+import { createElement, Fragment } from 'react'
+import { unified } from 'unified'
+import remarkRehype from 'remark-rehype'
+import rehypeReact from 'rehype-react'
 import { QuartzPlugin } from '@jackyzha0/quartz-plugins'
+import { Processor } from 'unified'
+import { Root as HTMLRoot } from 'hast'
+import { Root as MDRoot } from 'remark-parse/lib'
 
-export async function markdownProcessor(plugins: QuartzPlugin[]) {
-  let processor: Processor = unified().use(remarkParse)
+export type QuartzProcessor = Processor<MDRoot, MDRoot, HTMLRoot, React.ReactElement<unknown>>
+export async function markdownProcessor(plugins: QuartzPlugin[]): Promise<QuartzProcessor> {
+  // base Markdown -> MD AST
+  let processor = unified()
+    .use(remarkParse)
+
+  // MD AST -> MD AST transforms
   for (const plugin of plugins) {
     processor = processor.use(plugin.instantiatePlugin())
   }
 
+  // MD AST -> HTML AST -> React Nodes
   return processor
+    .use(remarkRehype, {allowDangerousHtml: true})
+    .use(rehypeReact, {
+      createElement,
+      Fragment,
+    })
 }
 
-export async function htmlProcessor(opts: RehypeDocumentOptions) {
-  let processor: Processor = unified()
-    .use(remarkRehype)
-    .use(rehypeDocument, opts)
-    .use(rehypeStringify)
-  return processor
-}

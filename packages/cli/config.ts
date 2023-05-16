@@ -6,40 +6,43 @@ import esbuild from 'esbuild'
 import t, { Infer } from 'myzod'
 import fs from 'fs'
 import { QuartzPlugin } from '@jackyzha0/quartz-plugins'
+import { ComponentType } from 'react'
 
 export interface UserProvidedConfig {
   quartzVersion: string,
-  baseUrl: string,
   name: string,
 }
 
 const configSchema = t.object({
   quartzVersion: t.string(),
-  baseUrl: t.string(),
   name: t.string(),
   ignorePatterns: t.array(t.string()),
 })
 
 export interface QuartzConfig {
   plugins: QuartzPlugin[],
-  configuration: Infer<typeof configSchema>
-}
-
-export const isValidBaseUrl = (url: string): boolean | string => {
-  if (!(url.startsWith("http://") || url.startsWith("https://"))) {
-    return "URL must start with either http:// or https://"
+  configuration: Infer<typeof configSchema>,
+  components: {
+    pageSingle: ComponentType,
+    pageList: ComponentType,
+    pageHome: ComponentType,
+    document: ComponentType
   }
-  if (!url.endsWith("/")) {
-    return `Include a trailing slash (${url}/)`
-  }
-  return true
 }
 
 function isValidConfig(cfg: any): cfg is QuartzConfig {
-  const requiredKeys = ["plugins", "configuration"]
+  const requiredKeys = ["plugins", "configuration", "components"]
   for (const key of requiredKeys) {
     if (!cfg.hasOwnProperty(key)) {
       console.log(`${chalk.yellow("Warning:")} Configuration is missing required key \`${key}\``)
+      return false
+    }
+  }
+
+  const requiredComponents = ["pageSingle", "pageList", "pageHome", "document"]
+  for (const key of requiredComponents) {
+    if (!cfg.components.hasOwnProperty(key)) {
+      console.log(`${chalk.yellow("Warning:")} Configuration is missing required component \`${key}\``)
       return false
     }
   }
@@ -55,6 +58,7 @@ function isValidConfig(cfg: any): cfg is QuartzConfig {
 
 export const QUARTZ = "quartz"
 export const QUARTZ_CONFIG_NAME = "quartz.config.js"
+
 export function getQuartzPath(directory: string) {
   return path.resolve(path.join(directory, QUARTZ))
 }
@@ -65,15 +69,23 @@ export function getConfigFilePath(directory: string) {
 
 export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   const fp = path.resolve(path.join(directory, QUARTZ, QUARTZ_CONFIG_NAME))
+
+  if (!fs.existsSync(fp)) {
+    console.error(`${chalk.red("Couldn't find Quartz configuration:")} ${fp}`)
+    console.log("hint: you can initialize a new Quartz with `quartz new`")
+    process.exit(1)
+  }
+
   const out = await esbuild.build({
     entryPoints: [fp],
     write: false,
     bundle: true,
     platform: "node",
+    jsx: "automatic"
   }).catch(err => {
-    console.error(`${chalk.red("Couldn't read Quartz configuration:")} ${fp}`)
+    console.error(`${chalk.red("Couldn't parse Quartz configuration:")} ${fp}`)
     console.log(`Reason: ${chalk.grey(err)}`)
-    console.log("hint: you can initialize a new Quartz with `quartz new`")
+    console.log("hint: make sure all the required dependencies are installed (run `npm install` in the `quartz` folder)")
     process.exit(1)
   })
 
@@ -97,7 +109,7 @@ export async function templateQuartzFolder(directory: string, cfg: UserProvidedC
   const quartzDirectory = getQuartzPath(directory)
   await fs.promises.cp(parentFolder, quartzDirectory, { recursive: true })
 
-  // template the quartz.config.js
+  // template quartz.config.js
   const configFilePath = getConfigFilePath(directory)
   const buf = await fs.promises.readFile(configFilePath)
   let s = buf.toString()
@@ -107,4 +119,3 @@ export async function templateQuartzFolder(directory: string, cfg: UserProvidedC
   }
   await fs.promises.writeFile(configFilePath, s)
 }
-

@@ -1,7 +1,7 @@
-import { Plugin } from "unified";
+import { Plugin } from "unified"
 import matter from "gray-matter"
-import { OutputType, QuartzPlugin } from "./types";
-import { VFile } from "vfile";
+import { OutputType, QuartzPlugin } from "./types"
+import { VFile } from "vfile"
 
 export interface Options {
   language: 'yaml' | 'toml',
@@ -10,7 +10,7 @@ export interface Options {
 
 const defaultOptions: Options = {
   language: 'yaml',
-  delims: '---'
+  delims: ['---', '---']
 }
 
 export class FrontMatter extends QuartzPlugin {
@@ -25,11 +25,17 @@ export class FrontMatter extends QuartzPlugin {
   instantiatePlugin(): Plugin {
     return () => {
       return (_tree, file) => {
-        const { content, data } = matter(file.value, this.opts ?? defaultOptions)
+        const { content, data } = matter(file.value, { ...defaultOptions, ...this.opts })
 
         // update to exclude frontmatter from file content 
         file.value = content
-        file.data.frontmatter = data
+
+        // fill in frontmatter
+        file.data.frontmatter = {
+          title: file.stem ?? "Untitled",
+          tags: [],
+          ...data
+        }
       }
     }
   }
@@ -41,7 +47,10 @@ export class FrontMatter extends QuartzPlugin {
 
 declare module 'vfile' {
   interface DataMap {
-    frontmatter: { [key: string]: any }
+    frontmatter: { [key: string]: any } & {
+      title: string
+      tags: string[]
+    }
   }
 }
 

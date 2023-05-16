@@ -9,7 +9,7 @@ export default {
     new FrontMatter(),
     new GitHubFlavoredMarkdown(),
     new CreatedModifiedDate({
-      priority: ['frontmatter', 'filesystem']
+      priority: ['frontmatter']
     })],
   configuration: {
     quartzVersion: "4.0.0",
