@@ -1,4 +1,4 @@
-import { Plugin } from "unified"
+import { PluggableList } from "unified"
 import matter from "gray-matter"
 import remarkFrontmatter from 'remark-frontmatter'
 import { OutputType, QuartzPlugin } from "./types"
@@ -23,7 +23,7 @@ export class FrontMatter extends QuartzPlugin {
     this.opts = opts
   }
 
-  instantiatePlugin(): Plugin<any[], any>[] {
+  markdownPlugins(): PluggableList {
     return [
       remarkFrontmatter,
       () => {
@@ -38,8 +38,11 @@ export class FrontMatter extends QuartzPlugin {
           }
         }
       }
-
     ]
+  }
+
+  htmlPlugins(): PluggableList {
+    return []
   }
 
   getData(_documents: VFile[]): undefined {

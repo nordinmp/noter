@@ -3,7 +3,7 @@ import { ArgumentsCamelCase, InferredOptionTypes } from "yargs"
 import { commonFlags } from "./flags"
 import { readConfigFile } from "../config"
 import { build } from "../renderer"
-import { markdownProcessor } from "../processors"
+import { getStaticResourcesFromPlugins, markdownProcessor } from "../processors"
 import path from "path"
 import chalk from "chalk"
 import { rimraf } from "rimraf"
@@ -39,6 +39,7 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
   }
 
   const processor = await markdownProcessor(cfg.plugins)
+  const staticResources = getStaticResourcesFromPlugins(cfg.plugins)
   for await (const globbedPath of globbyStream("**", {
     cwd: directory,
     ignore: cfg.configuration.ignorePatterns,
@@ -49,7 +50,15 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
     const ext = path.extname(fp)
 
     if (TEXT_FILE_EXTS.includes(ext)) {
-      await build(processor, fp, argv.output, cfg, argv.verbose)
+      await build({
+        processor,
+        inputPath: fp,
+        outputDir: argv.output, 
+        document: cfg.components.document,
+        component: cfg.components.pageSingle,
+        staticResources,
+        verbose: argv.verbose
+      })
     }
   }
 }

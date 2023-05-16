@@ -1,17 +1,16 @@
 import fs from 'fs'
 import path from 'path'
 import { read } from 'to-vfile'
-import { Data, VFile } from 'vfile'
-import { QuartzProcessor } from './processors'
+import { VFile } from 'vfile'
+import { QuartzProcessor, StaticResources } from './processors'
 import { Attributes, ComponentType, ReactElement } from 'react'
 import { pathToSlug } from '../lib'
 import { renderToPipeableStream } from 'react-dom/server'
 import React from 'react'
 import { Writable } from 'stream'
-import { QuartzConfig } from './config'
 import { logPromise } from '../lib'
 
-export async function index(processor: QuartzProcessor, fp: string): Promise<VFile> {
+export async function processMarkdown(processor: QuartzProcessor, fp: string): Promise<VFile> {
   const file = await read(fp)
 
   // base data properties that plugins may use
@@ -21,46 +20,64 @@ export async function index(processor: QuartzProcessor, fp: string): Promise<VFi
   return processor.process(file)
 }
 
-export function createComposedDocumentElement(document: ComponentType, component: ComponentType, article: ReactElement, data: Data) {
-  const fullComponent = React.createElement(component, data as Attributes, article)
-  const fullDocument = React.createElement(document, data as Attributes, fullComponent)
-  return fullDocument
-}
-
 export async function renderToStream(dest: Writable, element: ReactElement) {
   return new Promise((resolve, reject) => {
     const { pipe } = renderToPipeableStream(element, {
       onAllReady: () => {
         resolve(pipe(dest))
       },
-      onError: reject
+      onError: reject,
     })
   })
 }
 
+export interface BuildOptions {
+  processor: QuartzProcessor,
+  inputPath: string,
+  outputDir: string
+  document: ComponentType,
+  component: ComponentType,
+  staticResources: StaticResources,
+  verbose: boolean,
+}
 
-
-export async function build(processor: QuartzProcessor, inputPath: string, outputDir: string, cfg: QuartzConfig, verbose: boolean) {
+export async function build({
+  processor,
+  inputPath,
+  outputDir,
+  document,
+  component,
+  staticResources,
+  verbose
+}: BuildOptions) {
   if (verbose) {
     console.log(inputPath)
   }
 
-  const indexPromise = index(processor, inputPath)
+  const indexPromise = processMarkdown(processor, inputPath)
   const { data, result: articleElement } = await logPromise(verbose, indexPromise, "indexing")
 
   const fullPath = path.join(outputDir, data.slug! + ".html")
-  const dir = path.parse(fullPath).dir 
+  const dir = path.parse(fullPath).dir
 
   // attempt to make missing directory
   await fs.promises.mkdir(dir, { recursive: true })
   const stream = fs.createWriteStream(fullPath)
-  const composedDocument = createComposedDocumentElement(
-    cfg.components.document,
-    cfg.components.pageSingle,
-    articleElement as ReactElement,
-    { data }
+
+  // compose react elements
+  const fullComponent = React.createElement(
+    component,
+    { data } as Attributes,
+    articleElement as ReactElement
   )
-  await logPromise(verbose, renderToStream(stream, composedDocument), `rendering component to HTML: ${fullPath}`)
+  const fullDocument = React.createElement(
+    document,
+    {
+      data,
+      staticResources
+    } as Attributes,
+    fullComponent)
+  await logPromise(verbose, renderToStream(stream, fullDocument), `rendering component to HTML: ${fullPath}`)
 }
 
 declare module 'vfile' {

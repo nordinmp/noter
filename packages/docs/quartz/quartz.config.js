@@ -1,4 +1,4 @@
-import { FrontMatter, GitHubFlavoredMarkdown, CreatedModifiedDate } from '@jackyzha0/quartz-plugins'
+import { FrontMatter, GitHubFlavoredMarkdown, CreatedModifiedDate, Katex } from '@jackyzha0/quartz-plugins'
 import pageSingle from './pageSingle'
 import pageList from './pageList'
 import pageHome from './pageHome'
@@ -8,12 +8,13 @@ export default {
   plugins: [
     new FrontMatter(),
     new GitHubFlavoredMarkdown(),
+    new Katex(),
     new CreatedModifiedDate({
-      priority: ['frontmatter']
+      priority: ['frontmatter', 'filesystem']
     })],
   configuration: {
     quartzVersion: "4.0.0",
-    name: "Jacky",
+    name: "",
     ignorePatterns: [],
   },
   components: {

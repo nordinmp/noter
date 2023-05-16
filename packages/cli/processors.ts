@@ -7,6 +7,7 @@ import { QuartzPlugin } from '@jackyzha0/quartz-plugins'
 import { Processor } from 'unified'
 import { Root as HTMLRoot } from 'hast'
 import { Root as MDRoot } from 'remark-parse/lib'
+import { JSResource, StaticResources } from '@jackyzha0/quartz-plugins/types'
 
 export type QuartzProcessor = Processor<MDRoot, MDRoot, HTMLRoot, React.ReactElement<unknown>>
 export async function markdownProcessor(plugins: QuartzPlugin[]): Promise<QuartzProcessor> {
@@ -16,15 +17,41 @@ export async function markdownProcessor(plugins: QuartzPlugin[]): Promise<Quartz
 
   // MD AST -> MD AST transforms
   for (const plugin of plugins) {
-    processor = processor.use(plugin.instantiatePlugin())
+    processor = processor.use(plugin.markdownPlugins())
   }
 
-  // MD AST -> HTML AST -> React Nodes
+  // MD AST -> HTML AST
+  processor = processor.use(remarkRehype, { allowDangerousHtml: true })
+
+
+  // HTML AST -> HTML AST transforms
+  for (const plugin of plugins) {
+    processor = processor.use(plugin.htmlPlugins())
+  }
+
+  // HTML AST -> React Nodes
   return processor
-    .use(remarkRehype, {allowDangerousHtml: true})
     .use(rehypeReact, {
       createElement,
       Fragment,
     })
 }
 
+export function getStaticResourcesFromPlugins(plugins: QuartzPlugin[]) {
+  const staticResources: StaticResources = {
+    css: [],
+    js: [],
+  }
+
+  for (const plugin of plugins) {
+    const res = plugin.externalResources
+    if (res?.js) {
+      staticResources.js = staticResources.js.concat(res.js)
+    }
+    if (res?.css) {
+      staticResources.css = staticResources.css.concat(res.css)
+    }
+  }
+
+  return staticResources
+}

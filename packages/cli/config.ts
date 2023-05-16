@@ -81,7 +81,7 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
     write: false,
     bundle: true,
     platform: "node",
-    jsx: "automatic"
+    jsx: "automatic",
   }).catch(err => {
     console.error(`${chalk.red("Couldn't parse Quartz configuration:")} ${fp}`)
     console.log(`Reason: ${chalk.grey(err)}`)
