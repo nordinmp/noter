@@ -21,11 +21,13 @@ export async function setupQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
     }
   }
 
-  const name = await input({ message: "Your name (for author attribution and footer):" })
+  const name = await input({ message: `Your name ${chalk.grey("(for author attribution and footer)")}:` })
+  const hydrateInteractiveComponents = await confirm({ message: `Enable interactivity in custom components? ${chalk.grey("(this enables React hydration but may increase build times and bundle size)")}:` })
 
   await templateQuartzFolder(argv.directory, {
     quartzVersion: version,
-    name
+    name,
+    hydrateInteractiveComponents
   })
 
   console.log(`${chalk.green("Successfully initialized Quartz")} (wrote configuration and template files to ${quartzPath})`)

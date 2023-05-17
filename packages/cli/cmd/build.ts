@@ -2,7 +2,7 @@ import { globbyStream } from "globby"
 import { ArgumentsCamelCase, InferredOptionTypes } from "yargs"
 import { commonFlags } from "./flags"
 import { readConfigFile } from "../config"
-import { build } from "../renderer"
+import { buildSingle } from "../renderer"
 import { getStaticResourcesFromPlugins, markdownProcessor } from "../processors"
 import path from "path"
 import chalk from "chalk"
@@ -50,13 +50,12 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
     const ext = path.extname(fp)
 
     if (TEXT_FILE_EXTS.includes(ext)) {
-      await build({
+      await buildSingle({
         processor,
         inputPath: fp,
         outputDir: argv.output, 
-        document: cfg.components.document,
-        component: cfg.components.pageSingle,
         staticResources,
+        cfg,
         verbose: argv.verbose
       })
     }

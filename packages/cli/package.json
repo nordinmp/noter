@@ -25,7 +25,7 @@
   "scripts": {
     "build": "esbuild index.ts --bundle --banner:js=\"#!/usr/bin/env node\" --external:esbuild --platform=node --outfile=./build/cli.js && npm run copyTemplate",
     "copyTemplate": "cp -r ./template ./build/",
-    "link": "npm run build && npm link"
+    "link": "npm run build && npm link --no-audit"
   },
   "dependencies": {
     "@inquirer/prompts": "^1.0.3",

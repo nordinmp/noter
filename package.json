@@ -1,6 +1,6 @@
 {
   "name": "quartz",
-  "description": "Extensible framework for transpiling various Markdown flavours to HTML",
+  "description": "Extensible framework for transpiling Markdown to HTML with support for React components",
   "private": true,
   "workspaces": [
     "packages/*"

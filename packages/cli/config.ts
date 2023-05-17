@@ -10,12 +10,14 @@ import { ComponentType } from 'react'
 
 export interface UserProvidedConfig {
   quartzVersion: string,
+  hydrateInteractiveComponents: boolean,
   name: string,
 }
 
 const configSchema = t.object({
   quartzVersion: t.string(),
   name: t.string(),
+  hydrateInteractiveComponents: t.boolean(),
   ignorePatterns: t.array(t.string()),
 })
 
@@ -115,7 +117,11 @@ export async function templateQuartzFolder(directory: string, cfg: UserProvidedC
   let s = buf.toString()
 
   for (const [k, v] of Object.entries(cfg)) {
-    s = s.replace(`{{${k}}}`, v)
+    if (typeof v === 'string') {
+      s = s.replace(`__${k}`, `"${v}"`)
+    } else if (typeof v === 'number' || typeof v === 'boolean') {
+      s = s.replace(`__${k}`, `${v}`)
+    }
   }
   await fs.promises.writeFile(configFilePath, s)
 }

@@ -13,8 +13,9 @@ export default {
       priority: ['frontmatter', 'filesystem']
     })],
   configuration: {
-    quartzVersion: "{{quartzVersion}}",
-    name: "{{name}}",
+    quartzVersion: __quartzVersion,
+    name: __name,
+    hydrateInteractiveComponents: __hydrateInteractiveComponents,
     ignorePatterns: [],
   },
   components: {

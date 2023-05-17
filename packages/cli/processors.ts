@@ -7,7 +7,7 @@ import { QuartzPlugin } from '@jackyzha0/quartz-plugins'
 import { Processor } from 'unified'
 import { Root as HTMLRoot } from 'hast'
 import { Root as MDRoot } from 'remark-parse/lib'
-import { JSResource, StaticResources } from '@jackyzha0/quartz-plugins/types'
+import { StaticResources } from '@jackyzha0/quartz-plugins/types'
 
 export type QuartzProcessor = Processor<MDRoot, MDRoot, HTMLRoot, React.ReactElement<unknown>>
 export async function markdownProcessor(plugins: QuartzPlugin[]): Promise<QuartzProcessor> {

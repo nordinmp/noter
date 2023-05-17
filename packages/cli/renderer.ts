@@ -2,13 +2,17 @@ import fs from 'fs'
 import path from 'path'
 import { read } from 'to-vfile'
 import { VFile } from 'vfile'
-import { QuartzProcessor, StaticResources } from './processors'
+import { QuartzProcessor } from './processors'
 import { Attributes, ComponentType, ReactElement } from 'react'
 import { pathToSlug } from '../lib'
 import { renderToPipeableStream } from 'react-dom/server'
 import React from 'react'
 import { Writable } from 'stream'
 import { logPromise } from '../lib'
+import { QuartzConfig } from './config'
+import { StaticResources } from '@jackyzha0/quartz-plugins/types'
+import esbuild, { transform } from 'esbuild'
+import util from 'util'
 
 export async function processMarkdown(processor: QuartzProcessor, fp: string): Promise<VFile> {
   const file = await read(fp)
@@ -35,19 +39,17 @@ export interface BuildOptions {
   processor: QuartzProcessor,
   inputPath: string,
   outputDir: string
-  document: ComponentType,
-  component: ComponentType,
+  cfg: QuartzConfig,
   staticResources: StaticResources,
   verbose: boolean,
 }
 
-export async function build({
+export async function buildSingle({
   processor,
   inputPath,
   outputDir,
-  document,
-  component,
   staticResources,
+  cfg,
   verbose
 }: BuildOptions) {
   if (verbose) {
@@ -66,17 +68,30 @@ export async function build({
 
   // compose react elements
   const fullComponent = React.createElement(
-    component,
+    cfg.components.pageSingle,
     { data } as Attributes,
     articleElement as ReactElement
   )
+
   const fullDocument = React.createElement(
-    document,
+    cfg.components.document,
     {
       data,
       staticResources
     } as Attributes,
     fullComponent)
+
+  if (cfg.configuration.hydrateInteractiveComponents) {
+    console.log(util.inspect(fullDocument, false, null, true))
+    const transpiledResult = await esbuild.transform(`
+import { hydrateRoot } from 'react-dom/client';
+
+const domNode = document.getElementById('quartz-root');
+const root = hydrateRoot(domNode, ${fullDocument});
+`, {})
+    console.log(transpiledResult.code)
+  }
+
   await logPromise(verbose, renderToStream(stream, fullDocument), `rendering component to HTML: ${fullPath}`)
 }
 

@@ -15,6 +15,7 @@ export default {
   configuration: {
     quartzVersion: "4.0.0",
     name: "",
+    hydrateInteractiveComponents: true,
     ignorePatterns: [],
   },
   components: {
