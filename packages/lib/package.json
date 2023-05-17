@@ -21,9 +21,6 @@
   "files": [
     "build"
   ],
-  "scripts": {
-    "build": "tsc && esbuild index.ts --platform=node --bundle --outfile=./build/index.js"
-  },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "remark-gfm": "^3.0.1",

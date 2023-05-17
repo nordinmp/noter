@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := serve
+.DEFAULT_GOAL := help
 
 MAKEFLAGS += -j4
 NPM := npm
@@ -11,12 +11,10 @@ help: ## Show all Makefile targets
 deps: ## Install dependencies
 	$(NPM) i
 
+build: build-lib build-plugins build-cli ## Builds and links entirety of Quartz
+
 build-prod: ESBUILD_FLAGS += --minify
-build-prod: types build
-
-build: build-lib build-plugins build-cli ## Builds entirety of Quartz
-
-types: types-lib types-plugins ## Typecheck and emit types for all components of Quartz
+build-prod: types build ## Build Quartz for production and emit types
 
 ## -- LIB --
 build-lib: $(LIB_SOURCES) ## Build only shared library
@@ -33,8 +31,9 @@ types-plugins: $(LIB_SOURCES)
 	$(NPX) tsc -p ./packages/plugins/tsconfig.json
 
 ## -- CLI --
-build-cli: $(CLI_SOURCES) ## Build CLI
+build-cli: $(CLI_SOURCES) ## Build and link CLI 
 	cd ./packages/cli; $(NPX) esbuild index.ts --outfile=./build/cli.js --banner:js="#!/usr/bin/env node" --external:esbuild $(ESBUILD_FLAGS)
 	cp -r ./packages/cli/template ./packages/cli/build/
 	cd ./packages/cli; $(NPM) link --no-audit
 
+types: types-lib types-plugins ## Typecheck and emit types for all components of Quartz
