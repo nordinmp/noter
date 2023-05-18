@@ -1,8 +1,7 @@
-import React from 'react';
-import { hydrateRoot } from 'react-dom/client';
-import document from './document';
-import component from '__COMPONENT_PATH';
-const data = __BUILD_TIME_DATA;
-
+import { h, hydrate } from 'preact';
+const hydrationDataNode = document.getElementById('__QUARTZ_HYDRATION_DATA__');
+const renderedHTMLString = document.getElementById('__QUARTZ_HYDRATION_DATA__').innerHTML;
+const data = JSON.parse(hydrationDataNode.innerText);
+const element = h(component, { data, renderedHTMLString })
 const domNode = document.getElementById('quartz-body');
-hydrateRoot(domNode, React.createElement(component, { data }, component));
+hydrate(element, domNode);

@@ -1,3 +1,4 @@
+/** @jsx h */
 import { h, Fragment } from 'preact'
 
 const toScriptTag = (resource) => <script key={resource.src} src={resource.src} />

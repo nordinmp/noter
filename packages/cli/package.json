@@ -30,6 +30,7 @@
     "myzod": "^1.10.0",
     "preact": "^10.14.1",
     "preact-render-to-string": "^6.0.3",
+    "pretty-time": "^1.1.0",
     "rehype-react": "^7.2.0",
     "remark": "^14.0.2",
     "remark-parse": "^10.0.1",
@@ -42,6 +43,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "@types/pretty-time": "^1.1.2",
     "hast": "^1.0.0"
   }
 }

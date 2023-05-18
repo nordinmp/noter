@@ -15,7 +15,6 @@
     "esModuleInterop": true,
     "composite": true,
     "rootDir": ".",
-    "jsx": "react",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment"
   },

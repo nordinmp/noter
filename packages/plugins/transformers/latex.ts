@@ -1,11 +1,9 @@
 import { PluggableList } from "unified"
-import { OutputType, QuartzPlugin, StaticResources } from "./types"
-import { VFile } from "vfile"
+import { QuartzTransformerPlugin, StaticResources } from "../types"
 import remarkMath from "remark-math"
 import rehypeKatex from 'rehype-katex'
 
-export class Katex extends QuartzPlugin {
-  output: OutputType = 'in-memory'
+export class Katex extends QuartzTransformerPlugin {
 
   markdownPlugins(): PluggableList {
     return [remarkMath]
@@ -27,10 +25,6 @@ export class Katex extends QuartzPlugin {
         loadTime: "afterDOMReady"
       }
     ]
-  }
-
-  getData(_documents: VFile[]): undefined {
-    return undefined
   }
 }
 

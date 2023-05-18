@@ -3,9 +3,8 @@ import requireFromString from 'require-from-string'
 import chalk from 'chalk'
 import { version } from './package.json'
 import esbuild from 'esbuild'
-import t, { Infer } from 'myzod'
 import fs from 'fs'
-import { QuartzPlugin } from '@jackyzha0/quartz-plugins'
+import { QuartzConfig, isValidConfig } from '@jackyzha0/quartz-lib'
 
 export interface UserProvidedConfig {
   quartzVersion: string,
@@ -13,49 +12,6 @@ export interface UserProvidedConfig {
   name: string,
 }
 
-const configSchema = t.object({
-  quartzVersion: t.string(),
-  name: t.string(),
-  hydrateInteractiveComponents: t.boolean(),
-  ignorePatterns: t.array(t.string()),
-})
-
-export interface QuartzConfig {
-  plugins: QuartzPlugin[],
-  configuration: Infer<typeof configSchema>,
-  components: {
-    pageSingle: preact.ComponentType,
-    pageList: preact.ComponentType,
-    pageHome: preact.ComponentType,
-    document: preact.ComponentType
-  }
-}
-
-function isValidConfig(cfg: any): cfg is QuartzConfig {
-  const requiredKeys = ["plugins", "configuration", "components"]
-  for (const key of requiredKeys) {
-    if (!cfg.hasOwnProperty(key)) {
-      console.log(`${chalk.yellow("Warning:")} Configuration is missing required key \`${key}\``)
-      return false
-    }
-  }
-
-  const requiredComponents = ["pageSingle", "pageList", "pageHome", "document"]
-  for (const key of requiredComponents) {
-    if (!cfg.components.hasOwnProperty(key)) {
-      console.log(`${chalk.yellow("Warning:")} Configuration is missing required component \`${key}\``)
-      return false
-    }
-  }
-
-  const validationResult = configSchema.try(cfg.configuration)
-  if (validationResult instanceof t.ValidationError) {
-    console.log(`${chalk.yellow("Warning:")} Configuration doens't match schema. ${validationResult.message}`)
-    return false
-  }
-
-  return true
-}
 
 export const QUARTZ = "quartz"
 export const QUARTZ_CONFIG_NAME = "quartz.config.js"

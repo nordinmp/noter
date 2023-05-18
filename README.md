@@ -32,7 +32,6 @@ Filters
 Emitters
 - HTML AST[] + configuration + actions { buildPage(base component, props) } -> static resources
   - page/content indexing for search
-  - warn that props need to be renderable (i think preact has a specific type for this)
   - generate pages
     - build single page for each HTML AST entry
       - account for aliases here
@@ -52,12 +51,7 @@ Emitters
     - look for hydration props
     - lookup base component in components field 
 
-Components (JSX)
-- Typing with JSDOC + Typescript
-- TODO: remove document.jsx (this should be hidden from the user)
-- TODO: replace it with head.jsx
-
-Config File (JS)
+Components (JSX) + Config File (JS)
 - Typing with JSDOC + Typescript
 
 Client side

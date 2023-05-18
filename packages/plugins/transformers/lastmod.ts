@@ -1,10 +1,10 @@
-import { PluggableList, Preset } from "unified"
-import { OutputType, QuartzPlugin } from "./types"
-import { VFile } from "vfile"
+import { PluggableList } from "unified"
+import { QuartzTransformerPlugin } from "../types"
 import fs from "fs"
 import { promisify } from "util"
 import { exec as execCb } from 'child_process'
 const exec = promisify(execCb)
+import path from 'path'
 
 export interface Options {
   priority: ('frontmatter' | 'git' | 'filesystem')[],
@@ -14,8 +14,7 @@ const defaultOptions: Options = {
   priority: ['frontmatter', 'git', 'filesystem']
 }
 
-export class CreatedModifiedDate extends QuartzPlugin {
-  public output: OutputType = 'in-memory'
+export class CreatedModifiedDate extends QuartzTransformerPlugin {
   opts: Options
 
   constructor(opts: Options) {
@@ -36,10 +35,10 @@ export class CreatedModifiedDate extends QuartzPlugin {
             ...this.opts,
           }
 
-          const path = file.data.filePath as string
+          const fp = path.join(file.cwd, file.data.filePath as string)
           for (const source of priority) {
             if (source === "filesystem") {
-              const st = await fs.promises.stat(path)
+              const st = await fs.promises.stat(fp)
               created ||= new Date(st.birthtimeMs)
               modified ||= new Date(st.mtimeMs)
             } else if (source === "frontmatter" && file.data.frontmatter) {
@@ -48,7 +47,7 @@ export class CreatedModifiedDate extends QuartzPlugin {
               modified ||= file.data.frontmatter["last-modified"]
               published ||= file.data.frontmatter.publishDate
             } else if (source === "git") {
-              const { stdout } = await exec(`git log --pretty=format:%ci --follow -- "${path}"`)
+              const { stdout } = await exec(`git log --pretty=format:%ci --follow -- "${fp}"`)
               const lines = stdout.split("\n")
               if (lines.length > 0) {
                 modified ||= new Date(lines[0])
@@ -69,10 +68,6 @@ export class CreatedModifiedDate extends QuartzPlugin {
 
   htmlPlugins(): PluggableList {
     return []
-  }
-
-  getData(_documents: VFile[]): undefined {
-    return undefined
   }
 }
 

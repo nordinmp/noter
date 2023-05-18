@@ -1,8 +1,9 @@
+/** @jsx h */
 import { h, Fragment } from 'preact'
 
-export default function({ data, renderedHTMLString }) {
+/** @type {import("@jackyzha0/quartz-lib").QuartzConfig["components"]["pageSingle"]} */
+export default function({ pageData }) {
   return <article>
-    <h1>{data.frontmatter.title}</h1>
-    <div id="__QUARTZ_MAIN_CONTENT__" dangerouslySetInnerHTML={{ __html: renderedHTMLString }}></div>
+    <h1>{pageData.frontmatter?.title}</h1>
   </article>
 }

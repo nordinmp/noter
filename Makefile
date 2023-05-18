@@ -11,7 +11,7 @@ help: ## Show all Makefile targets
 deps: ## Install dependencies
 	$(NPM) i
 
-build: types build-lib build-plugins build-cli ## Builds and links entirety of Quartz
+build: types build-plugins build-lib build-cli ## Builds and links entirety of Quartz
 
 build-prod: ESBUILD_FLAGS += --minify
 build-prod: build ## Build Quartz for production and emit types
@@ -39,4 +39,4 @@ build-cli: ## Build and link CLI
 types-cli:
 	$(NPX) tsc -p ./packages/cli/tsconfig.json
 
-types: types-lib types-plugins types-cli ## Typecheck and emit types for all components of Quartz
+types: types-plugins types-lib types-cli ## Typecheck and emit types for all components of Quartz

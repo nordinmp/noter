@@ -1,7 +1,5 @@
 import { PluggableList } from 'unified'
-import { VFile } from 'vfile'
-
-export type OutputType = 'in-memory' | 'as-file'
+import { Node, VFile } from 'vfile/lib'
 
 export interface JSResource {
   src: string
@@ -13,15 +11,17 @@ export interface StaticResources {
   js: JSResource[]
 }
 
-export abstract class QuartzPlugin<ReduceType = undefined> {
-  public abstract output: OutputType
-
-  abstract markdownPlugins(): PluggableList 
-  abstract htmlPlugins(): PluggableList 
-
+export abstract class QuartzTransformerPlugin {
+  abstract markdownPlugins(): PluggableList
+  abstract htmlPlugins(): PluggableList
   externalResources?: Partial<StaticResources>
-
-  // Reduce over all the documents to produce a final state
-  abstract getData(documents: VFile[]): ReduceType
 }
 
+export type ProcessedContent = [Node, VFile]
+export abstract class QuartzFilterPlugin {
+  abstract shouldPublish(content: ProcessedContent): boolean
+}
+
+export abstract class QuartzEmitterPlugin {
+
+}
