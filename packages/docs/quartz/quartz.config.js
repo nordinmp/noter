@@ -14,7 +14,7 @@ export default {
     })],
   configuration: {
     quartzVersion: "4.0.0",
-    name: "",
+    name: "Jacky",
     hydrateInteractiveComponents: true,
     ignorePatterns: [],
   },

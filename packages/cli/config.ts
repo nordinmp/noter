@@ -6,7 +6,6 @@ import esbuild from 'esbuild'
 import t, { Infer } from 'myzod'
 import fs from 'fs'
 import { QuartzPlugin } from '@jackyzha0/quartz-plugins'
-import { ComponentType } from 'react'
 
 export interface UserProvidedConfig {
   quartzVersion: string,
@@ -25,10 +24,10 @@ export interface QuartzConfig {
   plugins: QuartzPlugin[],
   configuration: Infer<typeof configSchema>,
   components: {
-    pageSingle: ComponentType,
-    pageList: ComponentType,
-    pageHome: ComponentType,
-    document: ComponentType
+    pageSingle: preact.ComponentType,
+    pageList: preact.ComponentType,
+    pageHome: preact.ComponentType,
+    document: preact.ComponentType
   }
 }
 
@@ -83,7 +82,8 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
     write: false,
     bundle: true,
     platform: "node",
-    jsx: "automatic",
+    jsxFactory: "h",
+    jsxFragment: "Fragment",
   }).catch(err => {
     console.error(`${chalk.red("Couldn't parse Quartz configuration:")} ${fp}`)
     console.log(`Reason: ${chalk.grey(err)}`)

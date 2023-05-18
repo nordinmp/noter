@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-MAKEFLAGS += -j4
+MAKEFLAGS += -j6
 NPM := npm
 NPX := npx
 ESBUILD_FLAGS := --bundle --platform=node
@@ -11,29 +11,32 @@ help: ## Show all Makefile targets
 deps: ## Install dependencies
 	$(NPM) i
 
-build: build-lib build-plugins build-cli ## Builds and links entirety of Quartz
+build: types build-lib build-plugins build-cli ## Builds and links entirety of Quartz
 
 build-prod: ESBUILD_FLAGS += --minify
-build-prod: types build ## Build Quartz for production and emit types
+build-prod: build ## Build Quartz for production and emit types
 
 ## -- LIB --
-build-lib: $(LIB_SOURCES) ## Build only shared library
-	cd ./packages/lib; $(NPX) esbuild index.ts --outfile=./build/index.js $(ESBUILD_FLAGS)
+build-lib: ## Build only shared library
+	cd ./packages/lib; $(NPX) esbuild index.ts --packages=external --outfile=./build/index.js $(ESBUILD_FLAGS)
 
-types-lib: $(LIB_SOURCES)
+types-lib:
 	$(NPX) tsc -p ./packages/lib/tsconfig.json
 
 ## -- PLUGINS --
-build-plugins: $(PLUGIN_SOURCES) ## Build plugin library
-	cd ./packages/plugins; $(NPX) esbuild index.ts --outfile=./build/index.js $(ESBUILD_FLAGS)
+build-plugins: ## Build plugin library
+	cd ./packages/plugins; $(NPX) esbuild index.ts --packages=external --outfile=./build/index.js $(ESBUILD_FLAGS)
 
-types-plugins: $(LIB_SOURCES)
+types-plugins:
 	$(NPX) tsc -p ./packages/plugins/tsconfig.json
 
 ## -- CLI --
-build-cli: $(CLI_SOURCES) ## Build and link CLI 
-	cd ./packages/cli; $(NPX) esbuild index.ts --outfile=./build/cli.js --banner:js="#!/usr/bin/env node" --external:esbuild $(ESBUILD_FLAGS)
+build-cli: ## Build and link CLI 
+	cd ./packages/cli; $(NPX) esbuild index.ts --outfile=./build/cli.js --external:esbuild $(ESBUILD_FLAGS)
 	cp -r ./packages/cli/template ./packages/cli/build/
-	cd ./packages/cli; $(NPM) link --no-audit
+	cd ./packages/cli; $(NPM) link
 
-types: types-lib types-plugins ## Typecheck and emit types for all components of Quartz
+types-cli:
+	$(NPX) tsc -p ./packages/cli/tsconfig.json
+
+types: types-lib types-plugins types-cli ## Typecheck and emit types for all components of Quartz

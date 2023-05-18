@@ -1,11 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "include": [
-    "./**/*.ts"
+    "./**/*.ts",
+    "./**/*.tsx"
   ],
   "compilerOptions": {
+    "declaration": true,
     "declarationDir": "./build",
     "rootDir": ".",
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "noEmit": false
   }
 }

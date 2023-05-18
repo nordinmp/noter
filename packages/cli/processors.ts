@@ -1,5 +1,5 @@
 import remarkParse from 'remark-parse'
-import { createElement, Fragment } from 'react'
+import { createElement, Fragment } from 'preact/compat'
 import { unified } from 'unified'
 import remarkRehype from 'remark-rehype'
 import rehypeReact from 'rehype-react'
@@ -9,7 +9,7 @@ import { Root as HTMLRoot } from 'hast'
 import { Root as MDRoot } from 'remark-parse/lib'
 import { StaticResources } from '@jackyzha0/quartz-plugins/types'
 
-export type QuartzProcessor = Processor<MDRoot, MDRoot, HTMLRoot, React.ReactElement<unknown>>
+export type QuartzProcessor = Processor<MDRoot, MDRoot, HTMLRoot, preact.VNode<any>>
 export async function markdownProcessor(plugins: QuartzPlugin[]): Promise<QuartzProcessor> {
   // base Markdown -> MD AST
   let processor = unified()
@@ -31,6 +31,7 @@ export async function markdownProcessor(plugins: QuartzPlugin[]): Promise<Quartz
 
   // HTML AST -> React Nodes
   return processor
+    // @ts-ignore (rehypeReact assumes react)
     .use(rehypeReact, {
       createElement,
       Fragment,
