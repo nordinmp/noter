@@ -1,10 +1,12 @@
+import t, { Infer } from 'myzod'
 import path from 'path'
 import requireFromString from 'require-from-string'
 import chalk from 'chalk'
 import { version } from './package.json'
 import esbuild from 'esbuild'
 import fs from 'fs'
-import { QuartzConfig, isValidConfig } from '@jackyzha0/quartz-lib'
+import { Data, PluginTypes } from '@jackyzha0/quartz-plugins'
+import { ComponentTypes } from '@jackyzha0/quartz-lib/types'
 
 export interface UserProvidedConfig {
   quartzVersion: string,
@@ -12,6 +14,54 @@ export interface UserProvidedConfig {
   name: string,
 }
 
+export const configSchema = t.object({
+  quartzVersion: t.string(),
+  name: t.string(),
+  hydrateInteractiveComponents: t.boolean(),
+  ignorePatterns: t.array(t.string()),
+})
+
+
+export type ValidComponentName = keyof QuartzConfig["components"]
+export interface QuartzConfig {
+  plugins: PluginTypes,
+  configuration: Infer<typeof configSchema>,
+  components: ComponentTypes<Data>
+}
+
+export function isValidConfig(cfg: any): cfg is QuartzConfig {
+  const requiredKeys = ["plugins", "configuration", "components"]
+  for (const key of requiredKeys) {
+    if (!cfg.hasOwnProperty(key)) {
+      console.log(`${chalk.yellow("Warning:")} Configuration is missing required field \`${key}\``)
+      return false
+    }
+  }
+
+  const requiredPlugins = ["transformers", "filters", "emitters"]
+  for (const key of requiredPlugins) {
+    if (!cfg.plugins.hasOwnProperty(key)) {
+      console.log(`${chalk.yellow("Warning:")} Configuration is missing required field \`plugins.${key}\``)
+      return false
+    }
+  }
+
+  const requiredComponents = ["pageSingle", "pageList", "pageHome", "head"]
+  for (const key of requiredComponents) {
+    if (!cfg.components.hasOwnProperty(key)) {
+      console.log(`${chalk.yellow("Warning:")} Configuration is missing required field \`components.${key}\``)
+      return false
+    }
+  }
+
+  const validationResult = configSchema.try(cfg.configuration)
+  if (validationResult instanceof t.ValidationError) {
+    console.log(`${chalk.yellow("Warning:")} Configuration doens't match schema. ${validationResult.message}`)
+    return false
+  }
+
+  return true
+}
 
 export const QUARTZ = "quartz"
 export const QUARTZ_CONFIG_NAME = "quartz.config.js"

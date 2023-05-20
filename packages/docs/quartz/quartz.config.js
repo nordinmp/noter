@@ -1,8 +1,8 @@
-import { FrontMatter, GitHubFlavoredMarkdown, CreatedModifiedDate, Katex, RemoveDrafts } from '@jackyzha0/quartz-plugins'
+import { Description, FrontMatter, GitHubFlavoredMarkdown, CreatedModifiedDate, Katex, RemoveDrafts } from '@jackyzha0/quartz-plugins'
 import pageSingle from './pageSingle'
 import pageList from './pageList'
 import pageHome from './pageHome'
-import document from './document'
+import head from './head'
 
 /** @type {import("@jackyzha0/quartz-lib").QuartzConfig} */
 const quartzConfig = {
@@ -11,6 +11,7 @@ const quartzConfig = {
       new FrontMatter(),
       new GitHubFlavoredMarkdown(),
       new Katex(),
+      new Description(),
       new CreatedModifiedDate({
         priority: ['frontmatter', 'filesystem']
       })],
@@ -29,7 +30,7 @@ const quartzConfig = {
     pageSingle,
     pageList,
     pageHome,
-    document
+    head
   }
 }
 

@@ -1,7 +1,8 @@
 import { PluggableList } from "unified"
-import { QuartzTransformerPlugin, StaticResources } from "../types"
+import { QuartzTransformerPlugin } from "../types"
 import remarkMath from "remark-math"
 import rehypeKatex from 'rehype-katex'
+import { StaticResources } from "@jackyzha0/quartz-lib/types"
 
 export class Katex extends QuartzTransformerPlugin {
 

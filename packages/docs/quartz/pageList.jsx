@@ -1,10 +1,12 @@
+/** @jsx h */
 import { h, Fragment } from 'preact'
 
-export default function({ pages }) {
+/** @type {import("@jackyzha0/quartz-lib").QuartzConfig["components"]["pageList"]} */
+export default function({ pagesData }) {
   return <div>
     <ul>
-      {pages.map(({ data }) => <li>
-        <a href={data.slug}>{data.frontmatter.title}</a>
+      {pagesData.map((pageData) => <li>
+        <a href={pageData.slug}>{pageData.frontmatter?.title}</a>
       </li>)}
     </ul>
   </div>

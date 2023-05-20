@@ -19,7 +19,10 @@ export class CreatedModifiedDate extends QuartzTransformerPlugin {
 
   constructor(opts: Options) {
     super()
-    this.opts = opts
+    this.opts = {
+      ...defaultOptions,
+      ...opts,
+    }
   }
 
   markdownPlugins(): PluggableList {
@@ -30,13 +33,8 @@ export class CreatedModifiedDate extends QuartzTransformerPlugin {
           let modified: undefined | Date = undefined
           let published: undefined | Date = undefined
 
-          const { priority } = {
-            ...defaultOptions,
-            ...this.opts,
-          }
-
           const fp = path.join(file.cwd, file.data.filePath as string)
-          for (const source of priority) {
+          for (const source of this.opts.priority) {
             if (source === "filesystem") {
               const st = await fs.promises.stat(fp)
               created ||= new Date(st.birthtimeMs)

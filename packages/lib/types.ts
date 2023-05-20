@@ -1,0 +1,37 @@
+import { Root } from 'hast'
+import { Data as BaseData, Node, VFile } from 'vfile/lib'
+import { RenderableProps, VNode } from 'preact'
+
+export interface JSResource {
+  src: string
+  loadTime: 'beforeDOMReady' | 'afterDOMReady'
+}
+
+export interface StaticResources {
+  css: string[],
+  js: JSResource[]
+}
+
+export type ProcessedContent = [Node, VFile]
+
+export type ValidComponentName<Data extends BaseData> = keyof ComponentTypes<Data>
+export type FunctionComponent<P> = (props: RenderableProps<P>) => VNode<P>
+export type ComponentTypes<Data extends BaseData> = {
+  pageSingle: FunctionComponent<{
+    pageData: Data,
+    allPages: Data[],
+    articleAstNode: Root
+  }>,
+  pageList: FunctionComponent<{
+    listName: string,
+    description: string,
+    pagesData: Data[],
+  }>
+  pageHome: ComponentTypes<Data>["pageSingle"],
+  head: FunctionComponent<{
+    title: string,
+    description: string,
+    // TODO: og-image
+    externalResources: StaticResources
+  }>
+}

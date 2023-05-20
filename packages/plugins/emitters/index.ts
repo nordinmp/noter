@@ -1,0 +1,1 @@
+export { ContentIndex } from './contentIndex'

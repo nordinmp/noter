@@ -1,4 +1,5 @@
-import { QuartzTransformerPlugin, StaticResources } from './types'
+import { StaticResources } from '@jackyzha0/quartz-lib/types'
+import { QuartzEmitterPlugin, QuartzFilterPlugin, QuartzTransformerPlugin } from './types'
 
 export function getStaticResourcesFromPlugins(plugins: QuartzTransformerPlugin[]) {
   const staticResources: StaticResources = {
@@ -19,10 +20,14 @@ export function getStaticResourcesFromPlugins(plugins: QuartzTransformerPlugin[]
   return staticResources
 }
 
-export { QuartzTransformerPlugin, QuartzFilterPlugin, QuartzEmitterPlugin, ProcessedContent, StaticResources } from './types'
+export function getPluginName(plugin: QuartzTransformerPlugin | QuartzFilterPlugin | QuartzEmitterPlugin) {
+  return plugin.constructor.name.replace(/[0-9]+$/g, '')
+}
+
+export * from './types'
 export * from './transformers'
 export * from './filters'
-// export * from './emitters'
+export * from './emitters'
 
 declare module 'vfile' {
   // inserted in processors.ts

@@ -1,5 +1,10 @@
 {
   "extends": "../../tsconfig.json",
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./package.json"
+  ],
   "compilerOptions": {
     "noEmit": true
   }

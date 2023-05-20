@@ -1,15 +1,8 @@
 import { PluggableList } from 'unified'
-import { Node, VFile } from 'vfile/lib'
-
-export interface JSResource {
-  src: string
-  loadTime: 'beforeDOMReady' | 'afterDOMReady'
-}
-
-export interface StaticResources {
-  css: string[],
-  js: JSResource[]
-}
+import { StaticResources, ProcessedContent, ValidComponentName, ComponentTypes } from "@jackyzha0/quartz-lib/types"
+import { Data } from 'vfile'
+import { ComponentProps } from 'preact'
+export { Data } from 'vfile'
 
 export abstract class QuartzTransformerPlugin {
   abstract markdownPlugins(): PluggableList
@@ -17,11 +10,33 @@ export abstract class QuartzTransformerPlugin {
   externalResources?: Partial<StaticResources>
 }
 
-export type ProcessedContent = [Node, VFile]
 export abstract class QuartzFilterPlugin {
   abstract shouldPublish(content: ProcessedContent): boolean
 }
 
-export abstract class QuartzEmitterPlugin {
-
+export interface BuildPageOptions<T extends ValidComponentName<Data>> {
+  // meta
+  title: string
+  description: string
+  slug: string
+  
+  // hydration related
+  componentName: T
+  props: ComponentProps<ComponentTypes<Data>[T]>
 }
+
+export type Actions = {
+  buildPage: <T extends ValidComponentName<Data>>(opts: BuildPageOptions<T>) => Promise<string>
+}
+
+export abstract class QuartzEmitterPlugin {
+  abstract emit(content: ProcessedContent[], actions: Actions): Promise<string[]>
+}
+
+export interface PluginTypes {
+  transformers: QuartzTransformerPlugin[],
+  filters: QuartzFilterPlugin[],
+  emitters: QuartzEmitterPlugin[],
+}
+
+export type TypedComponent<T extends ValidComponentName<Data>> = ComponentTypes<Data>[T]

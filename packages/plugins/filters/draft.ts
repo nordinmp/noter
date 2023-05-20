@@ -1,4 +1,5 @@
-import { ProcessedContent, QuartzFilterPlugin } from "../types";
+import { ProcessedContent } from "@jackyzha0/quartz-lib/types"
+import { QuartzFilterPlugin } from "../types"
 
 export class RemoveDrafts extends QuartzFilterPlugin {
   shouldPublish([_tree, vfile]: ProcessedContent): boolean {
