@@ -1,8 +1,9 @@
 import { PluggableList } from 'unified'
 import { StaticResources, ProcessedContent, ValidComponentName, ComponentTypes } from "@jackyzha0/quartz-lib/types"
-import { Data } from 'vfile'
+import { Data as VFileData } from 'vfile'
 import { ComponentProps } from 'preact'
-export { Data } from 'vfile'
+
+export type Data = VFileData
 
 export abstract class QuartzTransformerPlugin {
   abstract markdownPlugins(): PluggableList
@@ -41,3 +42,12 @@ export interface PluginTypes {
 }
 
 export type TypedComponent<T extends ValidComponentName<Data>> = ComponentTypes<Data>[T]
+
+declare module 'vfile' {
+  // inserted in processors.ts
+  interface DataMap {
+    slug: string
+    filePath: string
+  }
+}
+

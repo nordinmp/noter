@@ -10,6 +10,8 @@ import { pathToSlug } from '@jackyzha0/quartz-lib'
 import { ProcessedContent } from '@jackyzha0/quartz-lib/types'
 import { createBuildPageAction } from './renderer'
 import { QuartzConfig } from './config'
+import { PerfTimer } from './util'
+import { HYDRATION_SCRIPT, transpileHydrationScript } from './hydration'
 
 export type QuartzProcessor = Processor<MDRoot, HTMLRoot, void>
 export function createProcessor(plugins: QuartzTransformerPlugin[]): QuartzProcessor {
@@ -34,6 +36,7 @@ export function createProcessor(plugins: QuartzTransformerPlugin[]): QuartzProce
 }
 
 export async function processMarkdown(processor: QuartzProcessor, baseDir: string, fps: string[], verbose: boolean): Promise<ProcessedContent<Data>[]> {
+  const perf = new PerfTimer()
   const res: ProcessedContent<Data>[] = []
   for (const fp of fps) {
     const file = await read(fp)
@@ -49,25 +52,48 @@ export async function processMarkdown(processor: QuartzProcessor, baseDir: strin
       console.log(`[process] ${fp} -> ${file.data.slug}`)
     }
   }
+
+  if (verbose) {
+    console.log(`Parsed and transformed ${res.length} Markdown files in ${perf.timeSince()}`)
+  }
   return res
 }
 
-export function filterContent(plugins: QuartzFilterPlugin[], content: ProcessedContent<Data>[]): ProcessedContent<Data>[] {
+export function filterContent(plugins: QuartzFilterPlugin[], content: ProcessedContent<Data>[], verbose: boolean): ProcessedContent<Data>[] {
+  const perf = new PerfTimer()
+  const initialLength = content.length
   for (const plugin of plugins) {
     content = content.filter(plugin.shouldPublish)
+  }
+
+  if (verbose) {
+    console.log(`Filtered out ${initialLength - content.length} files in ${perf.timeSince()}`)
   }
   return content
 }
 
-export async function emitContent(directory: string, cfg: QuartzConfig, content: ProcessedContent<Data>[], verbose: boolean) {
-  const actions: Actions = {
-    buildPage: createBuildPageAction(directory, cfg)
+export async function emitContent(input: string, output: string, cfg: QuartzConfig, content: ProcessedContent<Data>[], verbose: boolean) {
+  const perf = new PerfTimer()
+
+  if (cfg.configuration.hydrateInteractiveComponents) {
+    perf.addEvent('transpileHydration')
+    const outFile = path.join(output, HYDRATION_SCRIPT)
+    await transpileHydrationScript(input, outFile)
+    if (verbose) {
+      console.log(`Transpiled client-side hydration script in ${perf.timeSince('transpileHydration')}`)
+      console.log(`[emit:Hydration] ${outFile}`)
+    }
   }
 
-  let emittedFiles = 0 
+  const actions: Actions = {
+    buildPage: createBuildPageAction(output, cfg)
+  }
+
+  perf.addEvent('emitters')
+  let emittedFiles = 0
   for (const emitter of cfg.plugins.emitters) {
     const emitted = await emitter.emit(content, actions)
-    emittedFiles += emitted.length 
+    emittedFiles += emitted.length
 
     if (verbose) {
       const pluginName = getPluginName(emitter)
@@ -77,5 +103,7 @@ export async function emitContent(directory: string, cfg: QuartzConfig, content:
     }
   }
 
-  return emittedFiles
+  if (verbose) {
+    console.log(`Emitted ${emittedFiles} files to \`${output}\` in ${perf.timeSince('emitters')}`)
+  }
 }

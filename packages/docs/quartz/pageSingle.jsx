@@ -1,4 +1,4 @@
-import { astToJsx } from "@jackyzha0/quartz-lib"
+import { astToJsx } from "@jackyzha0/quartz-lib/jsx"
 
 /** @type {import("@jackyzha0/quartz-plugins").TypedComponent<"pageSingle">} */
 export default function({ pageData, articleAstNode }) {

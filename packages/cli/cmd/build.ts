@@ -37,7 +37,7 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
   if (argv.verbose) {
     const pluginCount = Object.values(cfg.plugins).flat().length
     const pluginNames = (key: 'transformers' | 'filters' | 'emitters') => cfg.plugins[key].map(getPluginName)
-    console.log(`Loaded ${pluginCount} plugins (${perf.timeSince('start')})`)
+    console.log(`Loaded ${pluginCount} plugins in ${perf.timeSince('start')}`)
     console.log(`  Transformers: ${pluginNames('transformers').join(", ")}`)
     console.log(`  Filters: ${pluginNames('filters').join(", ")}`)
     console.log(`  Emitters: ${pluginNames('emitters').join(", ")}`)
@@ -46,31 +46,27 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
   if (argv.clean) {
     perf.addEvent('clean')
     await rimraf(output)
-    console.log(`Cleaned output directory \`${output}\` (${perf.timeSince('clean')})`)
+    if (argv.verbose) {
+      console.log(`Cleaned output directory \`${output}\` in ${perf.timeSince('clean')}`)
+    }
   }
 
   // glob all md, implicitly ignore quartz folder
-  perf.addEvent('processMarkdown')
+  perf.addEvent('glob')
   const fps = await globby('**/*.md', {
     cwd: argv.directory,
     ignore: [...cfg.configuration.ignorePatterns, 'quartz/**'],
     gitignore: true,
   })
+  if (argv.verbose) {
+    console.log(`Found ${fps.length} input files in ${perf.timeSince('glob')}`)
+  }
 
-  // generate hast nodes with markdown-side plugins
   const processor = createProcessor(cfg.plugins.transformers)
   const filePaths = fps.map(fp => `${argv.directory}${path.sep}${fp}`)
   const processedContent = await processMarkdown(processor, argv.directory, filePaths, argv.verbose)
-  console.log(`Parsed and transformed ${processedContent.length} Markdown files (${perf.timeSince('processMarkdown')})`)
-
-  perf.addEvent('filterContent')
-  const filteredContent = filterContent(cfg.plugins.filters, processedContent)
-  console.log(`Filtered out ${processedContent.length - filteredContent.length} files (${perf.timeSince('filterContent')})`)
-
-  // run emitters
-  perf.addEvent('emitContent')
-  const numFilesEmitted = await emitContent(output, cfg, filteredContent, argv.verbose)
-  console.log(`Emitted ${numFilesEmitted} files to \`${output}\` (${perf.timeSince('emitContent')})`)
-  console.log(chalk.green(`Done in ${perf.timeSince('start')}`))
+  const filteredContent = filterContent(cfg.plugins.filters, processedContent, argv.verbose)
+  await emitContent(argv.directory, output, cfg, filteredContent, argv.verbose)
+  console.log(chalk.green(`Done in ${perf.timeSince()}`))
 }
 

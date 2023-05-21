@@ -6,12 +6,13 @@ import { getStaticResourcesFromPlugins } from '@jackyzha0/quartz-plugins'
 import { JSResource } from '@jackyzha0/quartz-lib/types'
 import path from 'path'
 import fs from 'fs'
+import { HYDRATION_SCRIPT } from './hydration'
+import { resolveToRoot } from '@jackyzha0/quartz-lib'
 
 export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig): Actions["buildPage"] {
   return async ({ slug, ext, title, description, componentName, props }) => {
     const staticResources = getStaticResourcesFromPlugins(cfg.plugins.transformers)
 
-    // TODO: actually make hydration script
     const hydrationData = cfg.configuration.hydrateInteractiveComponents
       ? <script id="__QUARTZ_HYDRATION_DATA__" type="application/quartz-data" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
@@ -20,6 +21,13 @@ export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig
         })
       }} />
       : null
+
+    if (cfg.configuration.hydrateInteractiveComponents) {
+      staticResources.js.push({
+        src: path.join(resolveToRoot(slug), HYDRATION_SCRIPT),
+        loadTime: 'afterDOMReady'
+      })
+    }
 
     const Head = cfg.components.head
     const component = cfg.components[componentName]

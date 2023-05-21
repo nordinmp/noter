@@ -31,7 +31,7 @@ export class PerfTimer {
     this.evts[evtName] = process.hrtime()
   }
 
-  timeSince(evtName: string): string {
-    return pretty(process.hrtime(this.evts[evtName]))
+  timeSince(evtName?: string): string {
+    return chalk.yellow(pretty(process.hrtime(this.evts[evtName ?? 'start'])))
   }
 }
