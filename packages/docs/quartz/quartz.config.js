@@ -1,10 +1,10 @@
-import { Description, FrontMatter, GitHubFlavoredMarkdown, CreatedModifiedDate, Katex, RemoveDrafts } from '@jackyzha0/quartz-plugins'
+import { Description, FrontMatter, GitHubFlavoredMarkdown, CreatedModifiedDate, Katex, RemoveDrafts, Page } from '@jackyzha0/quartz-plugins'
 import pageSingle from './pageSingle'
 import pageList from './pageList'
 import pageHome from './pageHome'
 import head from './head'
 
-/** @type {import("@jackyzha0/quartz-lib").QuartzConfig} */
+/** @type {import("@jackyzha0/quartz/config").QuartzConfig} */
 const quartzConfig = {
   plugins: {
     transformers: [
@@ -18,7 +18,9 @@ const quartzConfig = {
     filters: [
       new RemoveDrafts()
     ],
-    emitters: []
+    emitters: [
+      new Page()
+    ]
   },
   configuration: {
     quartzVersion: "4.0.0",

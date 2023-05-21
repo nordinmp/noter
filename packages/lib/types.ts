@@ -1,5 +1,5 @@
-import { Root } from 'hast'
-import { Data as BaseData, Node, VFile } from 'vfile/lib'
+import { Node } from 'hast'
+import { Data as BaseData, VFile } from 'vfile/lib'
 import { RenderableProps, VNode } from 'preact'
 
 export interface JSResource {
@@ -12,15 +12,14 @@ export interface StaticResources {
   js: JSResource[]
 }
 
-export type ProcessedContent = [Node, VFile]
-
+export type ProcessedContent<Data extends BaseData> = [Node<Data>, VFile]
 export type ValidComponentName<Data extends BaseData> = keyof ComponentTypes<Data>
 export type FunctionComponent<P> = (props: RenderableProps<P>) => VNode<P>
 export type ComponentTypes<Data extends BaseData> = {
   pageSingle: FunctionComponent<{
     pageData: Data,
     allPages: Data[],
-    articleAstNode: Root
+    articleAstNode: Node<Data>
   }>,
   pageList: FunctionComponent<{
     listName: string,

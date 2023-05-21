@@ -1,9 +1,9 @@
-/** @jsx h */
-import { h, Fragment } from 'preact'
+import { astToJsx } from "@jackyzha0/quartz-lib"
 
 /** @type {import("@jackyzha0/quartz-plugins").TypedComponent<"pageSingle">} */
-export default function({ pageData }) {
+export default function({ pageData, allPages, articleAstNode }) {
   return <article>
     <h1>{pageData.frontmatter?.title}</h1>
+    {astToJsx(articleAstNode)}
   </article>
 }

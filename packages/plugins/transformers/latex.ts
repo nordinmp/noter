@@ -11,7 +11,16 @@ export class Katex extends QuartzTransformerPlugin {
   }
 
   htmlPlugins(): PluggableList {
-    return [rehypeKatex]
+    return [
+      [rehypeKatex, {
+        output: 'html', delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: " $", right: "$ ", display: false },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "\\[", right: "\\]", display: true }
+        ]
+      }]
+    ]
   }
 
   externalResources: Partial<StaticResources> = {

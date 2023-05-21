@@ -6,8 +6,7 @@ import { rimraf } from "rimraf"
 import { createProcessor, emitContent, filterContent, processMarkdown } from "../processors"
 import path from "path"
 import { PerfTimer } from "../util"
-import { Actions, getPluginName } from "@jackyzha0/quartz-plugins"
-import { createBuildPageAction } from "../renderer"
+import { getPluginName } from "@jackyzha0/quartz-plugins"
 import chalk from "chalk"
 
 export const BuildArgv = {
@@ -33,6 +32,7 @@ export const BuildArgv = {
 export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<typeof BuildArgv>>) {
   const perf = new PerfTimer()
   const cfg = await readConfigFile(argv.directory)
+  const output = path.join(argv.directory, argv.output)
 
   if (argv.verbose) {
     const pluginCount = Object.values(cfg.plugins).flat().length
@@ -45,8 +45,8 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
 
   if (argv.clean) {
     perf.addEvent('clean')
-    await rimraf(argv.output)
-    console.log(`Cleaned output directory \`${argv.output}\` (${perf.timeSince('clean')})`)
+    await rimraf(output)
+    console.log(`Cleaned output directory \`${output}\` (${perf.timeSince('clean')})`)
   }
 
   // glob all md, implicitly ignore quartz folder
@@ -60,7 +60,7 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
   // generate hast nodes with markdown-side plugins
   const processor = createProcessor(cfg.plugins.transformers)
   const filePaths = fps.map(fp => `${argv.directory}${path.sep}${fp}`)
-  const processedContent = await processMarkdown(processor, filePaths, argv.verbose)
+  const processedContent = await processMarkdown(processor, argv.directory, filePaths, argv.verbose)
   console.log(`Parsed and transformed ${processedContent.length} Markdown files (${perf.timeSince('processMarkdown')})`)
 
   perf.addEvent('filterContent')
@@ -69,8 +69,8 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
 
   // run emitters
   perf.addEvent('emitContent')
-  const emittedContent = await emitContent(argv.output, cfg, filteredContent, argv.verbose)
-  console.log(`Emitted ${emittedContent.length} files to \`${argv.output}\` (${perf.timeSince('emitContent')})`)
+  const numFilesEmitted = await emitContent(output, cfg, filteredContent, argv.verbose)
+  console.log(`Emitted ${numFilesEmitted} files to \`${output}\` (${perf.timeSince('emitContent')})`)
   console.log(chalk.green(`Done in ${perf.timeSince('start')}`))
 }
 

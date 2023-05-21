@@ -1,6 +1,4 @@
-/** @jsx h */
-import { h, Fragment } from 'preact'
-
+import { h } from 'preact'
 import { Actions } from "@jackyzha0/quartz-plugins/types"
 import { render } from 'preact-render-to-string'
 import { QuartzConfig } from "./config"
@@ -10,7 +8,7 @@ import path from 'path'
 import fs from 'fs'
 
 export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig): Actions["buildPage"] {
-  return async ({ slug, title, description, componentName, props }) => {
+  return async ({ slug, ext, title, description, componentName, props }) => {
     const staticResources = getStaticResourcesFromPlugins(cfg.plugins.transformers)
 
     // TODO: actually make hydration script
@@ -29,7 +27,7 @@ export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig
     // @ts-ignore TODO: how do i make this typecheck
     const element = h(component, props)
 
-    const doc = <html id="quartz-root" >
+    const doc = <html id="quartz-root">
       <Head title={title} description={description} externalResources={staticResources} />
       <body id="quartz-body" >
         {element}
@@ -38,7 +36,9 @@ export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig
       </body>
     </html>
 
-    const pathToPage = path.join(outputDirectory, slug)
+    const pathToPage = path.join(outputDirectory, slug + ext)
+    const dir = path.dirname(pathToPage)
+    await fs.promises.mkdir(dir, { recursive: true })
     await fs.promises.writeFile(pathToPage, render(doc))
     return pathToPage
   }

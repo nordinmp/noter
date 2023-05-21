@@ -22,8 +22,9 @@
     "build"
   ],
   "dependencies": {
-    "myzod": "^1.10.0",
-    "chalk": "^5.2.0"
+    "chalk": "^5.2.0",
+    "hast-util-to-jsx-runtime": "^1.2.0",
+    "myzod": "^1.10.0"
   },
   "devDependencies": {
     "@jackyzha0/quartz-plugins": "^1.0.0"

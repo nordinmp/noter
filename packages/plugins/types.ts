@@ -11,7 +11,7 @@ export abstract class QuartzTransformerPlugin {
 }
 
 export abstract class QuartzFilterPlugin {
-  abstract shouldPublish(content: ProcessedContent): boolean
+  abstract shouldPublish(content: ProcessedContent<Data>): boolean
 }
 
 export interface BuildPageOptions<T extends ValidComponentName<Data>> {
@@ -19,6 +19,7 @@ export interface BuildPageOptions<T extends ValidComponentName<Data>> {
   title: string
   description: string
   slug: string
+  ext: `${string}.${string}`
   
   // hydration related
   componentName: T
@@ -30,7 +31,7 @@ export type Actions = {
 }
 
 export abstract class QuartzEmitterPlugin {
-  abstract emit(content: ProcessedContent[], actions: Actions): Promise<string[]>
+  abstract emit(content: ProcessedContent<Data>[], actions: Actions): Promise<string[]>
 }
 
 export interface PluginTypes {

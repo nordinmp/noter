@@ -1,8 +1,8 @@
 import { ProcessedContent } from "@jackyzha0/quartz-lib/types"
-import { QuartzFilterPlugin } from "../types"
+import { Data, QuartzFilterPlugin } from "../types"
 
 export class ExplicitPublish extends QuartzFilterPlugin {
-  shouldPublish([_tree, vfile]: ProcessedContent): boolean {
+  shouldPublish([_tree, vfile]: ProcessedContent<Data>): boolean {
     const publishFlag: boolean = vfile.data?.frontmatter?.publish ?? false
     return publishFlag
   }

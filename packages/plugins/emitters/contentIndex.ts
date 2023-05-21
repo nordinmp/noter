@@ -1,8 +1,11 @@
 import { ProcessedContent } from "@jackyzha0/quartz-lib/types"
-import { Actions, QuartzEmitterPlugin } from "../types"
+import { Actions, Data, QuartzEmitterPlugin } from "../types"
 
 export class ContentIndex extends QuartzEmitterPlugin {
-  async emit(content: ProcessedContent[], actions: Actions): Promise<string[]> {
-    return []
+  async emit(content: ProcessedContent<Data>[], actions: Actions): Promise<string[]> {
+    const fps: string[] = []
+    for (const [tree, file] of content) {
+    }
+    return fps
   }
 }

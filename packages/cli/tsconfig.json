@@ -6,6 +6,10 @@
     "./package.json"
   ],
   "compilerOptions": {
-    "noEmit": true
+    "declaration": true,
+    "declarationDir": "./build",
+    "rootDir": ".",
+    "emitDeclarationOnly": true,
+    "noEmit": false
   }
 }

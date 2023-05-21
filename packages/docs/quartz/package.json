@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@jackyzha0/quartz-plugins": "^1.0.0",
+    "@jackyzha0/quartz-lib": "^1.0.0",
     "preact": "^10.14.1"
   }
 }

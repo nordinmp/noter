@@ -1,8 +1,8 @@
 import { ProcessedContent } from "@jackyzha0/quartz-lib/types"
-import { QuartzFilterPlugin } from "../types"
+import { Data, QuartzFilterPlugin } from "../types"
 
 export class RemoveDrafts extends QuartzFilterPlugin {
-  shouldPublish([_tree, vfile]: ProcessedContent): boolean {
+  shouldPublish([_tree, vfile]: ProcessedContent<Data>): boolean {
     const draftFlag: boolean = vfile.data?.frontmatter?.draft ?? false
     return !draftFlag
   }

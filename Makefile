@@ -3,7 +3,7 @@
 MAKEFLAGS += -j6
 NPM := npm
 NPX := npx
-ESBUILD_FLAGS := --bundle --platform=node
+ESBUILD_FLAGS := --bundle --platform=node --jsx-import-source=preact --jsx=automatic
 
 help: ## Show all Makefile targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
