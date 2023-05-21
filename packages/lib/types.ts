@@ -18,7 +18,6 @@ export type FunctionComponent<P> = (props: RenderableProps<P>) => VNode<P>
 export type ComponentTypes<Data extends BaseData> = {
   pageSingle: FunctionComponent<{
     pageData: Data,
-    allPages: Data[],
     articleAstNode: Node<Data>
   }>,
   pageList: FunctionComponent<{
