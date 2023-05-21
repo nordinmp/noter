@@ -27,6 +27,7 @@
     "chalk": "^5.2.0",
     "cli-spinners": "^2.9.0",
     "globby": "^13.1.4",
+    "micro": "^10.0.1",
     "myzod": "^1.10.0",
     "preact": "^10.14.1",
     "preact-render-to-string": "^6.0.3",
@@ -36,6 +37,7 @@
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
     "rimraf": "^5.0.0",
+    "serve-handler": "^6.1.5",
     "to-vfile": "^7.2.4",
     "transliteration": "^2.3.5",
     "unified": "^10.1.2",
@@ -44,6 +46,7 @@
   },
   "devDependencies": {
     "@types/hast": "^2.3.4",
-    "@types/pretty-time": "^1.1.2"
+    "@types/pretty-time": "^1.1.2",
+    "@types/serve-handler": "^6.1.1"
   }
 }

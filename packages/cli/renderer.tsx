@@ -10,9 +10,8 @@ import { HYDRATION_SCRIPT } from './hydration'
 import { resolveToRoot } from '@jackyzha0/quartz-lib'
 
 export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig): Actions["buildPage"] {
+  const staticResources = getStaticResourcesFromPlugins(cfg.plugins.transformers)
   return async ({ slug, ext, title, description, componentName, props }) => {
-    const staticResources = getStaticResourcesFromPlugins(cfg.plugins.transformers)
-
     const hydrationData = cfg.configuration.hydrateInteractiveComponents
       ? <script id="__QUARTZ_HYDRATION_DATA__" type="application/quartz-data" dangerouslySetInnerHTML={{
         __html: JSON.stringify({

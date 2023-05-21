@@ -8,6 +8,8 @@ import path from "path"
 import { PerfTimer } from "../util"
 import { getPluginName } from "@jackyzha0/quartz-plugins"
 import chalk from "chalk"
+import http from 'http'
+import serveHandler from 'serve-handler'
 
 export const BuildArgv = {
   ...commonFlags,
@@ -26,6 +28,11 @@ export const BuildArgv = {
     boolean: true,
     default: false,
     describe: 'run a local server to preview your Quartz'
+  },
+  port: {
+    number: true,
+    default: 8080,
+    describe: 'port to serve Quartz on'
   }
 }
 
@@ -68,5 +75,17 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
   const filteredContent = filterContent(cfg.plugins.filters, processedContent, argv.verbose)
   await emitContent(argv.directory, output, cfg, filteredContent, argv.verbose)
   console.log(chalk.green(`Done in ${perf.timeSince()}`))
+
+  if (argv.serve) {
+    const server = http.createServer(async (req, res) => {
+      return serveHandler(req, res, {
+        public: output,
+        directoryListing: false
+      })
+    })
+    server.listen(argv.port)
+    console.log(`Started a Quartz server listening at http://localhost:${argv.port}`)
+    console.log('hint: exit with ctrl+c')
+  }
 }
 

@@ -15,6 +15,10 @@ export abstract class QuartzFilterPlugin {
   abstract shouldPublish(content: ProcessedContent<Data>): boolean
 }
 
+export abstract class QuartzEmitterPlugin {
+  abstract emit(content: ProcessedContent<Data>[], actions: Actions): Promise<string[]>
+}
+
 export interface BuildPageOptions<T extends ValidComponentName<Data>> {
   // meta
   title: string
@@ -29,10 +33,6 @@ export interface BuildPageOptions<T extends ValidComponentName<Data>> {
 
 export type Actions = {
   buildPage: <T extends ValidComponentName<Data>>(opts: BuildPageOptions<T>) => Promise<string>
-}
-
-export abstract class QuartzEmitterPlugin {
-  abstract emit(content: ProcessedContent<Data>[], actions: Actions): Promise<string[]>
 }
 
 export interface PluginTypes {
