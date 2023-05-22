@@ -20,10 +20,11 @@ export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig
       }} />
       : null
 
+    const pathToRoot = resolveToRoot(slug)
     const staticResources = getStaticResourcesFromPlugins(cfg.plugins.transformers)
     if (cfg.configuration.hydrateInteractiveComponents) {
       staticResources.js.push({
-        src: path.join(resolveToRoot(slug), HYDRATION_SCRIPT),
+        src: path.join(pathToRoot, HYDRATION_SCRIPT),
         loadTime: 'afterDOMReady'
       })
     }
@@ -35,7 +36,7 @@ export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig
     const element = h(component, props)
 
     const doc = <html id="quartz-root">
-      <Head title={title} description={description} externalResources={staticResources} />
+      <Head title={title} description={description} baseDir={pathToRoot} externalResources={staticResources} />
       <body id="quartz-body" >
         {element}
         {hydrationData}

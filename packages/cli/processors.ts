@@ -6,10 +6,11 @@ import { Root as MDRoot } from 'remark-parse/lib'
 import { Root as HTMLRoot } from 'hast'
 import { read } from 'to-vfile'
 import path from 'path'
+import fs from 'fs'
 import { pathToSlug } from '@jackyzha0/quartz-lib'
 import { ProcessedContent } from '@jackyzha0/quartz-lib/types'
 import { createBuildPageAction } from './renderer'
-import { QuartzConfig } from './config'
+import { QuartzConfig, getQuartzPath } from './config'
 import { PerfTimer } from './util'
 import { HYDRATION_SCRIPT, transpileHydrationScript } from './hydration'
 
@@ -103,7 +104,11 @@ export async function emitContent(input: string, output: string, cfg: QuartzConf
     }
   }
 
+  const staticPath = path.join(getQuartzPath(input), "static")
+  await fs.promises.cp(staticPath, path.join(output, "static"), { recursive: true })
+
   if (verbose) {
+    console.log(`[emit:Static] ${path.join(output, "static")}`)
     console.log(`Emitted ${emittedFiles} files to \`${output}\` in ${perf.timeSince('emitters')}`)
   }
 }

@@ -10,7 +10,7 @@ export default {
     // version of Quartz used to generate this file
     quartzVersion: "4.0.0",
     // your name
-    name: "",
+    name: "Jacky",
     // enables React hydration but may increase build times and bundle size 
     hydrateInteractiveComponents: true,
     // directories to exclude Quartz from parsing

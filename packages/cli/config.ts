@@ -87,8 +87,10 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
     entryPoints: [fp],
     write: false,
     bundle: true,
-    minifySyntax: true,
-    minifyWhitespace: true,
+    // minifySyntax: true,
+    // minifyWhitespace: true,
+    keepNames: true,
+    mainFields: ["module", "main"],
     platform: "node",
     jsx: "automatic",
     jsxImportSource: "preact"
@@ -100,7 +102,8 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   })
 
   const mod = out.outputFiles![0].text
-  const cfg: QuartzConfig = requireFromString(mod, fp).default 
+  console.log(mod)
+  const cfg: QuartzConfig = requireFromString(mod, fp).default
   if (!isValidConfig(cfg)) {
     console.error(chalk.red("Invalid Quartz configuration"))
     process.exit(1)

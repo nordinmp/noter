@@ -6,7 +6,7 @@ export default function({ pageData, articleAstNode }) {
   const [clicks, setClicks] = useState()
   return <article>
     <h1>{pageData.frontmatter?.title}</h1>
-    <p onClick={setClicks(clicks => clicks + 1)}>Clicks: {clicks}</p>
+    <p onClick={setClicks()}>Clicks: {clicks}</p>
     {astToJsx(articleAstNode)}
   </article>
 }

@@ -29,7 +29,7 @@ export type ComponentTypes<Data extends BaseData> = {
   head: FunctionComponent<{
     title: string,
     description: string,
-    // TODO: og-image
     externalResources: StaticResources
+    baseDir: string
   }>
 }

@@ -10,7 +10,12 @@ export function pathToSlug(fp: string): string {
 
 // resolve /a/b/c to ../../
 export function resolveToRoot(slug: string): string {
-  return path.relative(slug, path.posix.sep)
+  let fp = slug
+  if (fp.endsWith("/index")) {
+    fp = fp.slice(0, -"/index".length)
+  }
+
+  return "./" + path.relative(fp, path.posix.sep)
 }
 
 export { astToJsx } from './jsx'
