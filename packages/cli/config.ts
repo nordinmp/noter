@@ -102,7 +102,6 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   })
 
   const mod = out.outputFiles![0].text
-  console.log(mod)
   const cfg: QuartzConfig = requireFromString(mod, fp).default
   if (!isValidConfig(cfg)) {
     console.error(chalk.red("Invalid Quartz configuration"))

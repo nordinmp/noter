@@ -1,7 +1,7 @@
 import remarkParse from 'remark-parse'
 import { Processor, unified } from 'unified'
 import remarkRehype from 'remark-rehype'
-import { Actions, Data, QuartzFilterPlugin, QuartzTransformerPlugin, getPluginName } from '@jackyzha0/quartz-plugins'
+import { Actions, Data, QuartzFilterPlugin, QuartzTransformerPlugin, getPluginName, getStaticResourcesFromPlugins } from '@jackyzha0/quartz-plugins'
 import { Root as MDRoot } from 'remark-parse/lib'
 import { Root as HTMLRoot } from 'hast'
 import { read } from 'to-vfile'
@@ -76,10 +76,16 @@ export function filterContent(plugins: QuartzFilterPlugin[], content: ProcessedC
 export async function emitContent(input: string, output: string, cfg: QuartzConfig, content: ProcessedContent<Data>[], verbose: boolean) {
   const perf = new PerfTimer()
 
+  const staticResources = getStaticResourcesFromPlugins(cfg.plugins.transformers)
   if (cfg.configuration.hydrateInteractiveComponents) {
     perf.addEvent('transpileHydration')
     const outFile = path.join(output, HYDRATION_SCRIPT)
-    await transpileHydrationScript(input, outFile)
+    const { metafile } = await transpileHydrationScript(input, outFile)
+
+    for (const [k, v] of Object.entries(metafile.outputs)) {
+      console.log(k,v)
+    }
+
     if (verbose) {
       console.log(`Transpiled client-side hydration script in ${perf.timeSince('transpileHydration')}`)
       console.log(`[emit:Hydration] ${outFile}`)
@@ -87,7 +93,7 @@ export async function emitContent(input: string, output: string, cfg: QuartzConf
   }
 
   const actions: Actions = {
-    buildPage: createBuildPageAction(output, cfg)
+    buildPage: createBuildPageAction(output, cfg, staticResources)
   }
 
   perf.addEvent('emitters')

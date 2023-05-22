@@ -25,7 +25,6 @@ export class Page extends QuartzEmitterPlugin {
         aliases.push(...file.data.frontmatter.aliases as string[])
       }
 
-
       fps.push(fp)
     }
     return fps

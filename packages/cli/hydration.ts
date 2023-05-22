@@ -16,13 +16,14 @@ hydrate(element, domNode)
 
 export const HYDRATION_SCRIPT = "hydration.js"
 export async function transpileHydrationScript(inputDirectory: string, outfile: string) {
-  await esbuild.build({
+  return esbuild.build({
     stdin: {
       contents: hydrationScriptContent,
       resolveDir: getQuartzPath(inputDirectory),
     },
     bundle: true,
-    // minify: true,
+    minify: true,
+    metafile: true,
     platform: "browser",
     outfile,
     logLevel: 'error',
