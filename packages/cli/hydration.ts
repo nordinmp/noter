@@ -1,13 +1,14 @@
+import fs from 'fs'
 import esbuild from 'esbuild'
 import { getQuartzPath } from './config'
 
 const hydrationScriptContent = `
 import { h, hydrate } from 'preact'
-import { components } from './quartz.config.js'
+import cfg from './quartz.config.js'
 
 const hydrationDataNode = document.getElementById('__QUARTZ_HYDRATION_DATA__')
 const { props, componentName} = JSON.parse(hydrationDataNode.innerText)
-const component = components[componentName]
+const component = cfg.components[componentName]
 const element = h(component, props)
 const domNode = document.getElementById('quartz-body')
 hydrate(element, domNode)
@@ -21,7 +22,7 @@ export async function transpileHydrationScript(inputDirectory: string, outfile: 
       resolveDir: getQuartzPath(inputDirectory),
     },
     bundle: true,
-    // minify: true,
+    minify: true,
     platform: "browser",
     outfile,
     logLevel: 'error',
@@ -29,13 +30,16 @@ export async function transpileHydrationScript(inputDirectory: string, outfile: 
     plugins: [{
       name: "quartz-plugin-shim",
       setup(build) {
-        build.onResolve({ filter: /^@jackyzha0\/quartz-plugins/ }, args => ({
-          path: args.path,
-          namespace: 'quartz-plugin-shim',
-        }))
-        build.onLoad({ filter: /.*/, namespace: 'quartz-plugin-shim' }, _args => ({
-          contents: ""
-        }))
+        build.onLoad({ filter: /.\/quartz.config.js/ }, async args => {
+          const source = await fs.promises.readFile(args.path, "utf8")
+          let strippedSource = source
+            .replace(/^import \{.+\} from '@jackyzha0\/quartz-plugins(\/.+)?'/, '')
+            .replace(/new .+\([\s\S]*?\)/g, 'undefined')
+          return {
+            contents: strippedSource,
+            loader: 'js'
+          }
+        })
       },
     }]
   })

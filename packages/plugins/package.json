@@ -34,7 +34,7 @@
     "vfile": "^5.3.7"
   },
   "devDependencies": {
-    "preact": "^10.14.1",
-    "@jackyzha0/quartz-lib": "^1.0.0"
+    "@jackyzha0/quartz-lib": "^1.0.0",
+    "preact": "^10.14.1"
   }
 }

@@ -5,7 +5,6 @@ import rehypeKatex from 'rehype-katex'
 import { StaticResources } from "@jackyzha0/quartz-lib/types"
 
 export class Katex extends QuartzTransformerPlugin {
-
   markdownPlugins(): PluggableList {
     return [remarkMath]
   }
@@ -13,12 +12,7 @@ export class Katex extends QuartzTransformerPlugin {
   htmlPlugins(): PluggableList {
     return [
       [rehypeKatex, {
-        output: 'html', delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: " $", right: "$ ", display: false },
-          { left: "\\(", right: "\\)", display: false },
-          { left: "\\[", right: "\\]", display: true }
-        ]
+        output: 'html',
       }]
     ]
   }

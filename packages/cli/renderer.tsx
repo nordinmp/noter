@@ -10,7 +10,6 @@ import { HYDRATION_SCRIPT } from './hydration'
 import { resolveToRoot } from '@jackyzha0/quartz-lib'
 
 export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig): Actions["buildPage"] {
-  const staticResources = getStaticResourcesFromPlugins(cfg.plugins.transformers)
   return async ({ slug, ext, title, description, componentName, props }) => {
     const hydrationData = cfg.configuration.hydrateInteractiveComponents
       ? <script id="__QUARTZ_HYDRATION_DATA__" type="application/quartz-data" dangerouslySetInnerHTML={{
@@ -21,6 +20,7 @@ export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig
       }} />
       : null
 
+    const staticResources = getStaticResourcesFromPlugins(cfg.plugins.transformers)
     if (cfg.configuration.hydrateInteractiveComponents) {
       staticResources.js.push({
         src: path.join(resolveToRoot(slug), HYDRATION_SCRIPT),
@@ -46,7 +46,7 @@ export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig
     const pathToPage = path.join(outputDirectory, slug + ext)
     const dir = path.dirname(pathToPage)
     await fs.promises.mkdir(dir, { recursive: true })
-    await fs.promises.writeFile(pathToPage, render(doc))
+    await fs.promises.writeFile(pathToPage, "<!DOCTYPE html>\n" + render(doc))
     return pathToPage
   }
 }
