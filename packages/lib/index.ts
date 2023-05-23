@@ -17,5 +17,3 @@ export function resolveToRoot(slug: string): string {
 
   return "./" + path.relative(fp, path.posix.sep)
 }
-
-export { astToJsx } from './jsx'

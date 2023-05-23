@@ -1,7 +1,7 @@
 {
   "name": "@jackyzha0/quartz-lib",
   "description": "Shared components and utility functions for Quartz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "sideEffects": false,
   "author": "jackyzha0 <j.zhao2k19@gmail.com>",
@@ -19,7 +19,10 @@
     "library",
     "quartz"
   ],
-  "main": "./build/index.js",
+  "exports": {
+    ".": "./build/index.js",
+    "./jsx": "./build/jsx.js"
+  },
   "types": "./build/index.d.ts",
   "files": [
     "build"
@@ -32,7 +35,6 @@
     "preact": "^10.14.1"
   },
   "devDependencies": {
-    "@jackyzha0/quartz-plugins": "^1.0.0",
     "@types/hast": "^2.3.4",
     "vfile": "^5.3.7"
   }

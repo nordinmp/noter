@@ -12,6 +12,7 @@ const defaultOptions: Options = {
 }
 
 export class GitHubFlavoredMarkdown extends QuartzTransformerPlugin {
+  name = "GitHubFlavoredMarkdown"
   opts: Options
 
   constructor(opts?: Options) {

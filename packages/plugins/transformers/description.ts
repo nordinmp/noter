@@ -12,6 +12,7 @@ const defaultOptions: Options = {
 }
 
 export class Description extends QuartzTransformerPlugin {
+  name = "Description"
   opts: Options
 
   constructor(opts?: Options) {

@@ -1,7 +1,7 @@
 import remarkParse from 'remark-parse'
 import { Processor, unified } from 'unified'
 import remarkRehype from 'remark-rehype'
-import { Actions, Data, QuartzFilterPlugin, QuartzTransformerPlugin, getPluginName, getStaticResourcesFromPlugins } from '@jackyzha0/quartz-plugins'
+import { Actions, Data, QuartzFilterPlugin, QuartzTransformerPlugin, getStaticResourcesFromPlugins } from '@jackyzha0/quartz-plugins'
 import { Root as MDRoot } from 'remark-parse/lib'
 import { Root as HTMLRoot } from 'hast'
 import { read } from 'to-vfile'
@@ -83,7 +83,7 @@ export async function emitContent(input: string, output: string, cfg: QuartzConf
     const { metafile } = await transpileHydrationScript(input, outFile)
 
     for (const [k, v] of Object.entries(metafile.outputs)) {
-      console.log(k,v)
+      console.log(k, v)
     }
 
     if (verbose) {
@@ -103,9 +103,8 @@ export async function emitContent(input: string, output: string, cfg: QuartzConf
     emittedFiles += emitted.length
 
     if (verbose) {
-      const pluginName = getPluginName(emitter)
       for (const file of emitted) {
-        console.log(`[emit:${pluginName}] ${file}`)
+        console.log(`[emit:${emitter.name}] ${file}`)
       }
     }
   }

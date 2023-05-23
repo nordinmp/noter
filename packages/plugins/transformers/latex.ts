@@ -5,6 +5,7 @@ import rehypeKatex from 'rehype-katex'
 import { StaticResources } from "@jackyzha0/quartz-lib/types"
 
 export class Katex extends QuartzTransformerPlugin {
+  name = "Katex"
   markdownPlugins(): PluggableList {
     return [remarkMath]
   }

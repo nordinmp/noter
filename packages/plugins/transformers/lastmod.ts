@@ -15,6 +15,7 @@ const defaultOptions: Options = {
 }
 
 export class CreatedModifiedDate extends QuartzTransformerPlugin {
+  name = "CreatedModifiedDate"
   opts: Options
 
   constructor(opts: Options) {

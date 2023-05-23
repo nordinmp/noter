@@ -95,7 +95,8 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
     jsx: "automatic",
     jsxImportSource: "preact",
     alias: {
-      react: "react"
+      "react": "preact/compat",
+      "react-dom": "preact/compat",
     }
   }).catch(err => {
     console.error(`${chalk.red("Couldn't parse Quartz configuration:")} ${fp}`)

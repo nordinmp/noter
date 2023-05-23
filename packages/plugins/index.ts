@@ -1,5 +1,5 @@
 import { StaticResources } from '@jackyzha0/quartz-lib/types'
-import { QuartzEmitterPlugin, QuartzFilterPlugin, QuartzTransformerPlugin } from './types'
+import { QuartzTransformerPlugin } from './types'
 
 export function getStaticResourcesFromPlugins(plugins: QuartzTransformerPlugin[]) {
   const staticResources: StaticResources = {
@@ -18,10 +18,6 @@ export function getStaticResourcesFromPlugins(plugins: QuartzTransformerPlugin[]
   }
 
   return staticResources
-}
-
-export function getPluginName(plugin: QuartzTransformerPlugin | QuartzFilterPlugin | QuartzEmitterPlugin) {
-  return plugin.constructor.name.replace(/[0-9]+$/g, '')
 }
 
 export * from './types'

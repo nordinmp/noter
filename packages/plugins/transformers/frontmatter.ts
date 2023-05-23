@@ -14,6 +14,7 @@ const defaultOptions: Options = {
 }
 
 export class FrontMatter extends QuartzTransformerPlugin {
+  name = "FrontMatter"
   opts: Options
 
   constructor(opts?: Options) {

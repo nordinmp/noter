@@ -1,2 +1,2 @@
 export { ContentIndex } from './contentIndex'
-export { Page } from './pages'
+export { ContentPage } from './pages'

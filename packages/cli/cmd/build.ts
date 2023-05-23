@@ -6,7 +6,6 @@ import { rimraf } from "rimraf"
 import { createProcessor, emitContent, filterContent, processMarkdown } from "../processors"
 import path from "path"
 import { PerfTimer } from "../util"
-import { getPluginName } from "@jackyzha0/quartz-plugins"
 import chalk from "chalk"
 import http from 'http'
 import serveHandler from 'serve-handler'
@@ -43,7 +42,7 @@ export async function buildQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
 
   if (argv.verbose) {
     const pluginCount = Object.values(cfg.plugins).flat().length
-    const pluginNames = (key: 'transformers' | 'filters' | 'emitters') => cfg.plugins[key].map(getPluginName)
+    const pluginNames = (key: 'transformers' | 'filters' | 'emitters') => cfg.plugins[key].map(plugin => plugin.name)
     console.log(`Loaded ${pluginCount} plugins in ${perf.timeSince('start')}`)
     console.log(`  Transformers: ${pluginNames('transformers').join(", ")}`)
     console.log(`  Filters: ${pluginNames('filters').join(", ")}`)

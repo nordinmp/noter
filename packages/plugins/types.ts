@@ -6,16 +6,19 @@ import { ComponentProps } from 'preact'
 export type Data = VFileData
 
 export abstract class QuartzTransformerPlugin {
+  abstract name: string
   abstract markdownPlugins(): PluggableList
   abstract htmlPlugins(): PluggableList
   externalResources?: Partial<StaticResources>
 }
 
 export abstract class QuartzFilterPlugin {
+  abstract name: string
   abstract shouldPublish(content: ProcessedContent<Data>): boolean
 }
 
 export abstract class QuartzEmitterPlugin {
+  abstract name: string
   abstract emit(content: ProcessedContent<Data>[], actions: Actions): Promise<string[]>
 }
 

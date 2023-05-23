@@ -1,4 +1,4 @@
-import { Description, FrontMatter, GitHubFlavoredMarkdown, CreatedModifiedDate, Katex, RemoveDrafts, Page } from '@jackyzha0/quartz-plugins'
+import { Description, FrontMatter, GitHubFlavoredMarkdown, CreatedModifiedDate, Katex, RemoveDrafts, ContentPage } from '@jackyzha0/quartz-plugins'
 import pageSingle from './pageSingle'
 import pageList from './pageList'
 import pageHome from './pageHome'
@@ -29,7 +29,7 @@ export default {
       new RemoveDrafts()
     ],
     emitters: [
-      new Page()
+      new ContentPage()
     ]
   },
   components: {
