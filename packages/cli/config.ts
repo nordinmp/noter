@@ -87,13 +87,16 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
     entryPoints: [fp],
     write: false,
     bundle: true,
-    // minifySyntax: true,
-    // minifyWhitespace: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
     keepNames: true,
     mainFields: ["module", "main"],
     platform: "node",
     jsx: "automatic",
-    jsxImportSource: "preact"
+    jsxImportSource: "preact",
+    alias: {
+      react: "react"
+    }
   }).catch(err => {
     console.error(`${chalk.red("Couldn't parse Quartz configuration:")} ${fp}`)
     console.log(`Reason: ${chalk.grey(err)}`)

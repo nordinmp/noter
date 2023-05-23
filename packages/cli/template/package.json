@@ -2,7 +2,6 @@
   "name": "quartz-site",
   "version": "1.0.0",
   "private": true,
-  "sideEffects": false,
   "dependencies": {
     "@jackyzha0/quartz-plugins": "^1.0.0",
     "@jackyzha0/quartz-lib": "^1.0.0",

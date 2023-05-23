@@ -1,6 +1,6 @@
 {
   "name": "@jackyzha0/quartz-plugins",
-  "description": "Plugins for indexing content and modifying source content",
+  "description": "Plugins for indexing content and modifying source content in Quartz",
   "version": "1.0.0",
   "type": "module",
   "sideEffects": false,
@@ -34,8 +34,10 @@
     "unified": "^10.1.2",
     "vfile": "^5.3.7"
   },
+  "peerDependencies": {
+    "@jackyzha0/quartz-lib": "^1.0.0"
+  },
   "devDependencies": {
-    "@jackyzha0/quartz-lib": "^1.0.0",
     "preact": "^10.14.1"
   }
 }
