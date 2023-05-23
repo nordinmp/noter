@@ -7,7 +7,8 @@
   "homepage": "https://quartz.jzhao.xyz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackyzha0/quartz.git"
+    "url": "https://github.com/jackyzha0/quartz.git",
+    "directory": "packages/cli"
   },
   "keywords": [
     "site generator",
