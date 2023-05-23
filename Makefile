@@ -36,6 +36,7 @@ build-cli: ## Builds CLI
 	cp -r ./packages/cli/template ./packages/cli/build/
 
 link-cli:
+	rm -rf /usr/local/lib/node_modules/@jackyzha0
 	cd ./packages/cli; npm i -g . --omit=dev
 
 types-cli:
