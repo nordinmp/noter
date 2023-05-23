@@ -22,21 +22,21 @@ jobs:
         with:
           package: ./packages/lib/package.json
           token: ${{ secrets.NPM_AUTH_TOKEN }}
-          check-version: true
+          strategy: upgrade
       - id: publish-plugins
         name: Publish @jackyzha0/quartz-plugins
         uses: JS-DevTools/npm-publish@v2
         with:
           package: ./packages/plugins/package.json
           token: ${{ secrets.NPM_AUTH_TOKEN }}
-          check-version: true
+          strategy: upgrade
       - id: publish-cli
         name: Publish @jackyzha0/quartz
         uses: JS-DevTools/npm-publish@v2
         with:
           package: ./packages/cli/package.json
           token: ${{ secrets.NPM_AUTH_TOKEN }}
-          check-version: true
+          strategy: upgrade
       
       - if: steps.publish-lib.outputs.type != 'none'
         run: |
