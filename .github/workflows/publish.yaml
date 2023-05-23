@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build Quartz
-        run: make build
+        run: make build-prod
 
       - id: publish-lib
         name: Publish @jackyzha0/quartz-lib

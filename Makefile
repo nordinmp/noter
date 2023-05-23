@@ -11,10 +11,10 @@ help: ## Show all Makefile targets
 deps: ## Install dependencies
 	$(NPM) i
 
-build: types build-lib build-plugins build-cli ## Builds the entirety of Quartz
+build: types build-lib build-plugins build-cli link-cli ## Builds the entirety of Quartz
 
 build-prod: ESBUILD_FLAGS += --minify
-build-prod: build ## Build Quartz for production and emit types
+build-prod: types build-lib build-plugins build-cli ## Build Quartz for production and emit types
 
 ## -- LIB --
 build-lib: ## Build only shared library
@@ -34,6 +34,8 @@ types-plugins:
 build-cli: ## Builds CLI 
 	cd ./packages/cli; $(NPX) esbuild index.ts --outfile=./build/cli.js --external:esbuild --platform=node $(ESBUILD_FLAGS)
 	cp -r ./packages/cli/template ./packages/cli/build/
+
+link-cli:
 	cd ./packages/cli; npm i -g . --omit=dev
 
 types-cli:
