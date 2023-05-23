@@ -23,6 +23,7 @@ jobs:
           package: ./packages/lib/package.json
           token: ${{ secrets.NPM_AUTH_TOKEN }}
           strategy: upgrade
+          access: public
       - id: publish-plugins
         name: Publish @jackyzha0/quartz-plugins
         uses: JS-DevTools/npm-publish@v2
@@ -30,6 +31,7 @@ jobs:
           package: ./packages/plugins/package.json
           token: ${{ secrets.NPM_AUTH_TOKEN }}
           strategy: upgrade
+          access: public
       - id: publish-cli
         name: Publish @jackyzha0/quartz
         uses: JS-DevTools/npm-publish@v2
@@ -37,6 +39,7 @@ jobs:
           package: ./packages/cli/package.json
           token: ${{ secrets.NPM_AUTH_TOKEN }}
           strategy: upgrade
+          access: public
       
       - if: steps.publish-lib.outputs.type != 'none'
         run: |
