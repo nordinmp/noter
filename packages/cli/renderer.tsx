@@ -39,8 +39,7 @@ export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig
       { id: "quartz-root" },
       h(Head, { title, description, baseDir: pathToRoot, externalResources: resources }),
       h("body", { id: "quartz-body" },
-        // @ts-ignore
-        h(Component, props),
+        h(Component, props as any),
         hydrationData,
         ...resources.js.filter(resource => resource.loadTime === "afterDOMReady").map((resource) => h("script", { key: resource.src, src: resource.src }))
       ),

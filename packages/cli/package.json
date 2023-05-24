@@ -19,7 +19,7 @@
     "quartz"
   ],
   "bin": {
-    "quartz": "./build/cli.mjs"
+    "quartz": "./build/cli.js"
   },
   "files": [
     "build",

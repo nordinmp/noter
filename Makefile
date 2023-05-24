@@ -3,7 +3,7 @@
 MAKEFLAGS += -j6
 NPM := npm
 NPX := npx
-ESBUILD_FLAGS := --jsx-import-source=preact --jsx=automatic --packages=external
+ESBUILD_FLAGS := --jsx-import-source=preact --jsx=automatic
 
 help: ## Show all Makefile targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -18,21 +18,21 @@ build-prod: types build-lib build-plugins build-cli ## Build Quartz for producti
 
 ## -- LIB --
 build-lib: ## Build only shared library
-	cd ./packages/lib; $(NPX) esbuild index.ts jsx.ts --outdir=./build --platform=neutral $(ESBUILD_FLAGS)
+	cd ./packages/lib; $(NPX) esbuild index.ts jsx.ts --outdir=./build --platform=neutral --packages=external $(ESBUILD_FLAGS)
 
 types-lib:
 	$(NPX) tsc -p ./packages/lib/tsconfig.json
 
 ## -- PLUGINS --
 build-plugins: ## Build plugin library
-	cd ./packages/plugins; $(NPX) esbuild index.ts --outfile=./build/index.js --platform=neutral --bundle $(ESBUILD_FLAGS)
+	cd ./packages/plugins; $(NPX) esbuild index.ts --outfile=./build/index.js --platform=neutral --bundle --format=cjs --packages=external $(ESBUILD_FLAGS)
 
 types-plugins:
 	$(NPX) tsc -p ./packages/plugins/tsconfig.json
 
 ## -- CLI --
 build-cli: ## Builds CLI 
-	cd ./packages/cli; $(NPX) esbuild index.ts --outfile=./build/cli.mjs --format=esm --platform=node --bundle $(ESBUILD_FLAGS)
+	cd ./packages/cli; $(NPX) esbuild index.ts --outfile=./build/cli.js --platform=node --external:esbuild --bundle $(ESBUILD_FLAGS)
 	cp -r ./packages/cli/template ./packages/cli/build/
 
 link-cli:

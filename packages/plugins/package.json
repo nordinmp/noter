@@ -1,8 +1,7 @@
 {
   "name": "@jackyzha0/quartz-plugins",
   "description": "Plugins for indexing content and modifying source content in Quartz",
-  "version": "1.0.1",
-  "type": "module",
+  "version": "1.0.2",
   "sideEffects": false,
   "author": "jackyzha0 <j.zhao2k19@gmail.com>",
   "license": "MIT",

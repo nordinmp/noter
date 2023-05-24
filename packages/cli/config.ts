@@ -67,7 +67,6 @@ export function isValidConfig(cfg: any): cfg is QuartzConfig {
 
 export const QUARTZ = "quartz"
 export const QUARTZ_CONFIG_NAME = "quartz.config.js"
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
 export function getQuartzPath(directory: string) {
   return path.resolve(path.join(directory, QUARTZ))
@@ -99,26 +98,22 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   const out = await esbuild.build({
     entryPoints: [fp],
     write: false,
-    bundle: true,
     // minifySyntax: true,
     // minifyWhitespace: true,
-    format: "cjs",
+    bundle: true,
     keepNames: true,
     platform: "node",
+    format: "cjs",
     jsx: "automatic",
     jsxImportSource: "preact",
-    alias: {
-      "react": "preact/compat",
-      "react-dom": "preact/compat",
-    },
     plugins: [{
       name: 'rewrite-preact',
       setup(build) {
         const resolveToLocalNodeModules = async (mod: OnResolveArgs) => {
           const resolvedPath = resolve(mod.path)
-          console.log(`${mod.path} -> ${resolvedPath}`)
           return {
-            path: resolvedPath
+            path: resolvedPath,
+            external: true
           }
         }
         build.onResolve({ filter: /^preact/ }, resolveToLocalNodeModules)
