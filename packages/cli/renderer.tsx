@@ -1,21 +1,25 @@
 import { Actions } from "@jackyzha0/quartz-plugins/types"
 import { render } from 'preact-render-to-string'
 import { QuartzConfig } from "./config"
-import { JSResource, StaticResources } from '@jackyzha0/quartz-lib/types'
+import { StaticResources } from '@jackyzha0/quartz-lib/types'
 import path from 'path'
 import fs from 'fs'
 import { HYDRATION_SCRIPT } from './hydration'
+import { h } from 'preact'
 import { resolveToRoot } from '@jackyzha0/quartz-lib'
 
 export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig, staticResources: StaticResources): Actions["buildPage"] {
   return async ({ slug, ext, title, description, componentName, props }) => {
     const hydrationData = cfg.configuration.hydrateInteractiveComponents
-      ? <script id="__QUARTZ_HYDRATION_DATA__" type="application/quartz-data" dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          props,
-          componentName
-        })
-      }} />
+      ? h("script", {
+        id: "__QUARTZ_HYDRATION_DATA__", type: "application/quartz-data", dangerouslySetInnerHTML: {
+          __html: JSON.stringify({
+            props,
+            componentName
+          })
+        }
+      })
+
       : null
 
     const pathToRoot = resolveToRoot(slug)
@@ -30,17 +34,17 @@ export function createBuildPageAction(outputDirectory: string, cfg: QuartzConfig
     const Head = cfg.components.head
     const Component = cfg.components[componentName]
 
-    // @ts-ignore
-    const element = <Component {...props} id="quartz-body" />
-
-    const doc = <html id="quartz-root">
-      <Head title={title} description={description} baseDir={pathToRoot} externalResources={resources} />
-      <body>
-        {element}
-        {hydrationData}
-        {resources.js.filter(resource => resource.loadTime === "afterDOMReady").map((resource: JSResource) => <script key={resource.src} src={resource.src} />)}
-      </body>
-    </html>
+    const doc = h(
+      "html",
+      { id: "quartz-root" },
+      h(Head, { title, description, baseDir: pathToRoot, externalResources: resources }),
+      h("body", { id: "quartz-body" },
+        // @ts-ignore
+        h(Component, props),
+        hydrationData,
+        ...resources.js.filter(resource => resource.loadTime === "afterDOMReady").map((resource) => h("script", { key: resource.src, src: resource.src }))
+      ),
+    )
 
     const pathToPage = path.join(outputDirectory, slug + ext)
     const dir = path.dirname(pathToPage)

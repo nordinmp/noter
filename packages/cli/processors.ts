@@ -83,7 +83,7 @@ export async function emitContent(input: string, output: string, cfg: QuartzConf
     const { metafile } = await transpileHydrationScript(input, outFile)
 
     for (const [k, v] of Object.entries(metafile.outputs)) {
-      console.log(k, v)
+      // TODO
     }
 
     if (verbose) {

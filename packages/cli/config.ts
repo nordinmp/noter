@@ -3,10 +3,12 @@ import path from 'path'
 import requireFromString from 'require-from-string'
 import chalk from 'chalk'
 import { version } from './package.json'
-import esbuild from 'esbuild'
+import esbuild, { OnResolveArgs } from 'esbuild'
 import fs from 'fs'
+import url from 'url'
 import { Data, PluginTypes } from '@jackyzha0/quartz-plugins'
 import { ComponentTypes } from '@jackyzha0/quartz-lib/types'
+import buildResolver from 'esm-resolve'
 
 export interface UserProvidedConfig {
   quartzVersion: string,
@@ -65,6 +67,7 @@ export function isValidConfig(cfg: any): cfg is QuartzConfig {
 
 export const QUARTZ = "quartz"
 export const QUARTZ_CONFIG_NAME = "quartz.config.js"
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
 export function getQuartzPath(directory: string) {
   return path.resolve(path.join(directory, QUARTZ))
@@ -76,6 +79,16 @@ export function getConfigFilePath(directory: string) {
 
 export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   const fp = path.resolve(path.join(directory, QUARTZ, QUARTZ_CONFIG_NAME))
+  const resolver = buildResolver(fp)
+  const resolve = (mod: string) => {
+    const resolvedPath = resolver(mod)
+    if (!resolvedPath) {
+      console.log(chalk.red(`Couldn't find dependency \`${mod}\`, have you installed all the dependencies?`))
+      console.log("hint: `quartz deps`")
+      return mod
+    }
+    return path.resolve(__dirname, '..', resolvedPath)
+  }
 
   if (!fs.existsSync(fp)) {
     console.error(`${chalk.red("Couldn't find Quartz configuration:")} ${fp}`)
@@ -87,17 +100,31 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
     entryPoints: [fp],
     write: false,
     bundle: true,
-    minifySyntax: true,
-    minifyWhitespace: true,
+    // minifySyntax: true,
+    // minifyWhitespace: true,
+    format: "cjs",
     keepNames: true,
-    mainFields: ["module", "main"],
     platform: "node",
     jsx: "automatic",
     jsxImportSource: "preact",
     alias: {
       "react": "preact/compat",
       "react-dom": "preact/compat",
-    }
+    },
+    plugins: [{
+      name: 'rewrite-preact',
+      setup(build) {
+        const resolveToLocalNodeModules = async (mod: OnResolveArgs) => {
+          const resolvedPath = resolve(mod.path)
+          console.log(`${mod.path} -> ${resolvedPath}`)
+          return {
+            path: resolvedPath
+          }
+        }
+        build.onResolve({ filter: /^preact/ }, resolveToLocalNodeModules)
+        build.onResolve({ filter: /^@jackyzha0/ }, resolveToLocalNodeModules)
+      },
+    }]
   }).catch(err => {
     console.error(`${chalk.red("Couldn't parse Quartz configuration:")} ${fp}`)
     console.log(`Reason: ${chalk.grey(err)}`)
@@ -106,6 +133,7 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   })
 
   const mod = out.outputFiles![0].text
+  console.log(mod)
   const cfg: QuartzConfig = requireFromString(mod, fp).default
   if (!isValidConfig(cfg)) {
     console.error(chalk.red("Invalid Quartz configuration"))
@@ -114,7 +142,6 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
 
   if (cfg.configuration.quartzVersion !== version) {
     console.log(`${chalk.yellow("Warning:")} version in configuration (${cfg.configuration.quartzVersion}) is different from current Quartz version (${version}). Proceed with caution!`)
-    console.log("hint: visit https://github.com/jackyzha0/quartz/blob/v4/config.ts to see the most up-to-date schema")
   }
 
   return cfg
@@ -137,5 +164,6 @@ export async function templateQuartzFolder(directory: string, cfg: UserProvidedC
       s = s.replace(`__${k}`, `${v}`)
     }
   }
+
   await fs.promises.writeFile(configFilePath, s)
 }

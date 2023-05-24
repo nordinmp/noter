@@ -22,6 +22,7 @@ export async function transpileHydrationScript(inputDirectory: string, outfile: 
       resolveDir: getQuartzPath(inputDirectory),
     },
     bundle: true,
+    keepNames: true,
     minify: true,
     metafile: true,
     platform: "browser",

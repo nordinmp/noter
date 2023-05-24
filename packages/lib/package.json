@@ -3,7 +3,6 @@
   "description": "Shared components and utility functions for Quartz",
   "version": "1.0.1",
   "type": "module",
-  "sideEffects": false,
   "author": "jackyzha0 <j.zhao2k19@gmail.com>",
   "license": "MIT",
   "homepage": "https://quartz.jzhao.xyz",
@@ -28,7 +27,7 @@
     "build"
   ],
   "dependencies": {
-    "chalk": "^5.2.0",
+    "chalk": "^4.1.2",
     "hast-util-to-jsx-runtime": "^1.2.0"
   },
   "peerDependencies": {
