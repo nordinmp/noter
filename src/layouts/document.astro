@@ -1,25 +1,66 @@
 ---
+import "./css/base.scss"
+import Clipboard from "./clipboard.astro"
 import { relativeToRoot, resolveToRoot } from "../util/path"
 const { title, slug } = Astro.props
 const pathToRoot = resolveToRoot(slug)
-import quartzConfig from '../../quartz.config.mjs'
+import quartzConfig from "../../quartz.config.mjs"
+const siteTitle = quartzConfig.siteTitle
+const _ = (font: string) => font.replaceAll(" ", "+")
+const { header: headerFont, body: bodyFont, code: codeFont } = quartzConfig.theme.typography
 ---
+
+<style
+  is:global
+  lang="scss"
+  define:vars={{
+    headerFont,
+    bodyFont,
+    codeFont,
+    ...quartzConfig.theme.colors.lightMode,
+  }}
+></style>
+
+<Clipboard />
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+    <title>{title ?? siteTitle}</title>
     <link rel="icon" href={relativeToRoot(slug, "icon.png")} />
-    {quartzConfig.enableLatex && <>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"/>
-      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js"/>
-    </>}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href={`https://fonts.googleapis.com/css2?family=${_(codeFont)}&family=${_(
+        headerFont,
+      )}:wght@400;700&family=${_(bodyFont)}:ital,wght@0,400;0,600;1,400;1,600&display=swap`}
+      rel="stylesheet"
+    />
+
+    {
+      quartzConfig.enableLatex && (
+        <>
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
+          />
+          <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js"
+          />
+        </>
+      )
+    }
   </head>
-  <body class="flex justify-center">
-    <article class="prose max-w-2xl py-12">
-      <h1><a href={pathToRoot}>{title}</a></h1>
-      <slot />
-    </article>
+  <body>
+    <div class="page">
+      <h1><a href={pathToRoot}>{siteTitle}</a></h1>
+      <article>
+        {title && <h1>{title}</h1>}
+        <slot />
+      </article>
+    </div>
   </body>
 </html>
+
