@@ -9,8 +9,14 @@ import { slugFromPath, slugify, relativeToRoot, relative } from './src/util/path
 import { visit } from 'unist-util-visit'
 import isAbsoluteUrl from 'is-absolute-url'
 import quartzConfig from './quartz.config.mjs'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
 
 const usesRelativePaths = quartzConfig.pathResolution === 'relative'
+const { enableLatex } = quartzConfig
+
+// ast type defs
+/** @typedef {import('remark-math')} */
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,10 +32,11 @@ export default defineConfig({
         pageResolver: (name) => ([slugify(name)]),
         aliasDivider: '|',
         hrefTemplate: x => x
-      }]
+      }],
+      ...enableLatex ? [remarkMath] : [],
     ],
     rehypePlugins: [
-      // link processing
+      // relative link processing
       () => (tree, vfile) => {
         const curSlug = slugFromPath(vfile.cwd, vfile.history[0])
         visit(tree, 'element', (node, _index, _parent) => {
@@ -52,9 +59,13 @@ export default defineConfig({
       slugifyHeaders,
       generateIdsForHeadings,
       [linkHeadings, { content: '#' }],
+      ...enableLatex ? [[rehypeKatex, { output: 'html' }]] : []
     ],
     shikiConfig: {
       theme: 'github-dark'
     }
+  },
+  experimental: {
+    assets: true
   }
 })

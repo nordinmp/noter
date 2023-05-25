@@ -2,6 +2,7 @@
 import { relativeToRoot, resolveToRoot } from "../util/path"
 const { title, slug } = Astro.props
 const pathToRoot = resolveToRoot(slug)
+import quartzConfig from '../../quartz.config.mjs'
 ---
 
 <html lang="en">
@@ -10,6 +11,10 @@ const pathToRoot = resolveToRoot(slug)
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <link rel="icon" href={relativeToRoot(slug, "icon.png")} />
+    {quartzConfig.enableLatex && <>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"/>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js"/>
+    </>}
   </head>
   <body class="flex justify-center">
     <article class="prose max-w-2xl py-12">

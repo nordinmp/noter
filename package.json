@@ -18,7 +18,9 @@
     "is-absolute-url": "^4.0.1",
     "preact": "^10.15.0",
     "rehype-autolink-headings": "^6.1.1",
+    "rehype-katex": "^6.0.3",
     "rehype-slug": "^5.1.0",
+    "remark-math": "^5.1.1",
     "remark-wiki-link": "^1.0.4",
     "tailwindcss": "^3.3.2",
     "unist-util-visit": "^4.1.2"

@@ -7,7 +7,11 @@ export function resolveToRoot(slug: string): string {
     fp = fp.slice(0, -"/index".length)
   }
 
-  return "./" + path.relative(fp, path.posix.sep)
+  const newPath = fp
+    .split(path.posix.sep)
+    .map(_ => '..')
+    .join(path.posix.sep)
+  return "./" + newPath 
 }
 
 export function relativeToRoot(slug: string, fp: string): string {
@@ -20,13 +24,12 @@ export function slugify(fp: string): string {
   const rawSlugSegments = withoutFileExt.split(path.sep)
   const slugParts: string = rawSlugSegments
     .map((segment) => slug(segment))
-    .join('/')
+    .join(path.posix.sep)
     .replace(/\/index$/, '')
   return path.normalize(slugParts)
 }
 
 export function slugFromPath(dir: string, fullPath: string): string {
-  console.log(dir, fullPath)
   return slugify(path.relative(dir, fullPath))
 }
 
