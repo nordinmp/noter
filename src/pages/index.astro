@@ -1,0 +1,10 @@
+---
+import { getEntry } from "astro:content"
+import Document from "../layouts/document.astro"
+const entry = await getEntry("quartz", "index")
+const { Content } = await entry.render()
+---
+
+<Document title={entry.data.title} slug="/">
+  <Content />
+</Document>

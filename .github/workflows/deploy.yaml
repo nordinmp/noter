@@ -3,33 +3,15 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - hugo
+      - v4-astro 
 
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Build Link Index
-        uses: jackyzha0/hugo-obsidian@v2.20
-        with:
-          index: true
-          input: content
-          output: assets/indices
-          root: .
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.96.0'
-          extended: true
-
-      - name: Build
-        run: hugo --minify
-
+      - uses: actions/checkout@v3
+      - name: Install, build, and upload your site
+        uses: withastro/action@v0
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -37,3 +19,13 @@ jobs:
           publish_dir: ./public
           publish_branch: master  # deploying branch
           cname: quartz.jzhao.xyz
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

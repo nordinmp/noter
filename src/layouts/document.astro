@@ -1,0 +1,20 @@
+---
+import { relativeToRoot, resolveToRoot } from "../util/path"
+const { title, slug } = Astro.props
+const pathToRoot = resolveToRoot(slug)
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="icon" href={relativeToRoot(slug, "icon.png")} />
+  </head>
+  <body class="flex justify-center">
+    <article class="prose max-w-2xl py-12">
+      <h1><a href={pathToRoot}>{title}</a></h1>
+      <slot />
+    </article>
+  </body>
+</html>

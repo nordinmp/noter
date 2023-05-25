@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content"
+import Document from "../layouts/document.astro"
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("quartz")
+  const allPaths = blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+  return allPaths
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<Document title={entry.data.title} slug={entry.slug}>
+  <Content />
+</Document>
