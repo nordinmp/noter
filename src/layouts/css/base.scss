@@ -23,7 +23,6 @@ p, ul, text, a, tr, td, li, ol, ul {
 }
 
 a {
-  font-size: 1em;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -36,13 +35,13 @@ a {
   &.internal {
     text-decoration: none;
     background-color: var(--highlight);
-    padding: 0 0.1em;
+    padding: 0 0.1rem;
     border-radius: 5px;
   }
 }
 
 .page {
-  padding: 4em 30vw;
+  padding: 4rem 30vw;
   margin: 0 auto;
   max-width: 1000px;
   @media all and (max-width: 1200px) {
@@ -55,7 +54,7 @@ a {
 
   & article {
     & > h1 {
-      font-size: 2em;
+      font-size: 2rem;
     }
   }
 }
@@ -64,7 +63,7 @@ blockquote {
   font-style: italic;
   margin-left: 0;
   border-left: 3px solid var(--secondary);
-  padding-left: 1em;
+  padding-left: 1rem;
   transition: border-color 0.2s ease;
 }
 
@@ -87,24 +86,25 @@ thead {
 }
 
 div[data-rehype-pretty-code-fragment] {
+  line-height: 1.5rem;
+
   & > div[data-rehype-pretty-code-title] {
     font-family: var(--codeFont);
-    font-size: 0.9em;
-    padding: 0.1em 0.8em;
+    font-size: 0.9rem;
+    padding: 0.1rem 0.8rem;
     border: 1px solid var(--lightgray);
     width: max-content;
     border-radius: 5px;
-    margin-bottom: -0.8em;
+    margin-bottom: -0.8rem;
     color: var(--darkgray);
   }
 
   & pre {
     font-family: var(--codeFont);
-    padding: 0.4em 0;
+    padding: 0.5rem 0;
     border-radius: 5px;
     overflow-x: scroll;
     border: 1px solid var(--lightgray);
-    line-height: 1.2em;
     position: relative;
 
     & > code {
@@ -115,7 +115,7 @@ div[data-rehype-pretty-code-fragment] {
       display: grid;
 
       & .line {
-        padding: 0 0.75em;
+        padding: 0 0.75rem;
         box-sizing: border-box;
         border-left: 3px solid transparent;
 
@@ -127,7 +127,6 @@ div[data-rehype-pretty-code-fragment] {
         &::before {
           content: counter(line);
           counter-increment: line;
-
           width: 1rem;
           margin-right: 1rem;
           display: inline-block;
@@ -141,42 +140,42 @@ div[data-rehype-pretty-code-fragment] {
 
 code {
   font-family: var(--codeFont);
-  font-size: 0.9em;
+  font-size: 0.9rem;
   border-radius: 5px;
-  padding: 0.1em 0.2em;
+  padding: 0.1rem 0.2rem;
   background: var(--lightgray);
 }
 
 tbody, li, p {
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 
 table {
   border: 1px solid var(--lightgray);
   width: 100%;
-  padding: 1.5em;
+  padding: 1.5rem;
   border-collapse: collapse;
 }
 
 td, th {
-  padding: 0.2em 1em;
+  padding: 0.2rem 1rem;
   border: 1px solid var(--lightgray);
 }
 
 img {
   max-width: 100%;
   border-radius: 5px;
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 p > img + em {
   display: block;
-  transform: translateY(-1em);
+  transform: translateY(-1rem);
 }
 
 hr {
   width: 100%;
-  margin: 2em auto;
+  margin: 2rem auto;
   height: 1px;
   border: none;
   background-color: var(--lightgray);
