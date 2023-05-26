@@ -9,7 +9,7 @@ Quartz is designed to be extremely configurable. You can find the bulk of the co
 
 The majority of configuration can be found under `data/config.yaml`. An annotated example configuration is shown below.
 
-```yaml {title="data/config.yaml", 1-3, 5}
+```yaml {title="data/config.yaml", 5-10}
 # The name to display in the footer
 name: Jacky Zhao
 

@@ -25,7 +25,7 @@ export default {
         gray: '#343434',
         darkgray: '#d4d4d4',
         dark: '#fbfffe',
-        secondary: '#6b879a',
+        secondary: '#7b97aa',
         tertiary: '#84a59d',
         highlight: 'rgba(143, 159, 169, 0.15)',
       },

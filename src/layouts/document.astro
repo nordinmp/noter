@@ -1,6 +1,7 @@
 ---
 import "./css/base.scss"
 import Clipboard from "./clipboard.astro"
+import Darkmode from "./darkmode.astro"
 import { relativeToRoot, resolveToRoot } from "../util/path"
 const { title, slug } = Astro.props
 const pathToRoot = resolveToRoot(slug)
@@ -8,6 +9,27 @@ import quartzConfig from "../../quartz.config.mjs"
 const siteTitle = quartzConfig.siteTitle
 const _ = (font: string) => font.replaceAll(" ", "+")
 const { header: headerFont, body: bodyFont, code: codeFont } = quartzConfig.theme.typography
+
+const {
+  light: l1,
+  lightgray: l2,
+  gray: l3,
+  darkgray: l4,
+  dark: l5,
+  secondary: l6,
+  tertiary: l7,
+  highlight: l8,
+} = quartzConfig.theme.colors.lightMode
+const {
+  light: d1,
+  lightgray: d2,
+  gray: d3,
+  darkgray: d4,
+  dark: d5,
+  secondary: d6,
+  tertiary: d7,
+  highlight: d8,
+} = quartzConfig.theme.colors.darkMode
 ---
 
 <style
@@ -17,9 +39,59 @@ const { header: headerFont, body: bodyFont, code: codeFont } = quartzConfig.them
     headerFont,
     bodyFont,
     codeFont,
-    ...quartzConfig.theme.colors.lightMode,
+    l1,
+    l2,
+    l3,
+    l4,
+    l5,
+    l6,
+    l7,
+    l8,
+    d1,
+    d2,
+    d3,
+    d4,
+    d5,
+    d6,
+    d7,
+    d8,
   }}
-></style>
+>
+  body {
+    --light: var(--l1);
+    --lightgray: var(--l2);
+    --gray: var(--l3);
+    --darkgray: var(--l4);
+    --dark: var(--l5);
+    --secondary: var(--l6);
+    --tertiary: var(--l7);
+    --highlight: var(--l8);
+  }
+
+  [saved-theme="dark"] {
+    --light: var(--d1);
+    --lightgray: var(--d2);
+    --gray: var(--d3);
+    --darkgray: var(--d4);
+    --dark: var(--d5);
+    --secondary: var(--d6);
+    --tertiary: var(--d7);
+    --highlight: var(--d8);
+  }
+</style>
+
+<style lang="scss">
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em 0 2em 0;
+    & > h1 {
+      margin: 0;
+      flex: auto;
+    }
+  }
+</style>
 
 <Clipboard />
 
@@ -55,7 +127,11 @@ const { header: headerFont, body: bodyFont, code: codeFont } = quartzConfig.them
   </head>
   <body>
     <div class="page">
-      <h1><a href={pathToRoot}>{siteTitle}</a></h1>
+      <header>
+        <h1><a href={pathToRoot}>{siteTitle}</a></h1>
+        <div class="spacer"></div>
+        <Darkmode />
+      </header>
       <article>
         {title && <h1>{title}</h1>}
         <slot />
@@ -63,4 +139,3 @@ const { header: headerFont, body: bodyFont, code: codeFont } = quartzConfig.them
     </div>
   </body>
 </html>
-

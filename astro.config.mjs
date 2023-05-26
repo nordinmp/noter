@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config'
-import preact from "@astrojs/preact"
 import { rehypeHeadingIds as slugifyHeaders } from '@astrojs/markdown-remark'
 import generateIdsForHeadings from 'rehype-slug'
 import linkHeadings from 'rehype-autolink-headings'
@@ -17,9 +16,6 @@ const { enableLatex } = quartzConfig
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    preact({
-      compat: true
-    }),
     copyStaticAssets
   ],
   markdown: {
@@ -32,14 +28,14 @@ export default defineConfig({
         theme: 'css-variables',
         onVisitLine(node) {
           if (node.children.length === 0) {
-            node.children = [{ type: 'text', value: ' ' }];
+            node.children = [{ type: 'text', value: ' ' }]
           }
         },
         onVisitHighlightedLine(node) {
-          node.properties.className.push('highlighted');
+          node.properties.className.push('highlighted')
         },
         onVisitHighlightedWord(node) {
-          node.properties.className = ['word'];
+          node.properties.className = ['word']
         },
       }],
       processRelativeLinks,
