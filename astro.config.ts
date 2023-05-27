@@ -2,19 +2,18 @@ import { defineConfig } from 'astro/config'
 import { rehypeHeadingIds as slugifyHeaders } from '@astrojs/markdown-remark'
 import generateIdsForHeadings from 'rehype-slug'
 import linkHeadings from 'rehype-autolink-headings'
-import quartzConfig from './quartz.config.mjs'
+import quartzConfig from './quartz.config'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import copyStaticAssets from './src/plugins/static'
 import { processRelativeLinks, wikilinkPreset } from './src/plugins/links'
-import rehypePrettyCode from 'rehype-pretty-code'
+import { processCodeblocks } from './src/plugins/codeblocks'
+import rehypePrettyCode, { Options as CodeOptions } from 'rehype-pretty-code'
 const { enableLatex } = quartzConfig
 
-// ast type defs
-/** @typedef {import('remark-math')} */
-
-// https://astro.build/config
 export default defineConfig({
+  // TODO: test this more
+  // base: '/test/big/subpath',
   integrations: [
     copyStaticAssets
   ],
@@ -24,6 +23,7 @@ export default defineConfig({
       ...enableLatex ? [remarkMath] : [],
     ],
     rehypePlugins: [
+      processCodeblocks,
       [rehypePrettyCode, {
         theme: 'css-variables',
         onVisitLine(node) {
@@ -37,16 +37,17 @@ export default defineConfig({
         onVisitHighlightedWord(node) {
           node.properties.className = ['word']
         },
-      }],
+      } satisfies Partial<CodeOptions>],
       processRelativeLinks,
       slugifyHeaders,
       generateIdsForHeadings,
-      [linkHeadings, { content: '#' }],
-      ...enableLatex ? [[rehypeKatex, { output: 'html' }]] : []
+      [linkHeadings, { behavior: 'wrap' }],
+      ...enableLatex ? [rehypeKatex] : []
     ],
-    syntaxHighlight: false
-  },
-  experimental: {
-    assets: true
+    remarkRehype: {
+      clobberPrefix: 'article-',
+      footnoteBackLabel: 'Go to reference',
+    },
+    syntaxHighlight: false // handled by rehypePrettyCode
   }
 })

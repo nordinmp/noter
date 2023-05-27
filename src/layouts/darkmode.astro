@@ -1,4 +1,6 @@
 ---
+import quartzConfig from "../../quartz.config"
+const { enableSPA } = quartzConfig
 ---
 
 <style lang="scss">
@@ -48,31 +50,6 @@
   }
 </style>
 
-<script>
-  const userPref = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
-  const currentTheme = localStorage.getItem("theme") ?? userPref
-
-  if (currentTheme) {
-    document.body.setAttribute("saved-theme", currentTheme)
-  }
-
-  const switchTheme = (e: any) => {
-    if (e.target.checked) {
-      document.body.setAttribute("saved-theme", "dark")
-      localStorage.setItem("theme", "dark")
-    } else {
-      document.body.setAttribute("saved-theme", "light")
-      localStorage.setItem("theme", "light")
-    }
-  }
-
-  const toggleSwitch = document.querySelector("#darkmode-toggle") as HTMLInputElement
-  toggleSwitch.addEventListener("change", switchTheme, false)
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true
-  }
-</script>
-
 <div class="darkmode">
   <input class="toggle" id="darkmode-toggle" type="checkbox" tabindex="-1" />
   <label id="toggle-label-light" for="darkmode-toggle" tabindex="-1">
@@ -112,3 +89,23 @@
     </svg>
   </label>
 </div>
+
+<script is:inline>
+  document.querySelector("#darkmode-toggle").addEventListener(
+    "change",
+    (e) => {
+      if (e.target.checked) {
+        document.documentElement.setAttribute("saved-theme", "dark")
+        localStorage.setItem("theme", "dark")
+      } else {
+        document.documentElement.setAttribute("saved-theme", "light")
+        localStorage.setItem("theme", "light")
+      }
+    },
+    false,
+  )
+
+  if (window.currentTheme === "dark") {
+    toggleSwitch.checked = true
+  }
+</script>

@@ -1,7 +1,11 @@
-export default {
+import type { QuartzConfig } from "./src/quartz.types";
+
+const quartzConfig: QuartzConfig = {
   siteTitle: "🪴 Quartz 4.0",
-  pathResolution: 'absolute', // one of 'absolute' or 'relative'
-  enableLatex: true, // whether to process and render latex (increases bundle size)
+  prettyLinks: true,
+  markdownLinkResolution: 'absolute',
+  enableLatex: true,
+  enableSPA: true,
   theme: {
     typography: { // loaded from Google Fonts
       header: "Schibsted Grotesk",
@@ -32,3 +36,5 @@ export default {
     }
   }
 }
+
+export default quartzConfig

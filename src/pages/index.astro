@@ -1,8 +1,6 @@
 ---
-import { getEntry } from "astro:content"
 import Document from "../layouts/document.astro"
-const entry = await getEntry("quartz", "index")
-const { Content } = await entry.render()
+import Content from "../../content/index.md"
 ---
 
 <Document slug="/">

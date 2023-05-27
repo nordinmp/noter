@@ -82,10 +82,15 @@ thead {
   &:hover > .hanchor {
     color: var(--secondary);
   }
+
+  article > & > a {
+    color: var(--dark)
+  }
 }
 
 div[data-rehype-pretty-code-fragment] {
   line-height: 1.5rem;
+  position: relative;
 
   & > div[data-rehype-pretty-code-title] {
     font-family: var(--codeFont);
@@ -104,11 +109,11 @@ div[data-rehype-pretty-code-fragment] {
     border-radius: 5px;
     overflow-x: scroll;
     border: 1px solid var(--lightgray);
-    position: relative;
 
     & > code {
       background: none;
       padding: 0;
+      font-size: 0.9rem;
       counter-reset: line;
       counter-increment: line 0;
       display: grid;
@@ -138,8 +143,8 @@ div[data-rehype-pretty-code-fragment] {
 }
 
 code {
+  font-size: 0.9em;
   font-family: var(--codeFont);
-  font-size: 0.9rem;
   border-radius: 5px;
   padding: 0.1rem 0.2rem;
   background: var(--lightgray);
@@ -150,7 +155,7 @@ tbody, li, p {
 }
 
 table {
-  border: 1px solid var(--lightgray);
+  border: 2px solid var(--gray);
   width: 100%;
   padding: 1.5rem;
   border-collapse: collapse;
@@ -158,7 +163,7 @@ table {
 
 td, th {
   padding: 0.2rem 1rem;
-  border: 1px solid var(--lightgray);
+  border: 2px solid var(--gray);
 }
 
 img {
@@ -180,3 +185,17 @@ hr {
   background-color: var(--lightgray);
 }
 
+section {
+  margin: 2rem auto;
+  border-top: 1px solid var(--lightgray);
+
+  & > #footnote-label {
+    & > a {
+      color: var(--dark);
+    }
+  }
+  
+  & ol, & ul {
+    padding: 0 1em
+  }
+}
