@@ -20,6 +20,7 @@ const { enableSPA } = quartzConfig
     }
 
     & svg {
+      cursor: pointer;
       opacity: 0;
       position: absolute;
       width: 20px;
@@ -31,7 +32,7 @@ const { enableSPA } = quartzConfig
     }
   }
 
-  .toggle:checked ~ label {
+  :root[saved-theme="dark"] .toggle ~ label {
     & > #dayIcon {
       opacity: 0;
     }
@@ -40,7 +41,7 @@ const { enableSPA } = quartzConfig
     }
   }
 
-  .toggle:not(:checked) ~ label {
+  :root .toggle ~ label {
     & > #dayIcon {
       opacity: 1;
     }
@@ -91,9 +92,9 @@ const { enableSPA } = quartzConfig
 </div>
 
 <script is:inline>
-  document.querySelector("#darkmode-toggle").addEventListener(
-    "change",
-    (e) => {
+  ;(function () {
+    const toggleSwitch = document.querySelector("#darkmode-toggle")
+    toggleSwitch.addEventListener("change", (e) => {
       if (e.target.checked) {
         document.documentElement.setAttribute("saved-theme", "dark")
         localStorage.setItem("theme", "dark")
@@ -101,11 +102,10 @@ const { enableSPA } = quartzConfig
         document.documentElement.setAttribute("saved-theme", "light")
         localStorage.setItem("theme", "light")
       }
-    },
-    false,
-  )
+    })
 
-  if (window.currentTheme === "dark") {
-    toggleSwitch.checked = true
-  }
+    if (localStorage.getItem("theme") === "dark") {
+      toggleSwitch.checked = true
+    }
+  })()
 </script>

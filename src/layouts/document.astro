@@ -99,12 +99,14 @@ const dark = mapTheme(quartzConfig.theme.colors.darkMode, "dk")
       )
     }
     <script is:inline>
-      // darkmode needs to be inlined to prevent FOUC
-      window.currentTheme =
-        localStorage.getItem("theme") ?? window.matchMedia("(prefers-color-scheme: light)").matches
-          ? "light"
-          : "dark"
-      document.documentElement.setAttribute("saved-theme", window.currentTheme)
+      ;(function () {
+        // darkmode needs to be inlined to prevent FOUC
+        const currentTheme = localStorage.getItem("theme")
+        const theme =
+          currentTheme ??
+          (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+        document.documentElement.setAttribute("saved-theme", theme)
+      })()
     </script>
   </head>
   <body>
