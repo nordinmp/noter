@@ -18,7 +18,7 @@ build-prod: types build-lib build-plugins build-cli ## Build Quartz for producti
 
 ## -- LIB --
 build-lib: ## Build only shared library
-	cd ./packages/lib; $(NPX) esbuild index.ts jsx.ts --outdir=./build --platform=neutral --packages=external $(ESBUILD_FLAGS)
+	cd ./packages/lib; $(NPX) esbuild index.ts jsx.ts --outdir=./build --out-extension:.js=.mjs --platform=neutral --packages=external $(ESBUILD_FLAGS)
 
 types-lib:
 	$(NPX) tsc -p ./packages/lib/tsconfig.json

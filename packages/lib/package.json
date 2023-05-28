@@ -20,8 +20,8 @@
     "quartz"
   ],
   "exports": {
-    ".": "./build/index.js",
-    "./jsx": "./build/jsx.js"
+    ".": "./build/index.mjs",
+    "./jsx": "./build/jsx.mjs"
   },
   "types": "./build/index.d.ts",
   "files": [
