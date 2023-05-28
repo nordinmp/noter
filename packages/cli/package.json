@@ -1,7 +1,7 @@
 {
   "name": "@jackyzha0/quartz",
   "description": "🌱 publish your digital garden and notes as a website",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "author": "jackyzha0 <j.zhao2k19@gmail.com>",
   "license": "MIT",
   "homepage": "https://quartz.jzhao.xyz",
@@ -19,7 +19,7 @@
     "quartz"
   ],
   "bin": {
-    "quartz": "./build/cli.js"
+    "quartz": "./build/cli.mjs"
   },
   "files": [
     "build",
@@ -54,7 +54,6 @@
     "@types/hast": "^2.3.4",
     "@types/pretty-time": "^1.1.2",
     "@types/require-from-string": "^1.2.1",
-    "@types/resolve": "^1.20.2",
     "@types/serve-handler": "^6.1.1",
     "@types/yargs": "^17.0.24"
   }

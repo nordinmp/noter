@@ -35,6 +35,7 @@ export async function setupQuartz(argv: ArgumentsCamelCase<InferredOptionTypes<t
   const quartzPath = getQuartzPath(argv.directory)
   if (fs.existsSync(quartzPath)) {
     const answer = await confirm({ message: `A Quartz folder \`${quartzPath}\` already exists in this directory. Overwrite it?` })
+
     if (answer === false) {
       return
     }

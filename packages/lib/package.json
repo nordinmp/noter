@@ -1,7 +1,9 @@
 {
   "name": "@jackyzha0/quartz-lib",
   "description": "Shared components and utility functions for Quartz",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "sideEffects": false,
+  "type": "module",
   "author": "jackyzha0 <j.zhao2k19@gmail.com>",
   "license": "MIT",
   "homepage": "https://quartz.jzhao.xyz",
