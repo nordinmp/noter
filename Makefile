@@ -25,14 +25,14 @@ types-lib:
 
 ## -- PLUGINS --
 build-plugins: ## Build plugin library
-	cd ./packages/plugins; $(NPX) esbuild index.ts --outfile=./build/index.js --platform=neutral --bundle --format=cjs --packages=external $(ESBUILD_FLAGS)
+	cd ./packages/plugins; $(NPX) esbuild index.ts --outfile=./build/index.js --platform=neutral --bundle --packages=external $(ESBUILD_FLAGS)
 
 types-plugins:
 	$(NPX) tsc -p ./packages/plugins/tsconfig.json
 
 ## -- CLI --
 build-cli: ## Builds CLI 
-	cd ./packages/cli; $(NPX) esbuild index.ts --outfile=./build/cli.js --platform=node --external:esbuild --bundle $(ESBUILD_FLAGS)
+	cd ./packages/cli; $(NPX) esbuild index.ts --outfile=./build/cli.js --platform=node --packages=external --bundle $(ESBUILD_FLAGS)
 	cp -r ./packages/cli/template ./packages/cli/build/
 
 link-cli:

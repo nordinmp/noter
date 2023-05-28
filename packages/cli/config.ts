@@ -3,12 +3,10 @@ import path from 'path'
 import requireFromString from 'require-from-string'
 import chalk from 'chalk'
 import { version } from './package.json'
-import esbuild, { OnResolveArgs } from 'esbuild'
+import esbuild from 'esbuild'
 import fs from 'fs'
-import url from 'url'
 import { Data, PluginTypes } from '@jackyzha0/quartz-plugins'
 import { ComponentTypes } from '@jackyzha0/quartz-lib/types'
-import buildResolver from 'esm-resolve'
 
 export interface UserProvidedConfig {
   quartzVersion: string,
@@ -78,16 +76,6 @@ export function getConfigFilePath(directory: string) {
 
 export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   const fp = path.resolve(path.join(directory, QUARTZ, QUARTZ_CONFIG_NAME))
-  const resolver = buildResolver(fp)
-  const resolve = (mod: string) => {
-    const resolvedPath = resolver(mod)
-    if (!resolvedPath) {
-      console.log(chalk.red(`Couldn't find dependency \`${mod}\`, have you installed all the dependencies?`))
-      console.log("hint: `quartz deps`")
-      return mod
-    }
-    return path.resolve(__dirname, '..', resolvedPath)
-  }
 
   if (!fs.existsSync(fp)) {
     console.error(`${chalk.red("Couldn't find Quartz configuration:")} ${fp}`)
@@ -98,28 +86,15 @@ export async function readConfigFile(directory: string): Promise<QuartzConfig> {
   const out = await esbuild.build({
     entryPoints: [fp],
     write: false,
-    // minifySyntax: true,
-    // minifyWhitespace: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
     bundle: true,
+    packages: "external",
     keepNames: true,
     platform: "node",
     format: "cjs",
     jsx: "automatic",
     jsxImportSource: "preact",
-    plugins: [{
-      name: 'rewrite-preact',
-      setup(build) {
-        const resolveToLocalNodeModules = async (mod: OnResolveArgs) => {
-          const resolvedPath = resolve(mod.path)
-          return {
-            path: resolvedPath,
-            external: true
-          }
-        }
-        build.onResolve({ filter: /^preact/ }, resolveToLocalNodeModules)
-        build.onResolve({ filter: /^@jackyzha0/ }, resolveToLocalNodeModules)
-      },
-    }]
   }).catch(err => {
     console.error(`${chalk.red("Couldn't parse Quartz configuration:")} ${fp}`)
     console.log(`Reason: ${chalk.grey(err)}`)
