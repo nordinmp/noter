@@ -1,4 +1,4 @@
-baseURL = "https://nordinmp.github.io/quartz/"
+baseURL = "https://nordinmp.github.io/noter/"
 languageCode = "en-us"
 relativeURLs = false
 disablePathToLower = true
