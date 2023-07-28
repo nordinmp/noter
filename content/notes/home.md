@@ -1,13 +1,26 @@
 ---
-title: "Velkommen til Nordins Noter"
+title: "Velkommen til Nordins Noter. 👋"
 ---
 
 # Hjem
+Noterne tager mellem 3-5 min at blive opdateret fra jeg er færdig med at skrive dem.
+Alt som ikke er ren tekst og links kan være lidt scuffed, men det må i bare leve med.
+
+Der er 5 eller 6 sider som jeg ikke har lavet... men sidst jeg slettede dem crashede det hele.
+Men det skulle være ret nemt at se om det er noget jeg har skrevet efter den første linje.
+
 --- 
 
 ## TODO
 Det er bare en todo liste til mig selv 😄
  - [ ] 
+
+--- 
+
+>[!warning]
+>Søgning kan være lidt scuffed
+>
+>QUICK FIX: Reload siden og prøv igen
 
 --- 
 ## Generale links
