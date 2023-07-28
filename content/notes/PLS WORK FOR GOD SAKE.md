@@ -1,3 +1,3 @@
 i nede help,
 [[_index]]
-[[Nordins harem story]]
+[[private/Nordins harem story|Nordins harem story]]
