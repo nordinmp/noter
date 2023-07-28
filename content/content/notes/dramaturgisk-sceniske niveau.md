@@ -1,0 +1,21 @@
+#dansk #horror #genrefilmOgFilmgenre
+- **Den spændingsopbyggende hændelse**, også kaldet suspense
+    -   når går ned i kælder
+    -   ofte til chock
+-   **Chokket**, beslægtet med det dramaturgiske begreb surprise
+    -   **det ventede**
+        -   når man ved at der er chok på vej
+    -   **det uventede (jumpscare)**
+        -   når man ikke ved der er chock på vej
+    -   **det ægte**
+        -   når vi tror vi bliver chokket at et monster og det er et monster
+    -   **det falske**
+        -   når vi tror vi bliver chokket at et monster men det er noget andet
+-   **Den uhyggelige scene**
+    -   **Den eksplicitte**
+        -   når de viser alt
+    -   **den implicitte**
+        -   når man selv skal fantasier om nogle ting
+-   **Actionscenen**.
+    -   De finder sted, typisk
+        -   når et offer gemmer sig, flygter, jages og dræbes
