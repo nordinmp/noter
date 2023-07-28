@@ -9,7 +9,7 @@ enableCallouts: true
 enableSPA: true
 enableFooter: true
 enableContextualBacklinks: true
-enableRecentNotes: false
+enableRecentNotes: true
 enableGitHubEdit: true
 enableMermaid: true
 GitHubLink: https://github.com/jackyzha0/quartz/tree/hugo/content
@@ -26,4 +26,4 @@ links:
   - link_name: Twitter
     link: https://twitter.com/_jzhao
   - link_name: GitHub
-    link: https://nordinmp.github.io/noter
+    link: https://github.com/nordinmp/noter
