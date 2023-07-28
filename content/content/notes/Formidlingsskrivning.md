@@ -1,2 +1,0 @@
-#dansk #noter #skrivning 
-![[Processskrivning]]
