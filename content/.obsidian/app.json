@@ -1,0 +1,10 @@
+{
+  "spellcheckLanguages": [
+    "en-US",
+    "da"
+  ],
+  "newFileLocation": "folder",
+  "newFileFolderPath": "notes",
+  "newLinkFormat": "absolute",
+  "attachmentFolderPath": "notes/attachments"
+}
