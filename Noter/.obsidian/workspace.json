@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "8e66af212b67e7db",
+    "type": "split",
+    "children": [
+      {
+        "id": "d0e1ada41ea99d0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4841f9710804e932",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4b8b61d51e9762f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "69f909984b5e99ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d291a739e1b38de5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "76deb10f4fb17ac7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "38dfa9dde2839237",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1aacb6322e6768a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "03bb1819bf14cac5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "28e05068373aa8cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "12704bf1d692348d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6dd5dac26aad8ccf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c64d6bddd759cefa",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_index.md"
+              }
+            }
+          },
+          {
+            "id": "39e909509d82eddc",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "34e91ec1fedad247",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3600ec315a2c4054",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 304.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "command-palette:Open command palette": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false,
+      "homepage:Open homepage": false,
+      "audio-recorder:Start/stop recording": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "4841f9710804e932",
+  "lastOpenFiles": [
+    "_index.md",
+    "private/Nordins harem story.md",
+    "private/Link-Samling/2. Back and Biceps.md",
+    "private/Link-Samling/1. Chest Shoulders and Triceps.md",
+    "private/private-note.md",
+    "notes/PLS WORK FOR GOD SAKE.md",
+    "Excalidraw/Amplitude.excalidraw.md",
+    "notes/home.md"
+  ]
+}
