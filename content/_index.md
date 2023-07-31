@@ -1,5 +1,6 @@
 ---
 title: "Velkommen til Nordins Noter"
+enableToc: false
 ---
 
 # Hjem
