@@ -11,12 +11,10 @@
             "id": "4841f9710804e932",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "_index.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "Noter/.obsidian/workspace.json",
+                "staged": false
               }
             }
           }
@@ -87,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +101,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,9 +122,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_index.md"
-              }
+              "state": {}
             }
           },
           {
@@ -177,11 +171,11 @@
   },
   "active": "4841f9710804e932",
   "lastOpenFiles": [
+    "private/private-note.md",
     "_index.md",
     "private/Nordins harem story.md",
     "private/Link-Samling/2. Back and Biceps.md",
     "private/Link-Samling/1. Chest Shoulders and Triceps.md",
-    "private/private-note.md",
     "notes/PLS WORK FOR GOD SAKE.md",
     "Excalidraw/Amplitude.excalidraw.md",
     "notes/home.md"
