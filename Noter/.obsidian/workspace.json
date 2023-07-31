@@ -11,10 +11,12 @@
             "id": "4841f9710804e932",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "Noter/.obsidian/workspace.json",
-                "staged": false
+                "file": "private/private-note.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -85,6 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "private/private-note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,6 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "private/private-note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +126,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "private/private-note.md"
+              }
             }
           },
           {
@@ -171,6 +177,8 @@
   },
   "active": "4841f9710804e932",
   "lastOpenFiles": [
+    "notes/17 verdensmål.md",
+    "notes/11 lessons we learned in Vietnam.md",
     "private/private-note.md",
     "_index.md",
     "private/Nordins harem story.md",
