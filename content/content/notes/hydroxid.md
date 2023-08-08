@@ -1,0 +1,2 @@
+#kemi #ordbog #pH 
+$OH^-$

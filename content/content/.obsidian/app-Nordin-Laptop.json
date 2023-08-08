@@ -1,0 +1,10 @@
+{
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "da",
+    "en"
+  ],
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "Attachments"
+}
