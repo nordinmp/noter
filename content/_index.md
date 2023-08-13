@@ -45,3 +45,5 @@ Det er bare en todo liste til mig selv 😄
 [**Cambridge Onedrive**](https://tstaarhustech-my.sharepoint.com/personal/kasp933i_edu_aarhustech_dk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fkasp933i%5Fedu%5Faarhustech%5Fdk%2FDocuments%2F1%20HTX%20fag%2FCambridge%20english%2FCamb%20English&ga=1) Fælles dokument for cambridge
 
 [**Notion noter**](https://nordinmp.notion.site/nordinmp/Skole-dashboard-87cc63aa4e1f4836b6846be8fc894710) (No longer maintained) Gamle noter hvis der er noget som ser mærkeligt ud
+
+[ChatPDF](https://www.chatpdf.com/) Hvis man ikke gider læse lektier
