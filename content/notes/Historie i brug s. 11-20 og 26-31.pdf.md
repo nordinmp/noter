@@ -1,5 +1,10 @@
 ---
 title: "Historie i brug s. 11-20 og 26-31.pdf (AI)"
+tags: 
+- opgaver
+- Engelsk
+- tekst
+- ai
 ---
 PDF: Hej og velkommen til denne spændende PDF om historie! I denne fil vil du lære om, hvordan vores fortolkning af fortiden, nutiden og fremtiden formes i en vej. Du vil også opdage, hvordan historie er et flertydigt begreb, der involverer både studiet af fortiden og den historieskabende praksis. God læsning!
 
