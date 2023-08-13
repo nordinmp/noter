@@ -1,5 +1,0 @@
----
-Formel: 
----
-#fysik #ordbog #Formeler 
-
