@@ -9,3 +9,5 @@ vand er $n_{1}$
 luft er $n_{2}$
 
 ![[totalrefleksion#^935a76]]
+
+Det bliver til [[notes/totalrefleksion|totalrefleksion]]
