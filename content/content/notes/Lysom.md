@@ -1,0 +1,1 @@
+Lysosom, membranbeklædt, enzymholdig vesikel (blære) i cellers cytoplasma, der fungerer som nedbrydningssystem for materiale optaget i cellen ved [endocytose](https://denstoredanske.lex.dk/endocytose), især [fagocytose](https://denstoredanske.lex.dk/fagocytose), eller for eget cellemateriale, fx udtjente [[Organeller]]

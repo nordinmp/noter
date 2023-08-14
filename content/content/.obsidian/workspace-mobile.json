@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "af07c32bfb287110",
+    "type": "split",
+    "children": [
+      {
+        "id": "c6fa03bd89a0c0c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5830927d5598836",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Obsidion/publish/home.md",
+                "mode": "preview",
+                "source": false
+              }
+            },
+            "group": "c3f49564353fbb46"
+          }
+        ]
+      },
+      {
+        "id": "dac14141491681b4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7deaae3e39009a77",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Obsidion/publish/home.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.10825913261783912,
+                  "close": false
+                }
+              }
+            },
+            "group": "c3f49564353fbb46"
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0b57120cbd26afc5",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "ffd8ae61719e4352",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "31a964e4ff48e2c6",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "2e96b21af467295a",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "4969d386425c88d2",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "8ad16d0039bb5d2c",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "3b01144d2a7f85b5",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Obsidion/publish/home.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "e8851bfcaab43a7b",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Obsidion/publish/home.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "4c808c3dcaf93362",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Obsidion/publish/home.md"
+          }
+        }
+      },
+      {
+        "id": "3678cfc323d6c0f5",
+        "type": "leaf",
+        "state": {
+          "type": "timeline",
+          "state": {}
+        }
+      }
+    ]
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "audio-recorder:Start/stop recording": false
+    }
+  },
+  "active": "ffd8ae61719e4352",
+  "lastOpenFiles": [
+    "Notes",
+    "Link-Samling/3. Legs and Abs.md",
+    "Day Planners/Day Planner-20230508.md",
+    "Link-Samling/2. Back and Biceps.md",
+    "Day Planners/Day Planner-20230509.md",
+    "Obsidion/publish/Fysiske Enheder/Densitet.md",
+    "Day Planners/Day Planner-20230506.md",
+    "Templates/Day planer - weekend.md",
+    "Templates/Day planer - everyday.md",
+    "Templates/Day planer - everyday.md.tacitpart",
+    "Day Planners/Day Planner-20230507.md",
+    "Link-Samling/Link samling.md",
+    "Link-Samling/Link samling.md.tacitpart",
+    "Obsidion/publish/home.md",
+    "Obsidion/publish/Katalyse (katalysater).md",
+    "Obsidion/publish/genrefilm og filmgenre.md",
+    "Obsidion/publish/Horror.md",
+    "Obsidion/publish/Den klassiske novelle.md",
+    "Obsidion/publish/accepted-markdown-metadata.md",
+    "Obsidion/publish/Opgaver/Sognfri.md",
+    "Obsidion/publish/Opgaver/Økonomi for dummies.md",
+    "Obsidion/publish/17 verdensmål.md",
+    "Obsidion/publish/Opgaver/Opgaver.md",
+    "home.md",
+    "Notes/TEST.md",
+    "Fag/Dansk/AIDA.md",
+    "Notes"
+  ]
+}
