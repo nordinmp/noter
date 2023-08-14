@@ -2,6 +2,8 @@
 Formel: $\frac{\sin(i)}{\sin(b)}=\frac{v_{1}}{v_{2}}$
 ---
 #fysik #ordbog #Formeler #Lys 
+solnedgang illusion
+og blyant i glas vand
 
 i = indfaldsvinklen
 b = brydningsvinklen

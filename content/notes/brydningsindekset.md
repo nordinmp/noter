@@ -3,7 +3,7 @@ Formel: $v = \frac{c}{n}$
 ---
 #fysik #ordbog #Formeler #Lys 
 
-Jo større brydningsindekset (n) er, jo lavere er lysets hastighed i materialet
+Jo større brydningsindekset (n) er, jo langsommere er lysets hastighed i materialet
 
 $n_{luft} = 1$
 $n_{vand} \approx 1.33$
