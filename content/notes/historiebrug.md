@@ -3,6 +3,7 @@ title: "historiebrug"
 tags: 
 - idehistorie
 - historiebevidsthed
+- ordbog
 ---
 
 Forskelige måder at fortolke historien, for at bruge historien til at vinde noget
