@@ -4,11 +4,11 @@
 #fysik 
 ``` dataview
 table Formel
-from #Fysik and #Formeler and "Obsidion/publish"
+from #Fysik and #Formeler and "notes"
 ```
 # Kemi
 #kemi 
 ``` dataview
 table Formel
-from #kemi and #Formeler and "Obsidion/publish"
+from #kemi and #Formeler and "notes"
 ```

@@ -6,6 +6,9 @@ tags:
 - tekst
 - ai
 ---
+[[notes/historiebevidsthed|historiebevidsthed]]
+[[notes/historieskabt og historieskabende|historieskabt og historieskabende]]
+[[notes/historiebrug|historiebrug]]
 PDF: Hej og velkommen til denne spændende PDF om historie! I denne fil vil du lære om, hvordan vores fortolkning af fortiden, nutiden og fremtiden formes i en vej. Du vil også opdage, hvordan historie er et flertydigt begreb, der involverer både studiet af fortiden og den historieskabende praksis. God læsning!
 
 Her er tre spørgsmål, du kan stille dig selv, mens du læser denne PDF:

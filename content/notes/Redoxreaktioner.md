@@ -1,8 +1,8 @@
 #redoxreaktioner #kemi
 
 Består af 
+- [[Reduktion]]
 * [[Oxidation]]
-* [[Reduktion]]
 Ikke det samme som syre-baser det hydroner.
 --- 
 ## eksempel
@@ -16,7 +16,4 @@ Dette er både en  [[Oxidation]] og [[Reduktion]],
 ![[Pasted image 20230523082859.png]]
 
 ---
-# Spændingsrækken
-![[Pasted image 20230523085208.png]]
-Større tendens til at findes som ion                                                        Større tendens til at findes som fast stof
-De metaller der er mest til venstre, har lettere ved at reagere med andre metaller, hvorimod dem til højre har svære ved at reagere, for de er ædelmetaller.
+[[notes/Spændingsrækken|Spændingsrækken]]
