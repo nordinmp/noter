@@ -1,5 +1,8 @@
 ---
-Formel: 
+Formel:
+title: "{{title}}"
+tags:
+- fysik
+- ordbog
+- Formeler
 ---
-#fysik #ordbog #Formeler 
-
