@@ -1,4 +1,10 @@
-#teknologi #målgruppe 
+---
+title: "Bruger segmenter"
+tags: 
+- teknologi
+- målgruppe
+- 
+--- 
 # Bruger segmenter
 * Geografi - hvor er de henne i landet
 * Demografi - køn, alder indkomst

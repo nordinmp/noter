@@ -1,4 +1,11 @@
-#ordbog #Engelsk #grammatik 
+---
+title: "Adjektives - Tillægsord"
+tags: 
+- ordbog
+- Engelsk
+- grammatik
+- 
+---
 
 
 **1 stavelse**

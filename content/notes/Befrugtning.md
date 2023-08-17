@@ -1,4 +1,10 @@
-#Biologi #SexogØnskebørn
+---
+title: "Befrugtning"
+tags: 
+- Biologi
+- SexogØnskebørn
+- 
+---
 Sædceller er ikke så kloge og ved ikke hvilken vej de skal for at finde æggeledene
 	Ægcellen skal befrugtes inden for 24 timer
 	Sædceller kan overlever ca 3 døgn

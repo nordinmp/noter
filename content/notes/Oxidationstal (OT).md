@@ -14,6 +14,8 @@ Ved en kovalent binding, skal man tænke at det fælles elektronpar overføres t
 ![[Pasted image 20230608110539.png]]
 ![[Pasted image 20230608110519.png]]
 
+![[notes/attachments/Pasted image 20230817133729.png]]
+
 > [!IMPORTANT] Navngivning
 > 1. Når H er bundet til et mere elektronegativt grundstof, har H-atomet oxidationstallet +I. 
 > 2. Når O er bundet til mindre elektronegative grundstoffer, har O-atomet oxidationstallet -II. 

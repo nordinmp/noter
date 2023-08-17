@@ -1,4 +1,9 @@
 ---
 Formel: $(E)A = m*g*h$
----
-#fysik #ordbog #Formeler 
+title: "Arbejde af potentiel kemisk energi"
+tags: 
+- fysik
+- ordbog
+- Formeler
+- 
+--- 

@@ -1,4 +1,13 @@
-#dansk #taler #retorik #retoriskpentagram
+---
+title: "Ciceros pentagram retorisk pentagram"
+tags: 
+- dansk
+- taler
+- retorik
+- retoriskpentagram
+- 
+---
+
 ![[Afsender]]
 ![[Modtager]]
 ![[emne]]

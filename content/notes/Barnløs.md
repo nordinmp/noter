@@ -1,4 +1,12 @@
-#Biologi #SexogØnskebørn 
+
+---
+title: "Barnløs"
+tags: 
+- Biologi
+- SexogØnskebørn
+- 
+---
+
 Hvis man har prøvet at få et barn i over et år er man ufrivillig barnløs
 
 Det kan være på grund af begge køn

@@ -1,4 +1,12 @@
-#ordbog #Biologi #Fotosyntese
+---
+title: "Bruttoprimærproduktion"
+tags: 
+- ordbog
+- Biologi
+- Fotosyntese
+- 
+---
+
 [[Nettoprimærproduktion||NPP]] + [[Respiration||R]]
 
 

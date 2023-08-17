@@ -1,7 +1,13 @@
 ---
+title: "brydningsindekset"
+tags: 
+- fysik
+- ordbog
+- Formeler
+- Lys
+- 
 Formel: $v = \frac{c}{n}$
 ---
-#fysik #ordbog #Formeler #Lys 
 
 Jo større brydningsindekset (n) er, jo langsommere er lysets hastighed i materialet
 

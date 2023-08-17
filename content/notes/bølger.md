@@ -1,4 +1,10 @@
-#fysik #bølger
+---
+title: "bølger"
+tags: 
+- fysik
+- bølger
+- 
+---
 # Der er 2 typer af bølger
 [[Mekaniske bølger]]
 

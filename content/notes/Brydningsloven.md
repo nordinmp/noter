@@ -1,7 +1,13 @@
 ---
+title: "Brydningsloven"
+tags: 
+- fysik
+- ordbog
+- Formeler
+- Lys
+- 
 Formel: $\frac{\sin(i)}{\sin(b)}=\frac{v_{1}}{v_{2}}$
 ---
-#fysik #ordbog #Formeler #Lys 
 solnedgang illusion
 og blyant i glas vand
 

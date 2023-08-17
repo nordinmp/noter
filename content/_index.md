@@ -8,7 +8,7 @@ enableToc: false
 --- 
 ## TODO
 Det er bare en todo liste til mig selv 😄
- - [ ] 
+ - [ ] Skriv vektor 3d og 2d ind som noter med grafer
 
 --- 
 ## Generale links

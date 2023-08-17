@@ -1,4 +1,12 @@
-#dansk #retorik #Argumentationsmodel
+---
+title: "Argumentationsmodel"
+tags: 
+- dansk
+- retorik
+- Argumentationsmodel
+- 
+---
+
 ![[Pasted image 20230314093135.png]]
 ![[Påstand]]
 ![[Belæg]]

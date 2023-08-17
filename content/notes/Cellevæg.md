@@ -1,4 +1,11 @@
-#Biologi #cellen #ordbog 
+---
+title: "Cellevæg"
+tags: 
+- Biologi
+- cellen
+- ordbog
+- 
+---
 beskytter cellen, er kun på plantecellen
 
 # bakteriecellevæg 

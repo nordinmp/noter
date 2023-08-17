@@ -1,4 +1,12 @@
-#dansk #retorik #appelformer
+---
+title: "Appelformer"
+tags: 
+- dansk
+- retorik
+- appelformer
+- 
+---
+
 ![[Logos (argument)]]
 ![[Patos (Lidelse)]]
 ![[Etos]]
