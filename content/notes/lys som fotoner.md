@@ -1,7 +1,7 @@
 ---
 title: "lys som fotoner"
 tags: 
-- lys
+- Lys
 - fysik
 ---
 

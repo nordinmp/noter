@@ -5,7 +5,7 @@ tags:
 - fysik
 - ordbog
 - Formeler
-- lys
+- Lys
 ---
 
 I stedet for [[notes/Fysiske Enheder/Energi|E]] hvor man bruger J, bruger man eV - elektrovolt
