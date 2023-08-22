@@ -3,6 +3,7 @@ title: "nulvektor"
 tags: 
 - matematik
 - vektor
+- ordbog
 ---
 $\vec{v_{_{1}}}+ \vec{v_{_{2}}}+\vec{v_{_{3}}} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}$
 

@@ -3,6 +3,7 @@ title: "tværvektor"
 tags: 
 - matematik
 - vektor
+- ordbog
 - 
 ---
 Den er drejet 90 grader/vinkelret
