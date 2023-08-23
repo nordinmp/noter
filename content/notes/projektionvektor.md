@@ -16,3 +16,6 @@ $mod = hyp * cos(v)$
 
 
 $|\vec{b_{a}}| = \frac{|\vec{a} \cdot \vec{b}|}{|\vec{a}|}$
+	tæller skal altid være i positvt
+Man kan se det som hvor meget den ene skygger over den anden, hvis vinkelret
+![[Excalidraw/projektionvektor+skygge.excalidraw]]

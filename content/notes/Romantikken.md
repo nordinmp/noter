@@ -1,4 +1,10 @@
-#dansk #tidsperiode
+---
+title: "Romantikken"
+tags: 
+- dansk
+- tidsperiode
+- 
+---
 Man kommer mere over i virkelighed, og drøm.
 
 Sammenhæng mellem natur og ånd
@@ -16,3 +22,9 @@ Oehlenschläger er kendt som romantikkens førstemand. Og det vender tilbage til
 # Romantikkens filosofi
 Hvordan man skal se på verden
 	Verden er ikke kold, men varm og alt er godt
+
+# nationalromantikken
+Danmark mister Norge, og slesvig-holste
+Skete noget slemt med pnge
+
+Vi finder stolthed i det vi har, og vores fortid

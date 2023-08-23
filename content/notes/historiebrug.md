@@ -24,3 +24,4 @@ Forskelige måder at fortolke historien, for at bruge historien til at vinde nog
 
 [[notes/historiebevidsthed|historiebevidsthed]]
 [[notes/historieskabt og historieskabende|historieskabt og historieskabende]]
+[[notes/historietroper|historietroper]]
