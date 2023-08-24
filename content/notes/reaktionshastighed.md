@@ -1,0 +1,7 @@
+---
+title: "reaktionshastighed"
+tags: 
+- kemi
+- 
+---
+
