@@ -5,6 +5,8 @@ tags:
 - tidsperiode
 - 
 ---
+[Opsamlingsnoter til romantikken.docx](https://tstaarhustech-my.sharepoint.com/:w:/g/personal/kasp933i_edu_aarhustech_dk/ERAxxZ1rhzNDgKeRYnVkj8cBtWxe5Tqs3p_gzdW5JPovGg?e=iDUX3o) 
+
 Man kommer mere over i virkelighed, og drøm.
 
 Sammenhæng mellem natur og ånd
