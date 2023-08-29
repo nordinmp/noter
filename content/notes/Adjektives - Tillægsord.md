@@ -6,7 +6,15 @@ tags:
 - grammatik
 - 
 ---
+Det beskriver et [[notes/substantiver|navneord]], det kan også beskrive [[notes/Pronouns|Pronominer]]
 
+1. grad = positiv
+2. grad = komparativ
+3. grad = superlativ
+
+**falsk komparativ**
+Hvis man ikke sammenligner noget med noget
+f.eks. en *ældre* dame
 
 **1 stavelse**
 -er/est (tall/taller/tallest)
