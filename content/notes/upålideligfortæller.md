@@ -34,7 +34,7 @@ Afgrænset viden, og ved hvad der sker i **1** persons hoved
 - og flere
 
 ## Diegese / Diegetisk
-Diegese = narrativ , den virkelighed som det fiktive spiller sig i, alt det som personene i fortællingen kan se og hører - og undertekst og musik er non-diegetisk.
+Diegese = narrativ , den virkelighed som det fiktive spiller sig i, alt det som personerne i fortællingen kan se og hører - og undertekst og musik er non-diegetisk.
 
 Fortæller kommentarer er non-diegetisk
 
