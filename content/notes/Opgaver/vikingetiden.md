@@ -100,4 +100,25 @@ Danmark har altid været et sø land
 	- Han laver en stram udlandspolitik
 	- Så Harald laver nogle ringborge
 		- Fordi det viser at han har kontrol
-	- 
+		- Efter 10 år bliver de brændt ned, de er ikke vigtige på det tidspunkt
+		- man finder først ud af at de har eksisteret, mange 100 år senere
+	- Otto dør ret hurtigt
+- Vi begynder at have store slag, i stedet for mange små, disse store slag, er med andre lande
+- Svend (Haralds søn) prøver at tage magten
+- Svend Tveskæg
+	- Han er glad for magt
+	- Han leder mange hertug til England
+	- Han begynder at tage penge fra konger, som "beskyttelsespenge"
+	- Ethelreds (engelsk konge) beordre alle danske folk i England skulle halshugges, da han ikke ville betale for beskyttelsespengene
+		- Dette stopper dog ikke Svend, har bliver ved
+		- og det ener med at Svend bliver konge af England 1013
+			- Et år senere dør han
+- Knud den store
+	- Han havde Danmark (+ skåne), England og Norge
+	- Men hans sønner er mindre begavet
+- 250 år senere er vikingerne tiden ved at være slut
+	- Det har givet os en plads en verdenshistorien
+	- og det har gjort os et kristenfolk
+	- Nu bliver vi et handelsfolk
+	- og vi finder Amerika flere 100 år før Columbus
+- 
