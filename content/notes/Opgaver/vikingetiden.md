@@ -71,3 +71,33 @@ Danmark har altid været et sø land
 			- det samme som at give en gave
 			- det kunne være mad, dyr, våben og nogen gange mennesker
 		- 4 gange om året har de haft kæmpe fest for at fejre disse guder  
+		- De kunne også file riller i deres tænder for at vise at de hører til en bestemt gruppe
+- 850
+	- Vikinger "eger" Europa
+	- de starter en ny metode
+	- Da England var delt op i 5 kongeriger, gjorde det at vikinger nemt kunne komme forbi og sige hej
+	- Vikingerne er begyndt ikke at plyndre men også for at erobre land
+		- da det er den største rigdom
+- 879 - 900
+	- Vi har så stort magt i England, at vi får vores eget land
+	- Danelagen (den del Danmark eger) er stor og dækker en stor del af England
+		- der var mange regler for handel
+		- som at holde folk gidsel som pant
+	- Dette gør at større by begynder at lave mere forstærkning
+	- men vikinger har også haft indflydelse på det engelske sprog - over 600 ord
+	- Gorm har fået magt i Jelling , og han er den første konge i den morderne konge række vi har i dag
+		- Han har lavet det største monument for vikingetiden - skibet
+	- Harald (Blåtand) 
+		- han begynder at tvivle på den gamle tro
+		- måske fordi har har sæt hvor stærk i der syd på
+		- han gjorde det danske folk kristen af munken Poppo
+			- Denne historie blev skrevet af kristne efter for at vise at kristendommen er bedre
+			- men det var fordi Harald kunne godt se det var smart
+		- Jellingestenen er det første kongelige monument
+			- Nu er Harald konge af Danmark og Norge
+			- og gjorde os kristen
+- Otto d.2, 973
+	- Han laver en stram udlandspolitik
+	- Så Harald laver nogle ringborge
+		- Fordi det viser at han har kontrol
+	- 
