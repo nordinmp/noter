@@ -1,5 +1,5 @@
 ---
-Formel: E = h * f*
+Formel: E = h * f
 title: "fotoner"
 tags:
 - fysik
