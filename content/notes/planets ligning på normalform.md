@@ -19,7 +19,7 @@ Man skal så finde vektorerne mellem de 2 punkter ved at [[notes/minus vektorer|
 
 Så skal man finde [[notes/skalarprodukt|skalarproduktet]] af de tog vektorer (n og den mellem de 2 punkter)
 
-Så skal man sige sige skalarproduktet af de 2 skal give 0
+Så skal man sige sige skalarproduktet af de 2 skal give 0  - fordi cos af 90 
 $$a * (x_{2}-x_{1})\dots = 0$$
 Så kan man sortere det, hvorefter man får
 $$ax_{2}+by_{2}+cz_{2}-ax_{1}-by_{1}-cz_{1}$$
