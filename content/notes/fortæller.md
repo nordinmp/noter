@@ -1,8 +1,8 @@
 ---
-title: "upålideligfortæller"
-tags: 
-- dansk
-- upålideligfortæller
+title: fortæller
+tags:
+  - dansk
+  - upålideligfortæller
 ---
 # hvad er en der fortæller
 
@@ -38,7 +38,7 @@ Diegese = narrativ , den virkelighed som det fiktive spiller sig i, alt det som 
 
 Fortæller kommentarer er non-diegetisk
 
-## Upålidelighed
+# Upålidelighed
 Det er lidt sjovt at snakke om upålidelighed i fiktion, da fiktion allerede er opdigtet.
 
 Hvis det var en altvidende som sagde en der døde, men havde døde ikke.
@@ -47,3 +47,8 @@ Upålidelig fortæller betyder bare at man ikke kan stole 100% på alt de siger
 
 > [!QUOTE] Defination
 > I have called a narrator reliable when he speaks for or acs in accordance with the norms of the work . ..
+
+## Upålidelighedakse
+**Begivenhedsaksen**: Handler om fakta
+**Den etiske akse**:	Handler om værdier
+**Viden og perceptionsaksen**: Upålidelig uden at man ved det

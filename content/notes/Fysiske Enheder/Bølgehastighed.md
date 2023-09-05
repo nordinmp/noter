@@ -2,7 +2,13 @@
 Symbol: v
 Navn: Bølgehastighed
 Standart-enhed: $v = \frac{m}{s}$
-Enhed-betydning:
+Enhed-betydning: 
+tags:
+  - Fysiske-Enheder
+  - fysik
+  - ordbog
+  - bølger
+title: Bølgehastighed
 ---
-#Fysiske-Enheder #fysik #ordbog #bølger 
+
 [[Obsidion/publish/Bølgehastighed|Bølgehastighed]]

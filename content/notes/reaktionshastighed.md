@@ -23,3 +23,5 @@ jo mere til venstre jo hurtigere
 ![[notes/attachments/Pasted image 20230824111611.png]]
 	Figur 6. Chancen for, at der sker en kemisk reaktion, vokser i takt med stigende stofmængdekoncentration af reaktanterne
 Den til højre er der større chance for en reaktion
+
+[[]]
