@@ -6,7 +6,7 @@ tags:
 - ordbog
 formel: $v = \frac{\Delta[stof]}{\Delta t}$
 ---
-
+[[notes/Opgaver/reaktionshastighed|reaktionshastighed]]
 Energien der skal til kræver en hvis hastighed til at atomer kommer ud som 2 produkter
 
 $v = \frac{\Delta[stof]}{\Delta t}$
