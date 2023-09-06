@@ -29,3 +29,9 @@ Eksempel: skraldespand
 - Miljø: Materiale (pap mod stål)
 - Social: er den køn, hvordan er den at tømme
 - Økonomi: Hvor dyr er den, hvordan er den at tømme
+
+> [!NOTE] optimale miljømæssige løsning
+> Den optimale miljømæssige løsning er den som på den givne lokalitet og med de givne *forudsætninger* medfører færrest mulige *miljøpåvirkninger* på den (givne lokalitet)
+
+---
+Der er ret meget solenergi som vi stadig kan bruge, hvorimod alle de andre kun har nogle 100 år tilbage (sol har 25000 år tilbage)
