@@ -35,3 +35,16 @@ Eksempel: skraldespand
 
 ---
 Der er ret meget solenergi som vi stadig kan bruge, hvorimod alle de andre kun har nogle 100 år tilbage (sol har 25000 år tilbage)
+
+[[notes/LCA|LCA]]
+## Miljøeffekter
+Resultaterne af LCA analyse
+- Global opvarmning
+	- varmere
+	- mere regn
+-  smog
+- Forsuring
+	- Syre regn
+	- problem hvis det kommer til andre lande
+	- Næring i vand
+	- SO2 give forsuring
