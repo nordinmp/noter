@@ -18,4 +18,4 @@ Fremskridt
 - ting bliver bare bedre og bedre.
 
 U-model
-- 
+- Der var noget godt, og så er det blevet dårligt, og på til at blive godt igen
