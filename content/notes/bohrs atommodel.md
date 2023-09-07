@@ -23,10 +23,10 @@ kombination af de to kalder man for [[notes/Elektromagnetiske spektrum#Kontinuer
 
 For at kunne beregning af energiniveauerne i hydrogenatomet  
 $$E_{n} = -h*c*R*\frac{1}{2^2}$$
-$E_{n}$ = energien til en bestem tilstand [[notes/Fysiske Enheder/Energi|Energi]] eV (elektronvolt)
-[[notes/Fysiske Enheder/plancks konstant|h]]
-[[notes/Fysiske Enheder/Lys|c]]
-[[notes/Fysiske Enheder/Rydberg konstant|R]]
+$E_{n}$ = energien til en bestem tilstand [[notes/Energi 1|Energi 1]] eV (elektronvolt)
+[[notes/plancks konstant|h]]
+[[notes/Lys 1|c]]
+[[notes/Rydberg konstant|R]]
 n = nummeret på tilstanden
 
 Man kan forkort til

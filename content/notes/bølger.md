@@ -11,7 +11,7 @@ tags:
 [[Elektromagnetiske bølger]]
 
 # Generelt
-Det kan beskrives med vha. deres [[Periode]] (T), [[frekvens]] (f), [[Bølgelængde]] ($\lambda$), [[amplitude]] (A), [[Obsidion/publish/Bølgehastighed|bølgehastighed]] (v)
+Det kan beskrives med vha. deres [[notes/Periode]] (T), [[notes/frekvens]] (f), [[notes/Bølgelængde]] ($\lambda$), [[notes/Amplitude]] (A), [[Obsidion/publish/Bølgehastighed|bølgehastighed]] (v)
 
 
 Tværbølger på tværs af noget ``` /\/\>```

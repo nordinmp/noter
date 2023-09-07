@@ -3,7 +3,7 @@ Formel: $n*\lambda=d*\sin(\phi)$
 ---
 #fysik #ordbog #Formeler 
 n = antal ordner
-$\lambda$ = [[Bølgelængde]] (nm)
+$\lambda$ = [[notes/Bølgelængde]] (nm)
 d = gitterkonstant = $\frac{1}{Antal linjer pr.nm}$
 $\phi$ = afbøjning vinklen
 

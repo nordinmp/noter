@@ -5,7 +5,7 @@ Forestil dig et træ. Det vokser hvert år og bliver højere og bredere - men de
 
 1.  Vand fra jorden (H2O)
 2.  Kuldioxid fra luften (CO2). Kuldioxid er den luft vi ånder ud
-3.  [[Lys]] fra solen
+3.  [[notes/Lys]] fra solen
 
 For at kunne vokse og udvikle sig, skal planter også bruge næringssalte fra jorden, der er opløst i vandet, f.eks. nitrat og fosfat.
 
