@@ -20,8 +20,8 @@ tags:
 > En udvikling, der opfylder de nuværende behov uden at bringe fremtidige generationers muligheder for art opfylde deres behov i fare
 
 ---
-![[notes/attachments/PXL_20230906_103336950.jpg]]
 
+![[Excalidraw/Navitas.excalidraw]]
 Vi skal tænke mere cirkulært, altså genbruge mere.
 
 

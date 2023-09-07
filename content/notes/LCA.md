@@ -15,7 +15,10 @@ det er derfor en cirkuler økonomi
 
 [[notes/Triple bottom line|Triple bottom line]]
 
+![[notes/attachments/Pasted image 20230906141212.png]]
+
 ---
+
 En LCA-analyse (Life Cycle Assessment) er en systematisk metode til at vurdere miljøpåvirkningen af et produkt, en proces eller en tjeneste i løbet af hele dets livscyklus. Dette indebærer at vurdere de miljømæssige påvirkninger fra råvareudvinding, produktion, distribution, brug og bortskaffelse eller genanvendelse af produktet eller tjenesten.
 
 LCA-analysen involverer normalt følgende trin:
