@@ -70,5 +70,17 @@ Så det er en sur opløsning ^d8e943
 0.0016/0.02 = 0.0805 M
 
 
-# oxidaktionstal
+5. 
+	a. Når temperatuen stiger, falder koncentration i dette tilfælde
+		så vil det blive mindre og mindre, da broken bliver mindre og mindre
+	b. Jo lavere temperatur hvis man vil have en fordel
+
+6. 
+	a. 
+		$\frac{[HI]^2}{[H_{2}]*[I_{2}]} = K_{c}$ 
+		$\frac{[17.63*10^-3M]^2}{[45.8]*[2.60*10^{-3}M]} = 2.61*10^-3$
+	b. 
+		$\frac{[HI]^2}{[H_{2}]*[I_{2}]} = K_{c}$ 
+		$\frac{[17.63*10^-3M]^2}{[H_{2}]*[2.60*10^{-3}M]} = 45.8$
+	c. 
 
