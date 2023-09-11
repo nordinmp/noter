@@ -1,4 +1,12 @@
-#dansk #retorik 
+---
+title: Kildekritik
+tags:
+  - dansk
+  - retorik
+  - kildekritik
+  - idehistorie
+enableToc: true
+---
 Kildekritik kommer fra sundfornuft.
 
 Du skal tænke over hvilken type kilde der er:
@@ -35,3 +43,17 @@ Du kan tjekke det, som nogle regler:
 3.  Hvor er kilden opstået
 4.  Hvorfor er denne kilde lavet
 5.  Hvad er kildens synspunkt
+
+# idehistorie
+[[notes/Opgaver/Kildekritik (tekst)|Kildekritik (tekst)]]
+
+
+Der er 2 slags
+- **Funktionelle: Spørgsmål afgør værdi**
+- **Materielle: Indbygget værdi**
+
+Nu om dage er der folk der siger at der ikke er noget indbygget værdi i noget, da det går anpå hva vi undersøger.
+
+## Udsagnsevne vs udsagnskraft
+- **Udsagneevne: Hvor relevant er kilden.** Hvor meget har kilden med mit emne at gøre.
+- **Udsagnskraft: Hvor meget tiltro kan man have til kilden.** Hvor meget har kilden styr på hvad mit emne er. (har person viljen til sandheden)

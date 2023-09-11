@@ -1,3 +1,13 @@
+---
+title: Kildekritik (tekst)
+tags:
+  - opgaver
+  - idehistorie
+  - ai
+  - kildekritik
+---
+
+
 PDF: Hej og velkommen til denne PDF om kildekritik! Her vil du lære om vigtigheden af at bevare en kritisk holdning til kilderne og hvordan historikere arbejder med tekstanalyse. 
 
 Eksempel spørgsmål:
@@ -15,7 +25,8 @@ PDF: 1. Det funktionelle kildebegreb betyder, at kildens værdi afhænger af de 
 
 2. Udsagnsevne refererer til, hvad en kilde kan sige om et bestemt emne, mens udsagnskraft refererer til, hvor overbevisende eller pålidelig kilden er i dens udsagn.
 
-3. Kildens ophavssituation refererer til den historiske kontekst, som kilden blev skrevet i, herunder forfatterens baggrund, intentioner og omstændighederne omkring kildens tilblivelse.
+3. 
+vet i, herunder forfatterens baggrund, intentioner og omstændighederne omkring kildens tilblivelse.
 
 4. En kilde kan bruges som levn, når den bruges til at give information om den tid og det sted, den blev skrevet i. En kilde kan bruges som beretning, når den bruges til at give information om en bestemt begivenhed eller historisk virkelighed. Et eksempel på en kilde, der kan bruges som både levn og beretning, er en dagbog fra en soldat under 1. verdenskrig. Dagbogen kan bruges som levn for at give information om soldatens oplevelser og tanker under krigen, men den kan også bruges som beretning for at give information om krigen generelt.
 
