@@ -1,5 +1,5 @@
 ---
-title: "Velkommen til Nordins Noter"
+title: Velkommen til Nordins Noter
 enableToc: false
 ---
 
