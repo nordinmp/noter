@@ -48,6 +48,7 @@ Du kan tjekke det, som nogle regler:
 [[notes/Opgaver/Kildekritik (tekst)|Kildekritik (tekst)]]
 
 
+## Kildebegreber
 Der er 2 slags
 - **Funktionelle: Spørgsmål afgør værdi**
 - **Materielle: Indbygget værdi**
@@ -57,3 +58,15 @@ Nu om dage er der folk der siger at der ikke er noget indbygget værdi i noget, 
 ## Udsagnsevne vs udsagnskraft
 - **Udsagneevne: Hvor relevant er kilden.** Hvor meget har kilden med mit emne at gøre.
 - **Udsagnskraft: Hvor meget tiltro kan man have til kilden.** Hvor meget har kilden styr på hvad mit emne er. (har person viljen til sandheden)
+## Ophavssituation
+Alt det som er om kilden, kontekst og sammenhæng. Hvad ville kilden få ud af at skrive dette. Man kan kalde det den **historiske situation**
+
+## Levn og beretning
+Hvad kilden handler om.
+- Levn: alt er historisk
+- Beretning: Fortæller noget om en bestemt periode 
+
+**førstehåndskilde og andenhåndskilde**
+- Førstehåndskilde: hvis man selv var der
+- Andenhåndskilde: Man har hørt det fra en anden person
+Det er vigtigt at overveje om hvorfor det er vigtigt, da en førstehåndskilde nok er mere troværdig. Selvfølgelig kan det være at førstehåndskilden ikke er har interesse i at fortælle os sandheden
