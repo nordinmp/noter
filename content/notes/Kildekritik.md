@@ -46,8 +46,6 @@ Du kan tjekke det, som nogle regler:
 
 # idehistorie
 [[notes/Opgaver/Kildekritik (tekst)|Kildekritik (tekst)]]
-
-
 ## Kildebegreber
 Der er 2 slags
 - **Funktionelle: Spørgsmål afgør værdi**
@@ -69,4 +67,12 @@ Hvad kilden handler om.
 **førstehåndskilde og andenhåndskilde**
 - Førstehåndskilde: hvis man selv var der
 - Andenhåndskilde: Man har hørt det fra en anden person
-Det er vigtigt at overveje om hvorfor det er vigtigt, da en førstehåndskilde nok er mere troværdig. Selvfølgelig kan det være at førstehåndskilden ikke er har interesse i at fortælle os sandheden
+
+Det er vigtigt at overveje om hvorfor det er vigtigt, da en førstehåndskilde nok er mere troværdig. Selvfølgelig kan det være at førstehåndskilden ikke er har interesse i at fortælle os sandheden.
+
+## Repræsentativitet 
+
+***(Disclaimer dette er ai, da jeg ikke helt forstod det)***
+
+Repræsentativitet er vigtigt, fordi det sikrer, at de kilder, man bruger i sin forskning, er et retvisende billede af den virkelighed, man ønsker at undersøge. Hvis man bruger kilder, der ikke er repræsentative, kan man risikere at drage forkerte konklusioner eller få et skævt billede af den historiske periode eller det samfund, man undersøger. Derfor er det vigtigt at vælge kilder, der er repræsentative for den tid og det samfund, man undersøger, og at være opmærksom på eventuelle bias eller skævheder i kilderne.
+
