@@ -32,4 +32,6 @@ $aA+bB+\dots\rightleftharpoons cC+dD+\dots$
 $\frac{[C]^{c}*[D]^{d}}{[A]^{a}*[B]^{b}}=K_{c}$
 
 Hvis man har en høj **K** værdi vil det sige at den er meget forskudt mod højre.
-Hvis den derimod er lav, vil det sige der er mod venstre
+Hvis den derimod er lav, vil det sige der er mod venstre.
+
+![[notes/attachments/Pasted image 20230912141839.png]]
