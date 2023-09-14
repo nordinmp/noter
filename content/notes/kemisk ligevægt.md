@@ -35,3 +35,15 @@ Hvis man har en høj **K** værdi vil det sige at den er meget forskudt mod høj
 Hvis den derimod er lav, vil det sige der er mod venstre.
 
 ![[notes/attachments/Pasted image 20230912141839.png]]
+
+# ikke-ligevægt
+Hvis **Y** er mindre end **K**, så har vi ikke lavet nok produkt, så den bliver bare ved (højrevægt)
+Og hvis **Y** er større end **K**, så er det vægt på venstre side
+
+**DER ER IKKE NOGET DER STÅR STILLE, BARE SIG DET FORLØBER I SAMME HASTIGHED**
+
+> [!QUOTE] Henry Le Chatelier
+> Et ydre indgreb i et ligevægtssystem fremkalder en forskydning, som formindsker virkningen af indgrebet
+
+Hvis man fremkalder noget er der vægt på højre, derimod hvis man fjerne noget så for der vægt på venstre
+**Men der vil altid komme ligevægt til sidst**
