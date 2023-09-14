@@ -1,10 +1,14 @@
 ---
-Symbol:  $\lambda$ 
+Symbol: $\lambda$
 Navn: Bølelængde
-Standart-enhed: M 
+Standart-enhed: M
 Enhed-betydning: Meter
+tags:
+  - Fysiske-Enheder
+  - fysik
+  - ordbog
+  - bølger
 ---
-#Fysiske-Enheder #fysik #ordbog #ordbog #bølger 
 Afstanden mellem to bølgetoppe/Bølgedale
 
 ![[Lambda.excalidraw]]
