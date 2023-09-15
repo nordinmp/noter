@@ -79,6 +79,7 @@ Upålidelig fortæller betyder bare at man ikke kan stole 100% på alt de siger
 ## Peripetisk
 - Inhibitor 
 	- Den forståelse der nås med tillid til fortælleren som kommunikator, men som siden viser sig usammenhængende.
+	- ![[Excalidraw/inhibitor.excalidraw]]
 - Peripetisk punkt
 	- Det sted i teksten hvor den tillidsfulde forståelse ikke længere kan opretholdes.
 - Katalysator 

@@ -47,3 +47,11 @@ Og hvis **Y** er større end **K**, så er det vægt på venstre side
 
 Hvis man fremkalder noget er der vægt på højre, derimod hvis man fjerne noget så for der vægt på venstre
 **Men der vil altid komme ligevægt til sidst**
+
+[[notes/endoterm|endoterm]] og [[notes/exoterm|exoterm]], kan også have noget at sige om hvordan 
+![[notes/attachments/Pasted image 20230914141825.png]]
+
+## VIGTIGT ANER IK TIL HVA
+1. Når volumen halveres vil reaktionen forskydes til den side hvor der er færrest molekyler.
+2. Når volumen øges vil reaktionen forskydes til den side med flest molekyler. 
+3. Er der lige mange molekyler på hver side, så vil der ikke ske en forskydning.
