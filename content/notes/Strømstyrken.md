@@ -1,7 +1,7 @@
 ---
 Symbol: I
 Navn: Strømstyrken
-Standart-enhed: A = $\frac Cs$
+Standart-enhed: A = $\frac Cs$,I = $\frac Qt$
 Enhed-betydning: A = ampere, C = Coulomb, s = sekunder
 ---
 #Fysiske-Enheder #fysik #ordbog 
