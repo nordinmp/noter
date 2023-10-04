@@ -29,6 +29,7 @@ Story data
 	imagePath: string
 	Title: string
 	isShared: bool
+		users: array (med user id)
 	status: string (aktiv done ovs)
 	
 	
