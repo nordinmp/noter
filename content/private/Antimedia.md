@@ -20,6 +20,7 @@ Image data
 	isShared: bool - så skal det uploades til firestore
 	Story: string
 	id: string
+	isFavorite: bool
 Story data
 	actionClips (tags) : array
 	default: bool
