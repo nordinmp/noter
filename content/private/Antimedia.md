@@ -15,7 +15,6 @@ Data about user:
 Image data
 	Path: string
 	dateTaken: dateTime
-	late: bool
 	description: string
 	isShared: bool - så skal det uploades til firestore
 	Story: string
@@ -33,4 +32,43 @@ Story data
 		users: array (med user id)
 	status: string (aktiv done ovs)
 	
-	
+
+
+For later use
+``` dart
+Future<List<Map<String, dynamic>>> _getID(String userId) async {  
+  List<Map<String, dynamic>> photosData = [];  
+  
+  // Fetch the 'id' from the 'stories' collection  
+  QuerySnapshot storiesSnapshot = await FirebaseFirestore.instance  
+      .collection('users')  
+      .doc(userId)  
+      .collection('stories')  
+      .get();  
+  
+  // Use a loop to fetch documents until photosData is not empty  
+  for (var doc in storiesSnapshot.docs) {  
+    String storyId = doc['id'];  
+  
+    // Use the 'id' to query the 'photos' collection where the 'story' field matches the 'id'  
+    QuerySnapshot photosSnapshot = await FirebaseFirestore.instance  
+        .collection('users')  
+        .doc(userId)  
+        .collection('photos')  
+        .where('story', isEqualTo: storyId)  
+        .get();  
+  
+    // Map the documents where the 'story' matches the 'id'  
+    photosData = photosSnapshot.docs.map((doc) => doc.data() as Map<String, dynamic>).toList();  
+  
+    // If photosData is not empty, break the loop  
+    if (photosData.isNotEmpty) {  
+      break;  
+    }  
+  }  
+  
+  print(photosData);  
+  
+  return photosData;  
+}
+```
