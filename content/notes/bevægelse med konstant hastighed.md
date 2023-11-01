@@ -17,3 +17,4 @@ Hastighed beskriver, størrelse og retning
 Hvor fart er størrelsen
 
 [[Konstant hastighed]]
+
