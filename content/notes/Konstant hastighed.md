@@ -9,6 +9,6 @@ tags:
 ---
 
 $S = v * t$
-$t = \frac{v}{s}$
+$t = \frac{v}{S}$
 
 ![[notes/attachments/Pasted image 20231023091048.png]]
