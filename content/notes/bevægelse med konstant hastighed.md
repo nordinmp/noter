@@ -18,3 +18,14 @@ Hvor fart er størrelsen
 
 [[Konstant hastighed]]
 
+# grafer
+### Hastighed fra en (t,s) graf
+hvis den er lineær: $s = v * t$
+![[Excalidraw/ts-graf-linær.excalidraw]]
+Hvis den ikke er lineær: det er hældningen af en tangent
+![[Excalidraw/ts-graf-tangent.excalidraw]]
+
+
+### Find strækning fra en hastighedsgraf (t,v) graf
+Man kan finde strækningen på et bestemt tidspunkt ved at finde arealet
+![[Excalidraw/tv-graf-areal.excalidraw]]

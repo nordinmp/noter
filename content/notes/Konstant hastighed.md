@@ -1,5 +1,5 @@
 ---
-Formel: $v =\frac {\Delta T}{\Delta s}$
+Formel: $v =\frac {\Delta s}{\Delta t}$
 title: Konstant hastighed
 tags:
   - fysik
