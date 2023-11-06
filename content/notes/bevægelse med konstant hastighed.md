@@ -4,6 +4,7 @@ tags:
   - fysik
   - mekanik
 ---
+[[notes/bevægelse med konstant hastighed|bevægelse med konstant hastighed]]
 ### Grundprincipper
 1) hastigheden ændres ikke
 2) Accelerationen er nul (a = 0)
