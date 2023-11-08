@@ -1,8 +1,7 @@
 ---
-title: "11 lessons we learned in Vietnam"
-tags: 
-- Engelsk
-- Vietnam
+title: 11 lessons we learned in Vietnam
+tags:
+  - Engelsk
 ---
 1.  Misjudging the enemy and their intentions.
 2.  Seeing South Vietnam as little America and not considering the country's unique circumstances.
