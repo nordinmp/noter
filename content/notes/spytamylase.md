@@ -1,2 +1,10 @@
-#ordbog #Biologi #enzymer #kroppen 
+---
+title: spytamylase
+tags:
+  - ordbog
+  - Biologi
+  - enzymer
+  - kroppen
+---
 [[Enzym]] der nedbryder stivelse til disaccharidet maltose i munden.
+

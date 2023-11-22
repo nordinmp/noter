@@ -7,4 +7,5 @@ tags:
   - Formeler
 Standart-enhed: $\frac{m}{s^{2}}$
 ---
+[[notes/acceleration|acceleration]]
 ![[notes/attachments/Pasted image 20231106114204.png]]

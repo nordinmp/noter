@@ -1,11 +1,17 @@
 ---
 Formel:
-- Strømstyrken = [[Kirchhoffs 1. lov]]
-- Spændingsforskellen = $U = U_1=U_2=...$
-- Erstatningresistens = $R_{erstat} = \frac{1}{\frac{1}{R_{1}}+\frac{1}{R_{2}}+\dots}$
+  - Strømstyrken = [[Kirchhoffs 1. lov]]
+  - Spændingsforskellen = $U = U_1=U_2=...$
+  - Erstatningresistens = $R_{erstat} = \frac{1}{\frac{1}{R_{1}}+\frac{1}{R_{2}}+\dots}$
+title: parallelforbindelse
+tags:
+  - fysik
+  - elektrisitet
+  - jævnstrøm
+  - kredsløb
+  - Formeler
+  - ordbog
 ---
-#fysik #elektrisitet #jævnstrøm #kredsløb #Formeler #ordbog 
-
 Når noget er parallelt for hindanen i et kredsløb
 
 stadig lukket

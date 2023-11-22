@@ -3,6 +3,7 @@ title: bevægelse med konstant hastighed
 tags:
   - fysik
   - mekanik
+  - bevæglese
 ---
 [[notes/bevægelse med konstant hastighed|bevægelse med konstant hastighed]]
 ### Grundprincipper
@@ -18,6 +19,11 @@ Hastighed beskriver, størrelse og retning
 Hvor fart er størrelsen
 
 [[Konstant hastighed]]
+
+For at fjerne delta kan man skrive:
+$v -v_{0}=a(t-t_{0})$
+$v = a*t-a*t_{0}+v_{0}$
+$v = a*t+v_{0}$
 
 # grafer
 ### Hastighed fra en (t,s) graf
