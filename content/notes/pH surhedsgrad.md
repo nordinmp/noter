@@ -1,7 +1,11 @@
 ---
 Formel: $pH = -\log[H_{3}O^{+}]$
+title: pH surhedsgrad
+tags:
+  - ordbog
+  - Formeler
+  - kemi
 ---
-#kemi #ordbog #Formeler 
 
 Det omvendte er 
 
