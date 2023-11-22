@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"e4a0ab4bf3d55ed2","x":-125,"y":-30,"width":245,"height":110,"type":"text","text":"Danske boliger skal være mere bæredygtige"},
+		{"id":"ad946c7476fdb946","x":-125,"y":-180,"width":245,"height":60,"type":"text","text":"Årsager"},
+		{"id":"f57420dfbf9e7ff7","x":195,"y":-380,"width":250,"height":115,"type":"text","text":"Mangel på bevidsthed og engagement hos danskere"},
+		{"id":"6a346445a120b87f","x":40,"y":-660,"width":250,"height":175,"type":"text","text":"Danskere er ikke tilstrækkeligt bekymrede for deres boliger i forhold til bæredygtighed"},
+		{"id":"a2853657bff2ad24","x":691,"y":-520,"width":250,"height":91,"type":"text","text":"Modvilje mod ændring af adfærd"},
+		{"id":"78513e242a47ef76","x":395,"y":-629,"width":250,"height":144,"type":"text","text":"Danskerne mener, at politikerne har det største ansvar for at lave ændringer"},
+		{"id":"23b5e1f21467f37e","x":-432,"y":-361,"width":250,"height":96,"type":"text","text":"Begrænset viden om bæredygtige løsninger"},
+		{"id":"7575320b063d7e5d","x":-612,"y":-660,"width":250,"height":164,"type":"text","text":"Mangel på strategier til at gøre boliger energisparende og CO2-neutrale"},
+		{"id":"70d45715d93b9cd6","x":-253,"y":-660,"width":250,"height":215,"type":"text","text":"Danskerne vil gerne have mere bæredygtige boliger, men mangler viden om, hvordan de skal gøre det"},
+		{"id":"a19ddd0d0267f6d8","x":-129,"y":205,"width":250,"height":60,"type":"text","text":"Virkninger"},
+		{"id":"5ff7887111d1e828","x":-420,"y":400,"width":250,"height":77,"type":"text","text":"Bidrager til global opvarmning"},
+		{"id":"5013c92fdff894be","x":-420,"y":534,"width":250,"height":146,"type":"text","text":"Ikke-bæredygtige boliger medfører øget udledning af drivhusgasser"},
+		{"id":"216c6b4e7cb61348","x":-130,"y":400,"width":250,"height":77,"type":"text","text":"Øget klimaforandringer"},
+		{"id":"7c9d4402922b1d82","x":-130,"y":534,"width":250,"height":125,"type":"text","text":"Klimaforandringer resulterer i flere naturkatastrofer"},
+		{"id":"09f3e12e86bcf66b","x":157,"y":402,"width":250,"height":75,"type":"text","text":"Risiko for oversvømmelser"},
+		{"id":"7760649290f0e06e","x":157,"y":534,"width":250,"height":202,"type":"text","text":"Stigende havvandstand som følge af global opvarmning udgør en trussel for lavtliggende områder som Danmark"},
+		{"id":"56e04636a3547283","x":-796,"y":-180,"width":250,"height":77,"type":"text","text":"Dårlig isolering af eksisterende boliger"},
+		{"id":"a8d5e39ccae22b2d","x":-796,"y":-445,"width":250,"height":217,"type":"text","text":"Mange danske bygninger er dårligt isolerede, hvilket resulterer i et højt energiforbrug til opvarmning"}
+	],
+	"edges":[
+		{"id":"8fc16d86a7a02299","fromNode":"e4a0ab4bf3d55ed2","fromSide":"top","toNode":"ad946c7476fdb946","toSide":"bottom"},
+		{"id":"b00e02e9d45ad849","fromNode":"ad946c7476fdb946","fromSide":"top","toNode":"f57420dfbf9e7ff7","toSide":"bottom"},
+		{"id":"851c7cba2ac8ffe3","fromNode":"f57420dfbf9e7ff7","fromSide":"top","toNode":"6a346445a120b87f","toSide":"bottom"},
+		{"id":"4eb501e3bbf2a42b","fromNode":"f57420dfbf9e7ff7","fromSide":"top","toNode":"78513e242a47ef76","toSide":"bottom"},
+		{"id":"2c0195d59c619b81","fromNode":"f57420dfbf9e7ff7","fromSide":"top","toNode":"a2853657bff2ad24","toSide":"bottom"},
+		{"id":"1b86934dc9aa056a","fromNode":"ad946c7476fdb946","fromSide":"top","toNode":"23b5e1f21467f37e","toSide":"bottom"},
+		{"id":"04f9b80e59540449","fromNode":"23b5e1f21467f37e","fromSide":"top","toNode":"70d45715d93b9cd6","toSide":"bottom"},
+		{"id":"0fcc8c08c5e394ed","fromNode":"23b5e1f21467f37e","fromSide":"top","toNode":"7575320b063d7e5d","toSide":"bottom"},
+		{"id":"e1ec43c7e9ccbdc0","fromNode":"e4a0ab4bf3d55ed2","fromSide":"bottom","toNode":"a19ddd0d0267f6d8","toSide":"top"},
+		{"id":"87baa115898b5b2c","fromNode":"a19ddd0d0267f6d8","fromSide":"bottom","toNode":"5ff7887111d1e828","toSide":"top"},
+		{"id":"61ae83aea9a42dc0","fromNode":"5ff7887111d1e828","fromSide":"bottom","toNode":"5013c92fdff894be","toSide":"top"},
+		{"id":"eed61e74248dd856","fromNode":"a19ddd0d0267f6d8","fromSide":"bottom","toNode":"216c6b4e7cb61348","toSide":"top"},
+		{"id":"d5f4f763bd55f1e5","fromNode":"216c6b4e7cb61348","fromSide":"bottom","toNode":"7c9d4402922b1d82","toSide":"top"},
+		{"id":"1f967600b2e38507","fromNode":"a19ddd0d0267f6d8","fromSide":"bottom","toNode":"09f3e12e86bcf66b","toSide":"top"},
+		{"id":"dbc7e32797217fea","fromNode":"09f3e12e86bcf66b","fromSide":"bottom","toNode":"7760649290f0e06e","toSide":"top"},
+		{"id":"758ee2075ee4becd","fromNode":"ad946c7476fdb946","fromSide":"top","toNode":"56e04636a3547283","toSide":"bottom"},
+		{"id":"4c59855ec5284998","fromNode":"56e04636a3547283","fromSide":"top","toNode":"a8d5e39ccae22b2d","toSide":"bottom"}
+	]
+}
