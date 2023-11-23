@@ -8,6 +8,7 @@ tags:
 Formel: $v^{2}-v_{o}^{2} = 2*a*(S-S_{0})$
 ---
 **Anvendes når tiden er ubekendt i bevægelse med [[notes/konstant acceleration|konstant acceleration]]**
+
 $v^{2}-v_{o}^{2} = 2*a*(S-S_{0})$
 
 **Hvis vi vil finde sluthastigheden:**
@@ -20,9 +21,9 @@ $v = \sqrt{2*a*S}$
 $v_{0} = \sqrt{v^{2}-2*a*(S-S_{o})}$
 
 **Hvis man vil finde stræknigen**
-$S - S_{0} = \frac{v^{2}-v_{0}^{2}}{2*a}$ <- Man kalder det også bremselængden
+$S - S_{0} = \frac{v^{2}-v_{0}^{2}}{2*a}$ <- Man kalder det også **bremselængden**
 
-$S =\frac{v^{2}-v_{0}^{2}}{2*a} - S_{0}$
+$S =\frac{v^{2}-v_{0}^{2}}{2*a} + S_{0}$
 
 **frit fald:**
 $v^{2}-v_{o}^{2} = 2*g*(S-S_{0})$
