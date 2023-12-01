@@ -5,11 +5,11 @@ tags:
   - Produktion_og_arbejde
   - ordbog
 ---
-Forsigtighedsprincippet
-Forkerte hænder
-fremmedgørelse - arbejdsglæden
-maskiner = slaver
-æren
-forurening
+- Forsigtighedsprincippet
+- Forkerte hænder
+- fremmedgørelse - arbejdsglæden
+- maskiner = slaver
+- æren
+- forurening
 
 [[notes/Teknologi optimisme|Teknologi optimisme]]

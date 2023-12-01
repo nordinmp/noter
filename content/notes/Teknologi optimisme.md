@@ -5,10 +5,10 @@ tags:
   - Produktion_og_arbejde
   - ordbog
 ---
-Fordel
-Bedre livskvalitet
-% Hårdt fysisk arbejde
-% Brok + bedre
-tjener
+- Fordel
+- Bedre livskvalitet
+- % Hårdt fysisk arbejde
+- % Brok + bedre
+- tjener
 
 [[notes/teknologi pessissme|teknologi pessissme]]
