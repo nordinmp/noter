@@ -5,6 +5,7 @@ tags:
   - ordbog
   - Formeler
   - bevæglese
+title: tyngdekraft
 ---
 - $f_t$ = tyngdekraft = N
 - m = [[notes/Masse|Masse]] = kg
