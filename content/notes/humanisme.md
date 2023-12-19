@@ -13,3 +13,4 @@ Kernen i humanisnme:
 Man begynder at tænke mere abstrakt om hvad en hjerne er
 - computere er på lige fod med mennesker
 Man angriber menneskes essens, og nu er mennesker bare ligesom alle andre dyr. 
+
