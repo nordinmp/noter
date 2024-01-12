@@ -8,3 +8,6 @@ Github token: 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
 
 android studio
 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
+
+Discord
+MTA2MjcwODU0NTAwNDUyMzYwMQ.GQvpQM.Zw-2-Xsk3HL3NFgepZ8os3Bk2vZu523XOsjPKs
