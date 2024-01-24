@@ -5,6 +5,7 @@ tags:
   - retorik
   - kildekritik
   - idehistorie
+  - ai
 enableToc: true
 ---
 Kildekritik kommer fra sundfornuft.
@@ -71,6 +72,8 @@ Hvad kilden handler om.
 Det er vigtigt at overveje om hvorfor det er vigtigt, da en førstehåndskilde nok er mere troværdig. Selvfølgelig kan det være at førstehåndskilden ikke er har interesse i at fortælle os sandheden.
 
 ## Repræsentativitet 
+
+Kan vi være sikker på at andre også synes dette. 
 
 ***(Disclaimer dette er ai, da jeg ikke helt forstod det)***
 
