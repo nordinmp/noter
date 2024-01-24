@@ -26,4 +26,6 @@ Forskellen er at moralsk ondskab er fordi folk har løst til at gøre noget ondt
 - KKK (Ku Klux Klan) de er en flok racister som mener at de hvide er de bedste. De har dræbt man afrikanske amerikaner. KKK repræsenterer idealistiske ondskab fordi de synes de bedre end andre racer og derfor er det ok at gøre onde ting
 
 - Slaveri. Der er blevet brugt slaver mange steder i historien. Hvor nogen ville komme til et andet land og tage folk der boede der for så at sælge dem senere. Dette er også instrumentel ondskab da det var en måde man kunne opnå status på, fordi det var lidt cool at have købt mennesker
-# 
+
+[[notes/immanuel Kant|immanuel Kant]]
+[[notes/Teknologier i holocaust|Teknologier i holocaust]]

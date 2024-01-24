@@ -1,6 +1,13 @@
-#Samfundsfag #globalisering #Trekantskassen 
+---
+title: Årsagskassen
+tags:
+  - Samfundsfag
+  - globalisering
+  - Trekantskassen
+---
 # 3 overordnet
 ## Penge
+
 * Tjene flere
 * Spare penge
 

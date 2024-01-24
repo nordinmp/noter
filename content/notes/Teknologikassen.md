@@ -1,4 +1,10 @@
-#Samfundsfag  #Trekantskassen #globalisering
+---
+title: Teknologikassen
+tags:
+  - Samfundsfag
+  - Trekantskassen
+  - globalisering
+---
 # Teknik
 * Maskiner
 * redskaber

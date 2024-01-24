@@ -1,4 +1,10 @@
-#globalisering #Samfundsfag #Trekantskassen 
+---
+title: trelantsmodelen
+tags:
+  - globalisering
+  - Samfundsfag
+  - Trekantskassen
+---
 ![[Pasted image 20230328095507.png]]
 3 kasser
 * Teknologi
