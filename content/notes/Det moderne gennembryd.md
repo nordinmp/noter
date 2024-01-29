@@ -13,3 +13,5 @@ Nu er det cool at skrive om KKK (kirke, køn, klasser)
 
 Brandes var jøde og kunne lide russerene
 
+
+KKK (kirke køn klasse)
