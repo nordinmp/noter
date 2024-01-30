@@ -147,10 +147,12 @@ Folk som tror på at darwism er sand. Den ikke tror på det kaldes kristinister.
 - Han er ikke glad for tanken om at vi måske kommer fra dyr
 
 Der var 2 slags folk
+
 De **Ortodokse** - konflik
 - Poul la Cour
 	- Han lavede vindmøller
 	- men selvom at han var en videnskabsmand troede han ikke på darwinisme
+
 De **nygrundtviganske** - uafhængighed
 - Rasmus Nielsen
 	- Han vil både have videnskab og religion
