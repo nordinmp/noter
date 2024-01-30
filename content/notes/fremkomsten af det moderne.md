@@ -87,3 +87,97 @@ Der kommer et klassesamfund
 Vi har ikke rigtige nogen velfærdsstat.
 
 Der begynder at komme en globalisering - også i underholdning
+
+Samlebånd bliver meget populært - Ford
+
+Lokomotivet bliver forbundet med industrialisering 
+- fart
+- forandring
+- det nye
+
+**Great Exhibition:**
+Man begynder at holde møder med alle andre lande, hvor man kan vise hvad deres land kan. - Crystal palace i England
+
+Byer begynder at bevæge sig. Både oppe (folk) og nede (vand og affald)
+
+Luftskibe blev lavet, men de blev hurtigt droppet.
+
+Først havde man stearinlys, men folk døde når de skulle hente hvalfedtet for det. Så man brugte i en kort periode gas, men det blev hurtigt til elektricitet. 
+- giver liv til byen 
+- og teater
+
+**Konserves 1890-**:
+Det var et luksusprodukt. Dengang skulle man sige til butiksmedarbejderen hvad man skulle have. Nu gør vi mere mod ikke at skulle ansætte arbejdere
+
+Forurening - højere skorstene. Længere rør så de ikke kommer til stranden.
+
+# Religion og videnskab
+Darwin i den danske kulturkamp 1870 - 1920
+
+Nogen mener at evulotionsteorien ikke passer, det er ofte religiøse folk.
+
+![[notes/attachments/Pasted image 20240130105212.png]]
+Folk som tror på at darwism er sand. Den ikke tror på det kaldes kristinister. 
+
+## Darwin i Danmark
+ **Japetus Steenstrup - professor i zoologi**
+- Venner med Darwin
+- de kunne godt lide barnacle 
+- Han blev aldrig til darwinist, det gjorde Darwin trist
+**J.P Jacobsen - fan**
+- oversatte Darwins tekster
+- Når vi bliver bedre til videnskab bliver der mindre plads til religion
+- J.P Jacobsen var stor modstander af religion
+**Georg Brandes**
+- Kopernikus var den første til at "hakke" lidt i religion
+- Darwin var den anden til at "hakke" lidt i religion
+- Fik modstand fra Biskop D.G. Monrad
+	- Han lader som om han laver et bred
+	- Han sagde "Mennesker kommer ikke fra gudsbillede, men abedsbilleder"
+	- Folk kunne ikke lide den tanke
+	- Hvis vi tænker på os som dyr, mister vi vores morale
+		- Hænger sammen med Socialisme?
+**N.F.S Grundtvig**
+- Præst - skrevet mange sange
+- Han mener at darwinsme og religion kan leve hånd i hånd
+- Han troede ikke på Kopernikus' verdensbillede
+- Han mendte at det at være kristen handler ikke så meget om at læse bible, men at være i et fællesskav
+	- Derfor behøvede man ikke tage biblen 100%
+	- Men han kunne ikke lide videnskab - han har et historisk syn
+- Han er ikke glad for tanken om at vi måske kommer fra dyr
+
+Der var 2 slags folk
+De **Ortodokse** - konflik
+- Poul la Cour
+	- Han lavede vindmøller
+	- men selvom at han var en videnskabsmand troede han ikke på darwinisme
+De **nygrundtviganske** - uafhængighed
+- Rasmus Nielsen
+	- Han vil både have videnskab og religion
+	- Tro og videnskab skal ikke blandes sammen
+	- Det var der mange danskere som var enig med - måske
+- Valdemar Brückers
+	- Han var stor tilhænger af Rasmus Nielsen (og Grundtvig)
+
+
+Noget med videnskab kan ikke forklare alt, og tyskerne er dårlige
+
+**Folkekirken**
+- De liberale var ok med det
+- den kristne højrefløj, tog biblen sådan at hvad de sagde ikke kunne ændre
+
+**Eugen Warming**
+- Han var en videnskabsmand
+- Han var en kristen som ikke kunne lide darwins evolation
+- Han var ok med at der var sket en evolution
+	- men han troede ikke på at det var survival of the fittest
+- Han sagde Darwinisme var døende
+	- Fordi man kunne ikke forklar hvorfor det skete 
+	- nu ved vi hvad mutationer er
+
+**Lamaricksme**
+	- mener at man kan arve sine forældres styrker/kloghed osv.
+	- Det gjorde darwinisme mere "inline" af kristendommen, så det kunne kristne godt lide
+
+
+ 
