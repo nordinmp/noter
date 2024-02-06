@@ -183,3 +183,107 @@ Noget med videnskab kan ikke forklare alt, og tyskerne er dårlige
 
 
  
+# køn - felix noter
+1850-1915
+
+**Introduktion**
+-	1 ud af 10 børn døde, hvilket var lavt dengang
+-	Kæmpe udvikling
+o	Industrialisering
+o	Urbanisering
+o	Demokratisering
+o	Grundlov 1849
+-	1915, ordentligt demokrati
+-	I 1864 mister vi en del land i krig
+-	Klasseopdelt samfund
+-	Landbrugssamfund
+
+**Datidens kønsroller**
+-	Den gode mand
+o	Dem der havde stemmeret ifølge grundloven
+o	(se slideshowet på itslearning)
+-	Den gode kvinde
+o	Tage sig af hjem og familie
+o	Den gode moder
+o	Kunne man overhovedet kalde kvinder der ikke ville være mødre for kvinder???
+o	(se slideshowet på itslearning)
+-	1/5 del af børn født i københavn var uægte i 1880
+-	På landsplan var 10 procent af børnene uægte
+-	Enormt svært at have et uægte barn som mor
+-	I 1800-tallet blev halvdelen af alle mord begået af ugifte kvinder, begået på spædbørn
+-	Plejemødre ville tage op til 22 spædbørn ind på en gang. Fik penge fra staten på det
+-	Nogle af de børn begyndte også at dø
+
+**Sex**
+-	Interessere folk, men man snakkede ikke åbent om det
+-	De var bange for hvad der skete med kvinder der cyklede
+o	Ikke i stand til at få børn
+o	Seksuelt stimulere
+o	Tog cyklen til sig som et symbol
+-	Den reglementerede prostitution 1874-1906
+o	Epidemi af kønssygdomme
+o	Det blev ulovligt for kvinder at sælge sig selv
+	Medmindre de gjorde det for staten
+•	Straf for prostitution var at blive prostituere for staten
+	Statsbordeller
+	16 kunder om dagen, nogle op til 50
+	Måtte ikke have børn boende hos sig på bordellet
+-	Sædlighedsfejden 1883-1887
+o	Mænd der havde sex ok
+o	Kvinder skulle være ”rene” til ægteskab
+o	Nogle ville have at alle måtte have sex
+o	Nogle ville have at mænd også skulle være ”rene” til ægteskab
+	Det andet ville skabe uægte børn
+o	Første gang der for alvor offentligt diskuteres seksualmoral
+-	Den store sædelighedssag 1906-10907
+o	Reportage fra middagsposten (Ekstrabladet eller se og hør) skriver at der findes et stort undergrundsmiljø med mænd der har sex med mænd
+	Overklasse mænd
+o	Første gang der bliver diskuteret homoseksualitet, offentligheden finder ud af at det findes
+o	Reportagen prøver at få det til at se forfærdeligt ud, men det bliver til en guide til andre der vil være en del af miljøet
+o	Men tegnede homoseksuelle mænd som andre etniciteter, selvom dem i miljøet i Danmark mest var danskere
+o	Homoseksualitet måtte ikke knytte sig til maskulinitet og den rigtige mand, så de blev set som feminine
+o	Arbejder klassen siger at de skal have stemmeret når det nu ikke er dem som er gay
+
+**Lige ret til uddannelsen og erhverv samt andre skører ideer**
+-	Kvindebevægelsen kommer til Danmark 1850
+-	I starten handler det om retten til uddannelsen og at forsørge sig selv, ikke stemmeret
+-	Kvinder skal have ret til deres egene penge selv når de er gift
+-	Drenge og piger skulle have adgang til samme uddannelse i folkeskolen
+o	Drenge havde naturfag
+o	Piger havde håndværk
+-	Fører til fællesskoler (1946 i kbh)
+-	Kvinder laver private skoler kun til kvinder
+o	Ikke betalt af staten som uddannelser til mænd
+-	1875, kvinder får adgang til uni
+**Kvinders arbejde**
+-	Livet stod på hårdt ufaglært arbejde for de fleste
+-	Ubehagelige arbejdsforhold
+-	Hårdt fysisk arbejde
+-	Bløder ud af næse og mund fordi de stod forover båret
+-	Arbejderklasse kvinde skulle arbejde, så de kunne ikke passe hus og børn
+o	Børn blev efterladt alene hjem eller kom med på arbejde
+o	Førte til love mod børnearbejde
+o	Tvunget barsel til kvinder på fabrikker
+o	Beskyttede ikke kvinder for at blive fyret, så de overholdt ikke barsel
+-	Kvindebevægelsen kæmpede mod beskyttende love så kvinder ikke blev presset ud af arbejde
+
+**Stemmeretskampen**
+-	1880
+-	Argumentet var især at mødre skal være i politik og bidrage med omsorg
+o	Kvinder skal tage sig af det sociale i politik
+o	Kvinder kan komme med et nyt perspektiv end mænd
+-	Argumenter imod:
+o	Kvinder har ikke disciplin som mænd lærer i hæren
+-	1908 må kvinder stemme til kommunalvalg og byråd
+-	1915, kvinder må stemme og stille op
+o	Arbejder klassen må det samme
+-	Fejres med optog
+o	Blev kaldt takke tog, men kvinderne takkede ikke for menneskerettigheder
+o	Folk så på fordi de ikke troede kvinder kunne gå på række
+-	Kvinder i politik
+o	Meget uddannelse, sundhed og lignede
+o	Første kvindelige minister var uddannelsesminister
+o	Meget få kvinder blev valgt ind i starten (4 i 1915)
+	Få kvinder stillede op
+	Partier stillede ikke mange kvinder op
+
