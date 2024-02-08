@@ -16,3 +16,5 @@ Navn:
 Standart-enhed: 
 Enhed-betydning:
 
+
+Hvis man har noget i KM/t kan man dividere med 3.6
