@@ -1,12 +1,11 @@
 ---
-Formel: E_{n} = -13.6 eV * \frac{1}{n_{2}}
-title: "bohrs atommodel"
+Formel: $E_{n} = -13.6 eV * \frac{1}{n_{2}}$
+title: bohrs atommodel
 tags:
-- fysik
-- ordbog
-- Formeler
-- atomer
-- 
+  - fysik
+  - ordbog
+  - Formeler
+  - atomer
 ---
 [[notes/fotoner|fotoner]]
 
