@@ -37,3 +37,7 @@ $A_{t} = F_{t}*S = m*g*h$
 ## Skrå bevægelse:
 $A_{t} = \vec{F_t}*\vec{S} = F_{T} * S * cos(\phi)$
 $A_{t} = F_{t}*h = m*g*h$
+
+Hvis man kommer tilbage hvor man kommer fra er **tyngdekraften konservativ** det vil sige at tyngdekraftens arbejde = 0
+
+![[Excalidraw/tyngdekraftens arbejde.excalidraw]]
