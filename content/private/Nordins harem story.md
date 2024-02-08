@@ -156,7 +156,7 @@ introducere dig selv : du griner lidt, og siger du hedder Nordin, han siger han 
 **Ny Person** - Du skynder dig at finde en ny person, men hver gang du gå over til en finder de en ny person. Men pludselig ser du en sexy mand se på dig
 **næste** - hans muskler er gigantiske, hans hår basic, og hans solbriller for ham til at se duchy ud. Men der er stadig et eller andet som vækker sommerfuglene nede i din mave.
 **næste** - i smiller sødt til hinanden, og du går over til ham, og han går mod dig
-
+	
 **Kig saftigt på ham** - han er en lækker steg og det viser du tydligt, og han rødmer og siger hans navn er Magnus
 **Introducere dig selv** - Du starter tørt ud med "Hej jeg er Nordin, hvemst er du", og han svarer tørt "Magnus 👨‍🦲"
 **"Diss" ham** - Du sviner ham til og han sviner dig til, ingen af jer synes det var specielt sjovt - men du finder i det mindste ud af at han hedder Magnus 
