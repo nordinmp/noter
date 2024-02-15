@@ -15,7 +15,6 @@ Formel: $A = \vec{F} \cdot \vec{S} = F * S * Cos(\phi)$
 > [!NOTE] Definition
 > En kraft, der påvirker en genstand over en strækning
 
-
 ![[Excalidraw/arbejde.excalidraw]]
 
 
