@@ -19,7 +19,7 @@ Formel: $A = \vec{F} \cdot \vec{S} = F * S * Cos(\phi)$
 
 
 $A = \vec{F} \cdot \vec{S} = F * S * Cos(\phi)$ 
-
+	Vi vil gerne have længden af F og S
 $\phi =$ Vinklen mellem F og S (vektorer)
 Symbol: [A]
 Navn: Arbejde
@@ -32,11 +32,26 @@ $\vec{F} \space || \space \vec{S}$  (De er parallelle)
 
 # Tyngdekraftens arbejde
 $A_{t} = F_{t}*S = m*g*h$
+m = [[notes/Masse|Masse]]
+g = [[notes/Tyngdeacceleration|Tyngdeacceleration]]
+h = højde
+
 
 ## Skrå bevægelse:
 $A_{t} = \vec{F_t}*\vec{S} = F_{T} * S * cos(\phi)$
 $A_{t} = F_{t}*h = m*g*h$
 
 Hvis man kommer tilbage hvor man kommer fra er **tyngdekraften konservativ** det vil sige at tyngdekraftens arbejde = 0
+## Konservativ kræft:
 
 ![[Excalidraw/tyngdekraftens arbejde.excalidraw]]
+
+# Gnidningkræftens arbejde
+$F_{\mu} = \mu * F_{n}$
+
+![[Excalidraw/gnidningskræft.excalidraw]]
+**Skrå:**
+$A_{\mu}=-\mu * F_{n}*S$
+
+**Lige:**
+$A_{\mu}=-\mu * m*g*S$
