@@ -55,3 +55,6 @@ $A_{\mu}=-\mu * F_{n}*S$
 
 **Lige:**
 $A_{\mu}=-\mu * m*g*S$
+
+# arbejde af fjederkræft
+$A =$
