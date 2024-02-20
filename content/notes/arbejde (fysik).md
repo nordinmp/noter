@@ -57,4 +57,11 @@ $A_{\mu}=-\mu * F_{n}*S$
 $A_{\mu}=-\mu * m*g*S$
 
 # arbejde af fjederkræft
-$A =$
+$F_{fj} = K*x$
+K = Fjederkonstant
+x = 
+Brug hookeslov
+
+![[Excalidraw/fjederkræft.excalidraw]]
+
+$\frac{1}{2}k*x^{2}_{0}$ areal af trekant
