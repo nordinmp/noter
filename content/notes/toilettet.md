@@ -20,6 +20,7 @@ Aktør (tit menneske) noget som har haft stor betydning
 Begrænsninger der forhindre udbredelse, det kan være humane og non-humane
 
 # Faser 
+Fra ide til produkt
 ## 1 Opfindelse og innovationsfasen
 Hvor man kommer op med ideen?
 ## 2 Spredningsfasen
