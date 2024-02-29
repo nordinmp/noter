@@ -20,3 +20,8 @@ Hvis det ikke giver 0 så beværger den sig
 
 
 
+$g*sin(\alpha)-\mu * g * cos(\alpha) = a$
+
+
+Hvis acceleration er 0: 
+$\mu = tan(\alpha)$
