@@ -13,3 +13,4 @@ Reaktions
 
 Normal hvis slutter det på -ester (syre alkohol -ester), eller (alkohol syre -oat)
 
+Ester reaktioner sker selvfølgelig ikke med det samme der er [[notes/kemisk ligevægt|ligevægt]] 
