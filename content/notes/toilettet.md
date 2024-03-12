@@ -43,3 +43,4 @@ Man bliver vidst noget nyt, men det passer ikke til de lokale
 Derfor ser toiletter forskelligt ud rundt omkring, fordi det passer ind til deres daglig dag, og lokalebehov  
 
 Hvis man bliver nødt til at kreolisere et produkt, vil det sige at man enten er sekundere, eller overhovedet ikke tænkt på (flyvende toiletter)
+
