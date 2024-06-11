@@ -1,7 +1,9 @@
 ---
-tag: etik, Samfundsfag
+tags:
+  - etik
+  - Samfundsfag
+  - Engelsk
 ---
-#Samfundsfag #etik 
 ## George Forster
 
 -   Han blev hængt i 1800’talle
@@ -51,9 +53,46 @@ tag: etik, Samfundsfag
     -   Det kunne folk ikke lide
     -   Man kan stadig se hvad han har gjort i dag
     -   Dette er lidt et dilemma vi har i dag, bare kun med levende dyr, i stedet for døde mennesker
-
 ## De 3 etikker
 
 Konsekvensetik: Hjælp så mange som overhovedet muligt (f.eks. Togproblemet, om du vil køre 5 eller 1 over, og du så vælger at køre 1 over, fordi så hjælper du 5)
 
 Pligtetik: Hjælp folk fordi det er din pligt (Hvis du går i krig som soldat, har du pligt til at hjælpe dit land.)
+
+# Engelsk
+
+
+**The Utilitarian Approach**
+
+- Look at all available options: Consider the balance between evil and good; Choose the options which is the best. (Take amount of people into consideration)
+
+**The Rights Approach**
+
+- Does the action respect the moral rights of everyone? The more serious violation, the less ethical
+
+**The Fairness or Justice Approach**
+
+- Does it treat everyone equal (or favoritism): Favoritism and discrimination is wrong?
+
+**The Common-Good Approach**
+
+- Conditions which are equally to everyone's advantage.
+
+**The Virtue Approach**
+
+- Self-esteem; What kind of person should I be? What will promote the development of character within myself and my community?
+
+|   |   |   |
+|---|---|---|
+||What is ethically correct?|Basic questions called for|
+|The Utilitarian Approach|Choosing the good option|Look at all available options. Choose the options which is the best.|
+|The Rights Approach|Respecting others moral right|Which rights is being violated?|
+|The Fairness or Justice Approach|The option where there is no discrimination involved|Is the action baised on favortism or discrimination?|
+|The Common-Good Approach|The one where the most people are equal|Is the action equal to everyone?|
+|The Virtue Approach|Choosing the option that helps you and your community|Does the action fit you character, that you would want to be?|
+
+1.       How do each of the five approaches identify what is ethically correct?
+
+2.       What are the basic moral questions for each of the five approaches?
+
+3.       How can the five approaches help us deal with ethical problems?

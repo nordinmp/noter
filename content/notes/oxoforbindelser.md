@@ -36,5 +36,5 @@ Vist her:
 Der vil være nogle dipol-dipol (og londonbindinger) bindinger hvilket gør at de har høje kogepunkter.
 
 > [!NOTE] Fra bogen
-> Den basiske, ammoniakholdige sølv(I)ion-opløsning, som bruges til forsøget, kaldes Tollens reagens. Når man fremstiller Tollens reagens, benyttes der så meget ammoniak, at bundfaldet af Ag2O helt opløses. Aldehyder giver sølv ved reaktion med Tollens reagens, hvorimod ketoner ikke reagerer
+> Den basiske, ammoniakholdige sølv(I)ion-opløsning, som bruges til forsøget, kaldes Tollens reagens. Når man fremstiller Tollens reagens, benyttes der så meget ammoniak, at bundfaldet af Ag2O helt opløses. Aldehyder giver sølv ved reaktion med Tollens reagens, hvorimod ketoner ikke reagerer
 

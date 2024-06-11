@@ -5,7 +5,7 @@ tags:
   - toilet
 ---
 # socio-teknik
-| Frederik, Harald og Kasper, nordin felix | Taget fra word                                                               |
+| Frederik, Harald og Kasper, nordin felix | Taget fra word                                                 |
 | ---------------------------------------- | -------------------------------------------------------------- |
 | Socio-tekniske                           | De teknologiske og sociale indflydelser på en given teknologi  |
 | Black-box                                | Det der lader til og være den naturlige løsning til et problem |
@@ -44,3 +44,4 @@ Derfor ser toiletter forskelligt ud rundt omkring, fordi det passer ind til dere
 
 Hvis man bliver nødt til at kreolisere et produkt, vil det sige at man enten er sekundere, eller overhovedet ikke tænkt på (flyvende toiletter)
 
+[[The Origin of stuff]]
