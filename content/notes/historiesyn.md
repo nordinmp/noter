@@ -15,5 +15,8 @@ Teologisk: Der bevæger sig mod et slutpunkt (Det teleologiske historiesyn deler
 
 Substanstantialisk: Historien gentager sig på grund af lovmæssigheder, Så der er noget som er større en mennesker
 
-Idealistisk: 
+Idealistisk: Fokus mennesker som driver historien.
 
+Materialistiske: Naturen som driver historien. Magt og politik er også med her.
+
+![[notes/attachments/Pasted image 20240826111718.png]]
