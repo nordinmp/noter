@@ -6,8 +6,6 @@ tags:
   - ordbog
 ---
 ![[notes/attachments/Pasted image 20240822125403.png]]
-
-
 # Cyklisk / Linært
 Cyklisk: Alting gentager sig, og naturen og samfundet følges ad, 
 
@@ -20,3 +18,4 @@ Idealistisk: Fokus mennesker som driver historien.
 Materialistiske: Naturen som driver historien. Magt og politik er også med her.
 
 ![[notes/attachments/Pasted image 20240826111718.png]]
+   
