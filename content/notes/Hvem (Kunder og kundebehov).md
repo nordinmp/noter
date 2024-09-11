@@ -88,3 +88,31 @@ Det bliver kaldt **Maslows Behovspyramide** fordi den er rangordnede.
 ![[notes/attachments/Pasted image 20240911201734.png]]
 
 ## Behovscirklen
+Til at finde virksomhedens købsmotiver og Jobs-to-be-done kan man bruge behovscirklen, det er bygget op på Maslows Behovspyramide, men den er nu blevet cirkelformet for at vise at ny viden mener at det ikke kommer i en bestemtrækkefølge
+
+![[notes/attachments/Pasted image 20240911202158.png]]
+
+Behovscirklen viser de behovskategorier, der i teorien hyppigst ligger til grund for kundens køb, alt efter **omstændighederne** og det enkelte individs personlige præferencer.
+
+
+> [!NOTE] Behovscirklen
+> 
+> Modellen er opdelt i to afdelinger:
+> 1. **Funktionelle behov**: Disse behov er styrende for køb, der relaterer sig til kundens **fornuftsmæssige** engagement i produktet og dets brugsværdi. De funktionelle behov består af to kategorier: **Fysiske behov** og **praktiske behov**.
+> 2. **Sociale og emotionelle behov**: Disse behov er styrende for køb, der relaterer sig til kundens **følelsesmæssige** engagement i produktet. De sociale og emotionelle behov består af fire kategorier: **Tryghedsbehov**, **sociale behov**, **selvværdsbehov** og **selvrealiseringsbehov**.
+
+![[notes/attachments/Pasted image 20240911202540.png]]
+
+Ovenstående billede giver en forklaring på alle behovene
+
+Bemærk at der kan være flere behov og at de kan være svære at skelne. "Success" kan både være selvværdsbehov og sociale behov
+
+
+> [!NOTE] Sociale og emotionelle købsmotiver
+> Det ses ofte, at forbrugernes sociale og emotionelle købsmotiver reduceres til fire kategorier: _Bandwagon_ (at købe som alle andre), _Snob_ (at købe anderledes og originalt), _Veblen_ (at købe dyrt og prangende) og _Thrifty_ (at købe billigt og sparsommeligt). Forskningen viser imidlertid, at forbrugernes købsmotiver er langt mere komplicerede.
+> 
+> **Behovscirklen** og den tilknyttede behovsoversigt kan bruges til at nuancere og kvalificere analysen af årsagerne til kundens køb og til at diskutere, i hvor høj grad virksomhedens ydelser matcher kundens funktionelle, sociale og emotionelle behov/_Jobs-to-be-done_.
+> 
+> Som led i analysen kan behovscirklen bruges til at opstille **hypoteser** om målgruppens behov, der efterfølgende kan testes i interviews med udvalgte personer fra målgruppen.
+
+
