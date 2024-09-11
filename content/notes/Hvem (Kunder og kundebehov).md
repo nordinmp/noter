@@ -11,6 +11,7 @@ Der er 2 slags kunder
 
 
 > [!NOTE] Forkortelser
+> 
 > Når en virksomhed handler med privatkunder, kaldes det **B2C** (**_B_**_usiness to **C**onsumer_) eller handel på **privatmarkedet** (også kaldet **konsumentmarkedet**).
 > 
 Når en virksomhed handler med erhvervskunder, kaldes det **B2B** (**_B_**_usiness to **B**usiness_) eller handel på **erhvervsmarkedet** (også kaldet **producentmarkedet**).
@@ -20,12 +21,14 @@ Det er en god ide at dele markeder op endnu mere end bare at sige privat og erhv
 
 
 > [!NOTE] Kundesegmentering
+> 
 > **Kundesegmentering** (også kaldet **markedssegmentering**) handler om at opdele kunderne på markedet i afgrænsede grupper med ensartede kendetegn. Hver gruppe udgør et **kundesegment**.
 
 Det gør man ved at lave nogle kriterier, som kan være alder, køn, bopæl osv.
 
 
-> [!NOTE] **Segmenteringskriterier**
+> [!NOTE] Segmenteringskriterier
+> 
 > **Segmenteringskriterier** på privatmarkedet inddeles i to overordnede kategorier:
 > 1. **Sociodemografiske kriterier**, som vedrører de mere **synlige kendetegn** (fx køn, alder, indkomst, bopæl, uddannelse, arbejde og familieforhold).
 > 2. **Adfærdsmæssige kriterier**, som vedrører de **mindre synlige kendetegn** (fx interesser, holdninger, livsstil og købsadfærd, herunder forbrugsvaner og behov).
@@ -36,6 +39,7 @@ Dog er det ikke alle virksomheder som kan vælge deres egen målgruppe - offentl
 
 
 > [!NOTE] Segmenteringsmodeller
+> 
 > I arbejdet med at segmentere kunderne kan man benytte én eller flere af de **segmenteringsmodeller** (også kaldet **livsstilsmodeller**), der udbydes af de store markedsanalysebureauer. Modellerne bygger på data fra alle offentligt tilgængelige registre suppleret med bureauernes egne kundeanalyser.
 > 
 > Segmenteringsmodeller identificerer ikke enkeltpersoner, men de giver værdifuld viden om generelle fællestræk og tendenser, der kan hjælpe virksomheden med at blive klogere på de eksisterende kunder og med at identificere nye, potentielle målgrupper.
