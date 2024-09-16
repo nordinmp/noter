@@ -10,4 +10,5 @@
 	- Lineær -> teleologisk - Det var uundgåligt
 
 4. Diskutér, om argumentationen holder - Hvorfor? Hvorfor ikke?
-	- 
+	- Han går ud fra at det ville ske, hvem siger det ville
+
