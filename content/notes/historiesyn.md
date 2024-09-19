@@ -6,6 +6,7 @@ tags:
   - ordbog
 ---
 ![[notes/attachments/Pasted image 20240822125403.png]]
+
 # Cyklisk / Linært
 Cyklisk: Alting gentager sig, og naturen og samfundet følges ad, 
 
