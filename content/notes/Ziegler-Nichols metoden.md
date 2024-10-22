@@ -1,3 +1,10 @@
+---
+title: Ziegler-Nichols metoden
+tags:
+  - metode
+  - teknikfag
+  - ordbog
+---
 Man sætter $I$ og $D$ til 0, og så stiger $K_p$ fra 0 indtil den får den ultimative $K_u$
 Så bruger man $K_u$ og $T_u$ til at finde alle de andre $P$, $I$ og $D$
 den ultimative $K_u$ kan defines som 1/M og M er amplitude ratioen. $K_i = K_p/T_i$ og $K_d = K_pT_d$
