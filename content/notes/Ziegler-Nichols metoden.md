@@ -22,7 +22,9 @@ den ultimative $K_u$ kan defines som 1/M og M er amplitude ratioen. $K_i = K_p/T
 These 3 parameters are used to establish the correction ${\displaystyle u(t)}$ from the error ${\displaystyle e(t)}$ via the equation:
 
 
-${\displaystyle u(t)=K_{p}\left(e(t)+{\frac {1}{T_{i}}}\int _{0}^{t}e(\tau )\,d\tau +T_{d}{\frac {de(t)}{dt}}\right)}$
+$u(t) = K_p \left( e(t) + \frac{1}{T_i} \int_0^t e(\tau) \, d\tau + T_d \frac{de(t)}{dt} \right)$
+
+
 
 which has the following transfer function relationship between error and controller output:
 
