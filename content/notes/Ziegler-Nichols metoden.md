@@ -12,7 +12,8 @@ den ultimative $K_u$ kan defines som 1/M og M er amplitude ratioen. $K_i = K_p/T
 |    **some overshoot**    | $0.3\overline{3}K_u$ |     $0.50T_u$      | $0.3\overline3T_u$ | $0.6\overline6\frac{K_u}{T_u}$ | $0.1\overline1K_uT_u$  |
 |     **no overshoot**     |      $0.20K_u$       |     $0.50T_u$      | $0.3\overline3T_u$ |      $0.4\frac{K_u}{T_u}$      | $0.06\overline6K_uT_u$ |
 
-These 3 parameters are used to establish the correction u(t)![{\displaystyle u(t)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/b375df3b65d282f8715835dc91ccb22f46993959) from the error e(t)![{\displaystyle e(t)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/98cb518a61ada87bcd636f531d4d9fd2e67876c3) via the equation:
+These 3 parameters are used to establish the correction ${\displaystyle u(t)}$ from the error ${\displaystyle e(t)}$ via the equation:
+
 
 ${\displaystyle u(t)=K_{p}\left(e(t)+{\frac {1}{T_{i}}}\int _{0}^{t}e(\tau )\,d\tau +T_{d}{\frac {de(t)}{dt}}\right)}$
 
