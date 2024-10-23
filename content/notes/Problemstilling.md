@@ -22,6 +22,8 @@ Den behøver ikke være fancy
 
 **Kig på formalia + kernestof**
 
+Tænkt på taksonomiske niveauer
+ - tænkt det ind i overskrifterne
 
 # idehistorie
 
@@ -30,8 +32,6 @@ Den behøver ikke være fancy
 - Hvad for kilden mig til at undre mig over
 - hvad fanger dine øjne når du læser teksten
 - Er der noget som overraskede dog ift. din eksisterende viden om emnet
-
-
 ## guidelines
 - redegørende
 	- Hvad-, hvem-, hvilke spørgsmål
