@@ -9,6 +9,19 @@ En problemstilling er noget du gerne vil have svar på.
 
 En kilde kan hjælpe os med at få svar på vores problemstilling, når du for svar kalder man det en kildebelyser problemstillingen
 
+Den behøver ikke være fancy
+
+## Tip til at skrive problemstilling
+**En god problemstilling er**
+ - enkel
+ - Se gamle problemstillinger (DIO + ondskab)
+
+**Metode**
+- Brug 1 - 2 metoder som svarer problemstilling
+- Begrunder brug af metode
+
+**Kig på formalia + kernestof**
+
 
 # idehistorie
 
@@ -35,3 +48,4 @@ Ting at huske
 [[notes/Kildekritik#idehistorie|Kildekritik]]
 
 ![[notes/attachments/Pasted image 20240124085109.png]]
+
