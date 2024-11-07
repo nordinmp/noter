@@ -1,0 +1,29 @@
+---
+title: erhversøkonomi
+tags:
+  - Erhversøkonomi
+  - noter
+---
+
+Mekanisk og organisk
+- Dårligt  	godt
+
+X- og Y-teori
+- grundopfattelse af medarbejde
+- X: pisk
+- Y: ros
+
+Pygmalion og Golem-effekt
+- Folk arbejde bedre ved Pygmalion fordi de er der
+- Når Golem er der arbejder folk dårligere.
+
+Taylorisme og Human Relations-skolen
+- Taylorisme effektivitet, akkordløn. "In the past the has been first in the future the system must be first"
+	 - Brug videnskab til at være mest effektiv
+	 - betalt efter hvor god du var
+
+Human Relations-skolen
+- Søger for at alle har det godt, finder på en løsning til dem som arbejder
+
+Demokratisk - autoritær - Laissez-faire
+- Hører alles      Militær råb 	Løs opdragelse
