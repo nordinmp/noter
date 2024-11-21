@@ -9,11 +9,11 @@ tags:
 - Organisk: godt, mere løst
 # X- og Y-teori
 - grundopfattelse af medarbejde
-	- X: pisk
+	- X: pisk, og gullerod
 	- Y: ros
 # Pygmalion og Golem-effekt
-- Folk arbejde bedre ved Pygmalion fordi de er der
-- Når Golem er der arbejder folk dårligere.
+- Folk arbejde bedre ved Pygmalion fordi de er der, fordi lederen har meget respekt
+- Når Golem er der arbejder folk dårligere. Siver alt motivation ud af lokalet
 # Taylorisme og Human Relations-skolen
 - Taylorisme effektivitet, akkordløn. "In the past the has been first in the future the system must be first"
 	 - Brug videnskab til at være mest effektiv
@@ -24,4 +24,4 @@ tags:
 # Demokratisk - autoritær - Laissez-faire
 - Demokratisk:  Hører alles      
 - Autoritær: Militær råb 	
-- Laissez-faire: Løs opdragelse
+- Laissez-faire: Løs opdragelse, man finder selv ud af ting, ingen hieraki
