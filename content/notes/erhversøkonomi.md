@@ -22,6 +22,6 @@ tags:
 - Søger for at alle har det godt, finder på en løsning til dem som arbejder
 
 # Demokratisk - autoritær - Laissez-faire
-- Demokratisk:  Hører alles      
+- Demokratisk:  Hører alle      
 - Autoritær: Militær råb 	
-- Laissez-faire: Løs opdragelse, man finder selv ud af ting, ingen hieraki
+- Laissez-faire: Løs opdragelse, man finder selv ud af ting, ingen hierarki
