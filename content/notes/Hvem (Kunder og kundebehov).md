@@ -78,7 +78,7 @@ Derfor skal virksomheder spørge sig selv "Hvilke jobs/behov får kunden løst v
 
 Kundebehovet er altid **situationsbestemt**, det vil sige at det er påvirket af mange forskellige ting, som hvem kunden er sammen med, tid, sted, økonomi mm.
 
-## Maslows behovsteori
+## Maslows behovspyramide
 Maslow identificerede en række grundlæggende **fysiske, sociale og emotionelle behov** som var en forklaring på menneskernes drivkraft og motivation.
 
 Nederst i pyramiden optræder de **fysiske behov**. Herefter kommer de øvrige behov i følgende trinvise rækkefølge: **Tryghedsbehov**, **sociale behov**, **selvværdsbehov** og **selvrealiseringsbehov**.

@@ -1,7 +1,8 @@
 ---
 title: censur under besættelsen
 tags:
-  - tag
+  - idehistorie
+  - censur
 ---
 ## Vigtige begreber 
 - Forhåndscensur
@@ -22,3 +23,9 @@ Danmarks skulle prøve at sige at de ikke var helt alliered med De Allierede, me
 Man holdt hemmelige møde med pressen, for at pressen vidste hvad de måtte skrive om, som f.eks. Karikaturer, Sensationelle overskrifter, Grænsespørgsmål. Pressen overholdt de fordi det meste. Men da staten ikke kunne bryde ytringsfrihed, så var det kun anbefalinger. Så vi fik frivilligcensur.
 
 Zahles (han var en gesandt) skrev en lille rapport (depcher) om hvordan den politiske situation var i Tyskland direkte til Udenrigsministeriet i KBH, så de der kunne finde ud af hvad de skulle gøre
+
+
+# Omgå censur
+allegorier : Hvor man får dem til at minde om noget andet (Kornet er i fare)
+Historie den roman som fortællingsmetode. Lav en roman som er baseret på historien (Napoleon)
+
