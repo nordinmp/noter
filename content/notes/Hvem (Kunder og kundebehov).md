@@ -47,7 +47,6 @@ Dog er det ikke alle virksomheder som kan vælge deres egen målgruppe - offentl
 > To af de mest udbredte segmenteringsmodeller er **[[notes/Bruger segmenter#Gallups kompas|Gallup Kompas]]** (udbudt af analysebureauet Kantar Gallup) og **[[notes/Bruger segmenter#Conzoom|Conzoom]]** (udbudt af Geomatic). Begge modeller opdeler befolkningen i en række segmenter baseret på fællestræk i fx demografi, boligforhold, værdier og livsstil. Disse og andre lignende segmenteringsmodeller er velbeskrevet flere steder på internettet.
 
 ## Målgruppeprofil
-
 Efter at fundet deres kundesegment laver man en målgruppeprofil (også kalder en [[notes/Persona|Persona]])
 Som er en fiktiv person som passer til en målgruppe / kundesegment f.eks. "Singler under uddannelse"
 
