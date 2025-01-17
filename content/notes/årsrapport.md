@@ -50,3 +50,4 @@ Regnskab er kigge bagud, budget er kigge fremad
 #ai 
 ![[notes/attachments/Pasted image 20250117132706.png]]
 
+![[notes/attachments/Pasted image 20250117135202.png]]
