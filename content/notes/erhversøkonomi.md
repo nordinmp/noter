@@ -28,3 +28,4 @@ tags:
 - Laissez-faire: Løs opdragelse, man finder selv ud af ting, ingen hierarki
 # Årsrapport
 [[notes/årsrapport|årsrapport]]
+
