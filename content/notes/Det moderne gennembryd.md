@@ -7,11 +7,8 @@ Herman Bang: Han var en dygtig journalist som var bøsse.
 Der var stor forskel på litteraturens verden og virkeligheden
 
 København blev en storby hvor industri domineret hverdagen
-Den 3. november 1871 siger Brandes: "dansk litteratur er dårligt lad os gøre som frankrig, ikke flere følelser"
+Den 3. november 1871 siger Brandes: "dansk litteratur er dårligt lad os gøre som Frankrig, ikke flere følelser"
 
 Nu er det cool at skrive om KKK (kirke, køn, klasser)
 
-Brandes var jøde og kunne lide russerene
-
-
-KKK (kirke køn klasse)
+Brandes var jøde og kunne lide russerne
