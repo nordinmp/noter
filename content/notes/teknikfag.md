@@ -38,3 +38,23 @@ Spænding er det der skubber strømmen rundt i kredsløbet. Jo mere spænding jo
 https://dk.rs-online.com/web/c/passive-komponenter/modstande/hulmonterede-modstande/
 
 # Effekt
+[[notes/Effekt|Effekt]]
+
+# Spændingsdeling med modstande
+![[notes/attachments/Pasted image 20250614152022.png]]
+
+# Lysdiode LED
+![[notes/attachments/Pasted image 20250614152557.png]]Anode (den lange) er positive
+Cathode (den flade side af dioden) er negativ
+
+# LDR
+Jo mere lys, jo mindre modstand
+
+# Kondensator, spole
+
+## Kondensator
+ligesom en batteri kan en kondensator opbevar strøm, den bliver ladet op, hvorefter den bliver afladet, modsat et batteri som aflader langsomt, og lineært, så aflader en kondensator meget hurtigere.
+![[notes/attachments/Pasted image 20250615115136.png]]
+
+## Spole
+
