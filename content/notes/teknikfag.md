@@ -55,6 +55,39 @@ Jo mere lys, jo mindre modstand
 ## Kondensator
 ligesom en batteri kan en kondensator opbevar strøm, den bliver ladet op, hvorefter den bliver afladet, modsat et batteri som aflader langsomt, og lineært, så aflader en kondensator meget hurtigere.
 ![[notes/attachments/Pasted image 20250615115136.png]]
-
+![[notes/attachments/Pasted image 20250615115852.png]]
 ## Spole
+Bruger elektromagnetisme til at opbevar energi
+Oplader
+![[notes/attachments/Pasted image 20250615120017.png]]
+Aflader
+![[notes/attachments/Pasted image 20250615120033.png]]
+# DC motor
+![[notes/attachments/Pasted image 20250615120721.png]]
+Bruger magnetisme og en spole til at rotere
 
+Der er 2 slags DC motore
+![[notes/attachments/Pasted image 20250615121022.png]]
+Series motor er god til at starte op, men jo mere den skal dreje jo langsommere, drastig ændring 
+
+![[notes/attachments/Pasted image 20250615121046.png]]
+Shunt (parallel) motor er langsommere men mere konstant jo mere den skal dreje
+
+
+# L298N
+![[notes/attachments/Pasted image 20250615121401.png]]
+
+H-bro for at kontrollere en DC-motor
+
+# Transistor 
+## BJT, Bipolar Junction Transistor
+
+Bedre for ting med lavere ampere
+
+![[notes/attachments/Pasted image 20250615121638.png]]
+![[notes/attachments/Pasted image 20250615121941.png]]
+## MOSFET
+![[notes/attachments/Pasted image 20250615122242.png]]
+
+Lav spænding, høj modstand
+![[notes/attachments/Pasted image 20250615122404.png]]
