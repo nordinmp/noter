@@ -22,9 +22,7 @@ Man kan forstille sig ampere er mængden af vand som flyder igennem et rør, så
 ##
  Kredsløb
 ![[notes/attachments/Pasted image 20250614142555.png]]
-et kredsløb er bare et lukket loop hvor elektroner kan løber igennem
-
-
+et kredsløb er bare et lukket loop hvor strøm kan løber igennem
 # Spænding
 ![[notes/attachments/Pasted image 20250614143321.png]]
 Spænding er det der skubber strømmen rundt i kredsløbet. Jo mere spænding jo mere strøm. Der sker en kemisk reaktion, som laver negativ ladet strøm, som skubber andet negativ ladet strøm
